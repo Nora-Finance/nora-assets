@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 128 128"
+     color="#FFFFFF"
+     role="img"
+     aria-label="Símbolo institucional Nora com 17 raios simétricos e correção óptica de mais 20 por cento">
+  <title>Símbolo institucional Nora — 17 raios, correção óptica +20%</title>
+  <desc>
+    Master aprovado com dezessete raios congruentes em incrementos de 360/17
+    graus ao redor do centro 64,64. A largura dos raios é vinte por cento maior
+    que no master 2.0; raios, comprimento, centro e espaçamento não mudam.
+  </desc>
+
+  <!--
+    Approved construction
+    Center:                  64,64
+    Rays:                    17
+    Angular step:            360/17 = 21.176470588235294 degrees
+    Inner radius:            28
+    Outer radius:            56
+    Ray length:              28
+    Inner width:             3.84
+    Outer width:             4.8
+    Optical width vs 2.0:    120%
+
+    Every visible ray references the same master path. Positive and negative
+    rotations are paired around the vertical axis so the north ray is centered
+    and the south gap is split equally.
+  -->
+  <defs>
+    <path id="nora-institutional-17-optical-plus20-ray"
+          d="M61.6 8H66.4L65.92 36H62.08Z"/>
+  </defs>
+  <g id="nora-institutional-17-optical-plus20-symbol"
+     fill="currentColor"
+     shape-rendering="geometricPrecision">
+    <use href="#nora-institutional-17-optical-plus20-ray"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(21.176470588235294 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-21.176470588235294 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(42.352941176470588 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-42.352941176470588 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(63.529411764705882 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-63.529411764705882 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(84.705882352941176 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-84.705882352941176 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(105.882352941176471 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-105.882352941176471 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(127.058823529411765 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-127.058823529411765 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(148.235294117647059 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-148.235294117647059 64 64)"/>
+
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(169.411764705882353 64 64)"/>
+    <use href="#nora-institutional-17-optical-plus20-ray"
+         transform="rotate(-169.411764705882353 64 64)"/>
+  </g>
+</svg>

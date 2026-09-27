@@ -1,0 +1,2773 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-27T18:18:30Z",
+  "identity": {
+    "sourceRelease": "Nora Finance Brand Asset Library 2.2.0",
+    "identityVersion": "2.1",
+    "geometry": "17 raios simétricos com correção óptica de +20% na largura",
+    "sourceMasterSha256": "b1a2c26f57b29166f32da7ed117608747523ba2fa556000fd93c375c2f4571c4",
+    "primary": "logo/nora.svg"
+  },
+  "files": [
+    {
+      "path": "colors/nora.ase",
+      "sha256": "12b66540a3f031af38d17f190f84e80249ca3bcaed6d859f0980a53a55f7a846",
+      "bytes": 594,
+      "source": "05_color/nora.ase",
+      "sourceSha256": "12b66540a3f031af38d17f190f84e80249ca3bcaed6d859f0980a53a55f7a846",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/palette.css",
+      "sha256": "40bb4ab624f2d95aa6fbe49a767496c43229615e439c5a8532f51de9490dd8af",
+      "bytes": 313,
+      "source": "05_color/palette.css",
+      "sourceSha256": "40bb4ab624f2d95aa6fbe49a767496c43229615e439c5a8532f51de9490dd8af",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/palette.scss",
+      "sha256": "cfa11f9ced373c97c89af835b1ae67c76a04e7c94177a735f965ce36d30ee252",
+      "bytes": 267,
+      "source": "05_color/palette.scss",
+      "sourceSha256": "cfa11f9ced373c97c89af835b1ae67c76a04e7c94177a735f965ce36d30ee252",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/index.html",
+      "sha256": "3fce550f0bf6976e44b03382157c91a46078f4f4781082b49b3aa21117f5e83c",
+      "bytes": 1847,
+      "source": "05_color/swatches/index.html",
+      "sourceSha256": "3fce550f0bf6976e44b03382157c91a46078f4f4781082b49b3aa21117f5e83c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_black.png",
+      "sha256": "e65b342690825c09bfaebfdccc36b06e6208fb4206c59e304244055f41d4da97",
+      "bytes": 1413,
+      "source": "05_color/swatches/nora_swatch_black.png",
+      "sourceSha256": "e65b342690825c09bfaebfdccc36b06e6208fb4206c59e304244055f41d4da97",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_grid.png",
+      "sha256": "461c877645e64d5101caed121e7fecd5a611fd25c3b0d413e9428e87b830a805",
+      "bytes": 1837,
+      "source": "05_color/swatches/nora_swatch_grid.png",
+      "sourceSha256": "461c877645e64d5101caed121e7fecd5a611fd25c3b0d413e9428e87b830a805",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_ink.png",
+      "sha256": "a9ac7593150db62de0b53b34c98a2b1be37e4f00280a4df984b9319720564d3a",
+      "bytes": 1859,
+      "source": "05_color/swatches/nora_swatch_ink.png",
+      "sourceSha256": "a9ac7593150db62de0b53b34c98a2b1be37e4f00280a4df984b9319720564d3a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_lime-deep.png",
+      "sha256": "744252c91576a79b7da003a2c90fd39a616d3f54d9547fe11b6794294b7458dd",
+      "bytes": 2554,
+      "source": "05_color/swatches/nora_swatch_lime-deep.png",
+      "sourceSha256": "744252c91576a79b7da003a2c90fd39a616d3f54d9547fe11b6794294b7458dd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_lime.png",
+      "sha256": "9ea06efde58c43bf347640882a5485763ae99af3284603791e31760c1890894f",
+      "bytes": 2398,
+      "source": "05_color/swatches/nora_swatch_lime.png",
+      "sourceSha256": "9ea06efde58c43bf347640882a5485763ae99af3284603791e31760c1890894f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_line.png",
+      "sha256": "aa7f100c74ed2f33e99cd669651367cc0ad3e978febf1ff7e7fa8f84dbf73506",
+      "bytes": 1901,
+      "source": "05_color/swatches/nora_swatch_line.png",
+      "sourceSha256": "aa7f100c74ed2f33e99cd669651367cc0ad3e978febf1ff7e7fa8f84dbf73506",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_mid.png",
+      "sha256": "ebab08c34709c7beba86039fb31863b246bc52a0510aa8aae3345f74f314349b",
+      "bytes": 1745,
+      "source": "05_color/swatches/nora_swatch_mid.png",
+      "sourceSha256": "ebab08c34709c7beba86039fb31863b246bc52a0510aa8aae3345f74f314349b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_mute.png",
+      "sha256": "e4e29a37e41d53eace471b3535d752ec6e2ca0ca63c86733795ed0d8b2022838",
+      "bytes": 1940,
+      "source": "05_color/swatches/nora_swatch_mute.png",
+      "sourceSha256": "e4e29a37e41d53eace471b3535d752ec6e2ca0ca63c86733795ed0d8b2022838",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_neutral-200.png",
+      "sha256": "bde0a6766d5aeb5ddeb8fc07228575c9262a8206d34f6045eb5214c687d50331",
+      "bytes": 2177,
+      "source": "05_color/swatches/nora_swatch_neutral-200.png",
+      "sourceSha256": "bde0a6766d5aeb5ddeb8fc07228575c9262a8206d34f6045eb5214c687d50331",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_paper.png",
+      "sha256": "4d30d9353763bb92e01cbe84041226293cd9000e39c69e6da401602eec9d886d",
+      "bytes": 2193,
+      "source": "05_color/swatches/nora_swatch_paper.png",
+      "sourceSha256": "4d30d9353763bb92e01cbe84041226293cd9000e39c69e6da401602eec9d886d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_signal.png",
+      "sha256": "2202ffd6f7a72f54cc947c7ad7907732e94eb64251aa859be535487a0ef9afaf",
+      "bytes": 2104,
+      "source": "05_color/swatches/nora_swatch_signal.png",
+      "sourceSha256": "2202ffd6f7a72f54cc947c7ad7907732e94eb64251aa859be535487a0ef9afaf",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/swatches/nora_swatch_white.png",
+      "sha256": "56bc21dd5a06676ed10ea84a9c3395d8665002a88a835a90de3b1938ee1cb043",
+      "bytes": 1857,
+      "source": "05_color/swatches/nora_swatch_white.png",
+      "sourceSha256": "56bc21dd5a06676ed10ea84a9c3395d8665002a88a835a90de3b1938ee1cb043",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/tailwind.colors.js",
+      "sha256": "90033eff8f0ac243affaa504c2ac8cb2baccfd67d58f9239698c0a9fdc7baeea",
+      "bytes": 289,
+      "source": "05_color/tailwind.colors.js",
+      "sourceSha256": "90033eff8f0ac243affaa504c2ac8cb2baccfd67d58f9239698c0a9fdc7baeea",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/tokens.json",
+      "sha256": "7bbbc9f738d57ac9e9faf8ad63c18229b4142160ae03fb077f4f0b5cf29270cd",
+      "bytes": 5658,
+      "source": "05_color/tokens.json",
+      "sourceSha256": "7bbbc9f738d57ac9e9faf8ad63c18229b4142160ae03fb077f4f0b5cf29270cd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/wcag-contrast-matrix.csv",
+      "sha256": "8a7cc07acd6cbc4c1b2b683f7b7e62f3f1bebb5e00def47a4307a6d239cff1d8",
+      "bytes": 7280,
+      "source": "05_color/wcag-contrast-matrix.csv",
+      "sourceSha256": "8a7cc07acd6cbc4c1b2b683f7b7e62f3f1bebb5e00def47a4307a6d239cff1d8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "colors/wcag-contrast-matrix.html",
+      "sha256": "92e63615129624eca079b688460d136c614ba497b6411c44d52a4e4378083d20",
+      "bytes": 13630,
+      "source": "05_color/wcag-contrast-matrix.html",
+      "sourceSha256": "92e63615129624eca079b688460d136c614ba497b6411c44d52a4e4378083d20",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_fullcolor_on-dark_padded.eps",
+      "sha256": "08d6092f6b55d3b20f851b2c32fe9d7a80827e1674ee8293a91080770f6fb5aa",
+      "bytes": 10330,
+      "source": "01_logo/eps/nora_logo-horizontal-short_fullcolor_on-dark_padded.eps",
+      "sourceSha256": "08d6092f6b55d3b20f851b2c32fe9d7a80827e1674ee8293a91080770f6fb5aa",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_fullcolor_on-dark_tight.eps",
+      "sha256": "dbf99a7d4a04688253238accbd5b6a667463d7f63dfe1ad6f4e6eefe64244ca2",
+      "bytes": 10457,
+      "source": "01_logo/eps/nora_logo-horizontal-short_fullcolor_on-dark_tight.eps",
+      "sourceSha256": "dbf99a7d4a04688253238accbd5b6a667463d7f63dfe1ad6f4e6eefe64244ca2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_fullcolor_on-light_padded.eps",
+      "sha256": "f17b166a7e24d1d9aae59ad396867b8871ead8dc15769058bc5aa472e6203015",
+      "bytes": 10304,
+      "source": "01_logo/eps/nora_logo-horizontal-short_fullcolor_on-light_padded.eps",
+      "sourceSha256": "f17b166a7e24d1d9aae59ad396867b8871ead8dc15769058bc5aa472e6203015",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_fullcolor_on-light_tight.eps",
+      "sha256": "c3f9a46f4ca56dc8d032d7ff13c7e59b504967b84535a4214b4f2522721b6853",
+      "bytes": 10327,
+      "source": "01_logo/eps/nora_logo-horizontal-short_fullcolor_on-light_tight.eps",
+      "sourceSha256": "c3f9a46f4ca56dc8d032d7ff13c7e59b504967b84535a4214b4f2522721b6853",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_mono-black_on-light_padded.eps",
+      "sha256": "f17b166a7e24d1d9aae59ad396867b8871ead8dc15769058bc5aa472e6203015",
+      "bytes": 10304,
+      "source": "01_logo/eps/nora_logo-horizontal-short_mono-black_on-light_padded.eps",
+      "sourceSha256": "f17b166a7e24d1d9aae59ad396867b8871ead8dc15769058bc5aa472e6203015",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_mono-black_on-light_tight.eps",
+      "sha256": "c3f9a46f4ca56dc8d032d7ff13c7e59b504967b84535a4214b4f2522721b6853",
+      "bytes": 10327,
+      "source": "01_logo/eps/nora_logo-horizontal-short_mono-black_on-light_tight.eps",
+      "sourceSha256": "c3f9a46f4ca56dc8d032d7ff13c7e59b504967b84535a4214b4f2522721b6853",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_mono-white_on-dark_padded.eps",
+      "sha256": "8196294f1583705e745b31f47744db0b80b09ce326f0693528a06acda309e3b5",
+      "bytes": 10304,
+      "source": "01_logo/eps/nora_logo-horizontal-short_mono-white_on-dark_padded.eps",
+      "sourceSha256": "8196294f1583705e745b31f47744db0b80b09ce326f0693528a06acda309e3b5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal-short_mono-white_on-dark_tight.eps",
+      "sha256": "1ed1b15f57d77084452fac87121b2852c4c7abfc9eccd34d7d689913913364f7",
+      "bytes": 10327,
+      "source": "01_logo/eps/nora_logo-horizontal-short_mono-white_on-dark_tight.eps",
+      "sourceSha256": "1ed1b15f57d77084452fac87121b2852c4c7abfc9eccd34d7d689913913364f7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_fullcolor_on-dark_padded.eps",
+      "sha256": "444d46db09854e2b168ef78ee7ad29d15fe38af769c7fb4ab3321e9a511fedc4",
+      "bytes": 17993,
+      "source": "01_logo/eps/nora_logo-horizontal_fullcolor_on-dark_padded.eps",
+      "sourceSha256": "444d46db09854e2b168ef78ee7ad29d15fe38af769c7fb4ab3321e9a511fedc4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_fullcolor_on-dark_tight.eps",
+      "sha256": "0d854b80cc234aa3cc1f04eda13138514c01b05938a30657ee19a7c94d4bf07b",
+      "bytes": 17819,
+      "source": "01_logo/eps/nora_logo-horizontal_fullcolor_on-dark_tight.eps",
+      "sourceSha256": "0d854b80cc234aa3cc1f04eda13138514c01b05938a30657ee19a7c94d4bf07b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_fullcolor_on-light_padded.eps",
+      "sha256": "d4945ae896b7a1343577237af26ddebad5b1a215c5e3d2d03e9aeee943bd8c6a",
+      "bytes": 18031,
+      "source": "01_logo/eps/nora_logo-horizontal_fullcolor_on-light_padded.eps",
+      "sourceSha256": "d4945ae896b7a1343577237af26ddebad5b1a215c5e3d2d03e9aeee943bd8c6a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_fullcolor_on-light_tight.eps",
+      "sha256": "2e754044cabb7510a5123be26d82e2b01ea28a5ccbd977948b9cb42c449f7fa7",
+      "bytes": 17722,
+      "source": "01_logo/eps/nora_logo-horizontal_fullcolor_on-light_tight.eps",
+      "sourceSha256": "2e754044cabb7510a5123be26d82e2b01ea28a5ccbd977948b9cb42c449f7fa7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_mono-black_on-light_padded.eps",
+      "sha256": "e9918cd2acc5f6e31ee0f329a2369dbebec9ed5f707217eb2208f36f81094f5f",
+      "bytes": 17938,
+      "source": "01_logo/eps/nora_logo-horizontal_mono-black_on-light_padded.eps",
+      "sourceSha256": "e9918cd2acc5f6e31ee0f329a2369dbebec9ed5f707217eb2208f36f81094f5f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_mono-black_on-light_tight.eps",
+      "sha256": "d18689fdb7615513efef0a20c70e5b4b6e20775661add97254658a9804fe59e3",
+      "bytes": 17661,
+      "source": "01_logo/eps/nora_logo-horizontal_mono-black_on-light_tight.eps",
+      "sourceSha256": "d18689fdb7615513efef0a20c70e5b4b6e20775661add97254658a9804fe59e3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_mono-white_on-dark_padded.eps",
+      "sha256": "a76511ddeee9d12a8a627a7c9383bc5176930e0e0ffd982244039fbbc5a648cc",
+      "bytes": 17938,
+      "source": "01_logo/eps/nora_logo-horizontal_mono-white_on-dark_padded.eps",
+      "sourceSha256": "a76511ddeee9d12a8a627a7c9383bc5176930e0e0ffd982244039fbbc5a648cc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-horizontal_mono-white_on-dark_tight.eps",
+      "sha256": "c77baf7680c8987d5223c083b3f6c86e4b5f2b411c4143a71abef75d09149ab9",
+      "bytes": 17661,
+      "source": "01_logo/eps/nora_logo-horizontal_mono-white_on-dark_tight.eps",
+      "sourceSha256": "c77baf7680c8987d5223c083b3f6c86e4b5f2b411c4143a71abef75d09149ab9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_fullcolor_on-dark_padded.eps",
+      "sha256": "2e688510b633dc9584d5681ec6a4e20643e208493230cec21e651a7d419a29dc",
+      "bytes": 4941,
+      "source": "01_logo/eps/nora_logo-symbol_fullcolor_on-dark_padded.eps",
+      "sourceSha256": "2e688510b633dc9584d5681ec6a4e20643e208493230cec21e651a7d419a29dc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_fullcolor_on-dark_tight.eps",
+      "sha256": "76f1a6092d98b8b8ec76ec433c6b42a5c17eaa9bdd5aeed7fa7b34b07cf15582",
+      "bytes": 5063,
+      "source": "01_logo/eps/nora_logo-symbol_fullcolor_on-dark_tight.eps",
+      "sourceSha256": "76f1a6092d98b8b8ec76ec433c6b42a5c17eaa9bdd5aeed7fa7b34b07cf15582",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_fullcolor_on-light_padded.eps",
+      "sha256": "deea059505e6493167fd83b29e6d9872933be9a03c5fd3578957152dad3add02",
+      "bytes": 4915,
+      "source": "01_logo/eps/nora_logo-symbol_fullcolor_on-light_padded.eps",
+      "sourceSha256": "deea059505e6493167fd83b29e6d9872933be9a03c5fd3578957152dad3add02",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_fullcolor_on-light_tight.eps",
+      "sha256": "4b4e6991f439248c4aa379fec4d5307e9fea6a372c2a4c4c8f9e1f10d01128b2",
+      "bytes": 4933,
+      "source": "01_logo/eps/nora_logo-symbol_fullcolor_on-light_tight.eps",
+      "sourceSha256": "4b4e6991f439248c4aa379fec4d5307e9fea6a372c2a4c4c8f9e1f10d01128b2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_mono-black_on-light_padded.eps",
+      "sha256": "deea059505e6493167fd83b29e6d9872933be9a03c5fd3578957152dad3add02",
+      "bytes": 4915,
+      "source": "01_logo/eps/nora_logo-symbol_mono-black_on-light_padded.eps",
+      "sourceSha256": "deea059505e6493167fd83b29e6d9872933be9a03c5fd3578957152dad3add02",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_mono-black_on-light_tight.eps",
+      "sha256": "4b4e6991f439248c4aa379fec4d5307e9fea6a372c2a4c4c8f9e1f10d01128b2",
+      "bytes": 4933,
+      "source": "01_logo/eps/nora_logo-symbol_mono-black_on-light_tight.eps",
+      "sourceSha256": "4b4e6991f439248c4aa379fec4d5307e9fea6a372c2a4c4c8f9e1f10d01128b2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_mono-white_on-dark_padded.eps",
+      "sha256": "3af91ff0173e83cbafb4f14b4a52d9a71926d7535655a67a93c43bd3f014693b",
+      "bytes": 4915,
+      "source": "01_logo/eps/nora_logo-symbol_mono-white_on-dark_padded.eps",
+      "sourceSha256": "3af91ff0173e83cbafb4f14b4a52d9a71926d7535655a67a93c43bd3f014693b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/eps/nora_logo-symbol_mono-white_on-dark_tight.eps",
+      "sha256": "c07706c7b322ee29604cbb800a78c967958e77181113f82c8ff8825ea9cd35eb",
+      "bytes": 4933,
+      "source": "01_logo/eps/nora_logo-symbol_mono-white_on-dark_tight.eps",
+      "sourceSha256": "c07706c7b322ee29604cbb800a78c967958e77181113f82c8ff8825ea9cd35eb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon.ico",
+      "sha256": "4306236b1f4722661a34fb05f18cc0b90f99ff43d16f6358d4ce537a7413dce9",
+      "bytes": 7150,
+      "source": "01_logo/favicon/nora_favicon.ico",
+      "sourceSha256": "4306236b1f4722661a34fb05f18cc0b90f99ff43d16f6358d4ce537a7413dce9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon.svg",
+      "sha256": "4bb61dbcef0643582f793014a4ca7637d93e523d34abb79c2d4d6aa10f62b6de",
+      "bytes": 2537,
+      "source": "01_logo/favicon/nora_favicon.svg",
+      "sourceSha256": "4bb61dbcef0643582f793014a4ca7637d93e523d34abb79c2d4d6aa10f62b6de",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon_16x16.png",
+      "sha256": "7077fe46405cf5c66b8541233a2262b0ac7714b43ea20fc22f5674677b2afc1c",
+      "bytes": 416,
+      "source": "01_logo/favicon/nora_favicon_16x16.png",
+      "sourceSha256": "7077fe46405cf5c66b8541233a2262b0ac7714b43ea20fc22f5674677b2afc1c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon_180x180.png",
+      "sha256": "e27712e6eeee4ce9ee8e370e77458a3845974f19271c6e6e5195cabb76f6e6d7",
+      "bytes": 6164,
+      "source": "01_logo/favicon/nora_favicon_180x180.png",
+      "sourceSha256": "e27712e6eeee4ce9ee8e370e77458a3845974f19271c6e6e5195cabb76f6e6d7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon_192x192.png",
+      "sha256": "7813e04d70ca4e96e943245aa811c90d0e46297fa0d54e38dcdcbab009d2252b",
+      "bytes": 6480,
+      "source": "01_logo/favicon/nora_favicon_192x192.png",
+      "sourceSha256": "7813e04d70ca4e96e943245aa811c90d0e46297fa0d54e38dcdcbab009d2252b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon_32x32.png",
+      "sha256": "b9bfd206dd9ccc6fed174cda2a8cd82d9a00d1d26cddcea0e6ed96aecae0924c",
+      "bytes": 968,
+      "source": "01_logo/favicon/nora_favicon_32x32.png",
+      "sourceSha256": "b9bfd206dd9ccc6fed174cda2a8cd82d9a00d1d26cddcea0e6ed96aecae0924c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon_48x48.png",
+      "sha256": "70c07bb6e15cb5341d55e6a155559fc810f57ff439d7b3de1e5e7866518fe139",
+      "bytes": 1510,
+      "source": "01_logo/favicon/nora_favicon_48x48.png",
+      "sourceSha256": "70c07bb6e15cb5341d55e6a155559fc810f57ff439d7b3de1e5e7866518fe139",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/favicon/nora_favicon_512x512.png",
+      "sha256": "d2c3f8f87ffcc3f5bb2963fa0053d6054f460c03a7a8981f939bc8b606dd97c5",
+      "bytes": 19261,
+      "source": "01_logo/favicon/nora_favicon_512x512.png",
+      "sourceSha256": "d2c3f8f87ffcc3f5bb2963fa0053d6054f460c03a7a8981f939bc8b606dd97c5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/master/nora-symbol.svg",
+      "sha256": "b1a2c26f57b29166f32da7ed117608747523ba2fa556000fd93c375c2f4571c4",
+      "bytes": 3285,
+      "source": "00_source/approved-masters/nora_logo-symbol_17-symmetric-normalized-optical-plus20.svg",
+      "sourceSha256": "b1a2c26f57b29166f32da7ed117608747523ba2fa556000fd93c375c2f4571c4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/nora-256.png",
+      "sha256": "07d771a081863461d1c9fd5f54b696a6e75fb1931a36eb5b90ebdeb3f73fdf88",
+      "bytes": 5652,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_padded_256w.png",
+      "sourceSha256": "07d771a081863461d1c9fd5f54b696a6e75fb1931a36eb5b90ebdeb3f73fdf88",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/nora-finance.svg",
+      "sha256": "b067b23e589ea4bbea406fcdc61296edffa0d92e1c061e1ef71e74b7fab5af4d",
+      "bytes": 8207,
+      "source": "01_logo/svg/nora_logo-horizontal_fullcolor_on-light_padded-outlined.svg",
+      "sourceSha256": "b067b23e589ea4bbea406fcdc61296edffa0d92e1c061e1ef71e74b7fab5af4d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/nora-symbol.svg",
+      "sha256": "2eff97a6a8440e5fa1ff0ceaf6932d6b845a7c9d62b671af5aed698e6c87fba3",
+      "bytes": 2501,
+      "source": "01_logo/svg/nora_logo-symbol_fullcolor_on-light_padded.svg",
+      "sourceSha256": "2eff97a6a8440e5fa1ff0ceaf6932d6b845a7c9d62b671af5aed698e6c87fba3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/nora.svg",
+      "sha256": "3a75ac90d5ce1cbe5565a50d241b4fb8aaeae409b29f69109cbbd54d0509438e",
+      "bytes": 4784,
+      "source": "01_logo/svg/nora_logo-horizontal-short_fullcolor_on-light_padded-outlined.svg",
+      "sourceSha256": "3a75ac90d5ce1cbe5565a50d241b4fb8aaeae409b29f69109cbbd54d0509438e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_fullcolor_on-dark_padded.pdf",
+      "sha256": "2a49b9a2caba8a012b3ea81ab2f887ef360e20b759c76cf70a65ed7f4214d54a",
+      "bytes": 3529,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_fullcolor_on-dark_padded.pdf",
+      "sourceSha256": "2a49b9a2caba8a012b3ea81ab2f887ef360e20b759c76cf70a65ed7f4214d54a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_fullcolor_on-dark_tight.pdf",
+      "sha256": "5a875acd8281ace64280b540d2f9300662949922738afc93f37ff070449a8dcd",
+      "bytes": 3587,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_fullcolor_on-dark_tight.pdf",
+      "sourceSha256": "5a875acd8281ace64280b540d2f9300662949922738afc93f37ff070449a8dcd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_fullcolor_on-light_padded.pdf",
+      "sha256": "d95c73ee895bbe272b28c17bb64c12b682001db5315c6a151cb76cd16944e4b3",
+      "bytes": 3515,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_fullcolor_on-light_padded.pdf",
+      "sourceSha256": "d95c73ee895bbe272b28c17bb64c12b682001db5315c6a151cb76cd16944e4b3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_fullcolor_on-light_tight.pdf",
+      "sha256": "6cdefee3481bbd351dbb5cf3f51879188c4fb401c1529ec35dff1040cb3e9254",
+      "bytes": 3571,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_fullcolor_on-light_tight.pdf",
+      "sourceSha256": "6cdefee3481bbd351dbb5cf3f51879188c4fb401c1529ec35dff1040cb3e9254",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_mono-black_on-light_padded.pdf",
+      "sha256": "d95c73ee895bbe272b28c17bb64c12b682001db5315c6a151cb76cd16944e4b3",
+      "bytes": 3515,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_mono-black_on-light_padded.pdf",
+      "sourceSha256": "d95c73ee895bbe272b28c17bb64c12b682001db5315c6a151cb76cd16944e4b3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_mono-black_on-light_tight.pdf",
+      "sha256": "6cdefee3481bbd351dbb5cf3f51879188c4fb401c1529ec35dff1040cb3e9254",
+      "bytes": 3571,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_mono-black_on-light_tight.pdf",
+      "sourceSha256": "6cdefee3481bbd351dbb5cf3f51879188c4fb401c1529ec35dff1040cb3e9254",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_mono-white_on-dark_padded.pdf",
+      "sha256": "af627f2846cb01743fa7814d7ccf10f180dd2c6eab8bdbc0153abbb39eb26872",
+      "bytes": 3515,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_mono-white_on-dark_padded.pdf",
+      "sourceSha256": "af627f2846cb01743fa7814d7ccf10f180dd2c6eab8bdbc0153abbb39eb26872",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal-short_mono-white_on-dark_tight.pdf",
+      "sha256": "68c13938657f9244caa80125a92798a5521fa1519766744024bcc67940293ada",
+      "bytes": 3572,
+      "source": "01_logo/pdf/nora_logo-horizontal-short_mono-white_on-dark_tight.pdf",
+      "sourceSha256": "68c13938657f9244caa80125a92798a5521fa1519766744024bcc67940293ada",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_fullcolor_on-dark_padded.pdf",
+      "sha256": "71700bb8c3da4aefd3efd5d10012ff4e17eced56be02a18347d841467f33cf27",
+      "bytes": 6375,
+      "source": "01_logo/pdf/nora_logo-horizontal_fullcolor_on-dark_padded.pdf",
+      "sourceSha256": "71700bb8c3da4aefd3efd5d10012ff4e17eced56be02a18347d841467f33cf27",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_fullcolor_on-dark_tight.pdf",
+      "sha256": "1431b573b24dee0b1ba1141a95c087d37419abaddf5060e0023834802fb95207",
+      "bytes": 6356,
+      "source": "01_logo/pdf/nora_logo-horizontal_fullcolor_on-dark_tight.pdf",
+      "sourceSha256": "1431b573b24dee0b1ba1141a95c087d37419abaddf5060e0023834802fb95207",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_fullcolor_on-light_padded.pdf",
+      "sha256": "bd07074c9656e6a40de5517828e7026883b326cb9cd769261aca6c87c917de53",
+      "bytes": 6427,
+      "source": "01_logo/pdf/nora_logo-horizontal_fullcolor_on-light_padded.pdf",
+      "sourceSha256": "bd07074c9656e6a40de5517828e7026883b326cb9cd769261aca6c87c917de53",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_fullcolor_on-light_tight.pdf",
+      "sha256": "915a4cf86d7abffba4ec508cf684191f34e3c7b986920f89ca3538caf1f4d428",
+      "bytes": 6347,
+      "source": "01_logo/pdf/nora_logo-horizontal_fullcolor_on-light_tight.pdf",
+      "sourceSha256": "915a4cf86d7abffba4ec508cf684191f34e3c7b986920f89ca3538caf1f4d428",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_mono-black_on-light_padded.pdf",
+      "sha256": "a4a5538e3de4b329bed2bbae990393bb57857e953f5209c26f99b906902832eb",
+      "bytes": 6341,
+      "source": "01_logo/pdf/nora_logo-horizontal_mono-black_on-light_padded.pdf",
+      "sourceSha256": "a4a5538e3de4b329bed2bbae990393bb57857e953f5209c26f99b906902832eb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_mono-black_on-light_tight.pdf",
+      "sha256": "94403813c55fa228e994affa8423e903ec6e79b9783bdf6c40e77cbf1e5e23eb",
+      "bytes": 6314,
+      "source": "01_logo/pdf/nora_logo-horizontal_mono-black_on-light_tight.pdf",
+      "sourceSha256": "94403813c55fa228e994affa8423e903ec6e79b9783bdf6c40e77cbf1e5e23eb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_mono-white_on-dark_padded.pdf",
+      "sha256": "23ce94ac78aeecf209fab284e89a5d714047d62bd810576cb1663c95e255f69e",
+      "bytes": 6341,
+      "source": "01_logo/pdf/nora_logo-horizontal_mono-white_on-dark_padded.pdf",
+      "sourceSha256": "23ce94ac78aeecf209fab284e89a5d714047d62bd810576cb1663c95e255f69e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-horizontal_mono-white_on-dark_tight.pdf",
+      "sha256": "7fa48642255765aa90867de56073b7fac851fd1e2df72ebbecd92d7f68172bb7",
+      "bytes": 6315,
+      "source": "01_logo/pdf/nora_logo-horizontal_mono-white_on-dark_tight.pdf",
+      "sourceSha256": "7fa48642255765aa90867de56073b7fac851fd1e2df72ebbecd92d7f68172bb7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_fullcolor_on-dark_padded.pdf",
+      "sha256": "bd1e9c40459ea99b5df0d0eebbe5c199bb8f5859d5c2e5ace72edaa97e9ee60f",
+      "bytes": 1376,
+      "source": "01_logo/pdf/nora_logo-symbol_fullcolor_on-dark_padded.pdf",
+      "sourceSha256": "bd1e9c40459ea99b5df0d0eebbe5c199bb8f5859d5c2e5ace72edaa97e9ee60f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_fullcolor_on-dark_tight.pdf",
+      "sha256": "d59b08ce6a31ac6e62a6424f03b9420d11073f7673ab9883b20457b62eb9bc40",
+      "bytes": 1404,
+      "source": "01_logo/pdf/nora_logo-symbol_fullcolor_on-dark_tight.pdf",
+      "sourceSha256": "d59b08ce6a31ac6e62a6424f03b9420d11073f7673ab9883b20457b62eb9bc40",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_fullcolor_on-light_padded.pdf",
+      "sha256": "2fd5f8984212637985aff446ef2dfd4c87fd203a32f4b3349a9bfaa7030d4736",
+      "bytes": 1363,
+      "source": "01_logo/pdf/nora_logo-symbol_fullcolor_on-light_padded.pdf",
+      "sourceSha256": "2fd5f8984212637985aff446ef2dfd4c87fd203a32f4b3349a9bfaa7030d4736",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_fullcolor_on-light_tight.pdf",
+      "sha256": "4e94aae0575a14b27040256cbae8d3abf98b4bfa4a3ffab09a047bc3e9c75052",
+      "bytes": 1391,
+      "source": "01_logo/pdf/nora_logo-symbol_fullcolor_on-light_tight.pdf",
+      "sourceSha256": "4e94aae0575a14b27040256cbae8d3abf98b4bfa4a3ffab09a047bc3e9c75052",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_mono-black_on-light_padded.pdf",
+      "sha256": "2fd5f8984212637985aff446ef2dfd4c87fd203a32f4b3349a9bfaa7030d4736",
+      "bytes": 1363,
+      "source": "01_logo/pdf/nora_logo-symbol_mono-black_on-light_padded.pdf",
+      "sourceSha256": "2fd5f8984212637985aff446ef2dfd4c87fd203a32f4b3349a9bfaa7030d4736",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_mono-black_on-light_tight.pdf",
+      "sha256": "4e94aae0575a14b27040256cbae8d3abf98b4bfa4a3ffab09a047bc3e9c75052",
+      "bytes": 1391,
+      "source": "01_logo/pdf/nora_logo-symbol_mono-black_on-light_tight.pdf",
+      "sourceSha256": "4e94aae0575a14b27040256cbae8d3abf98b4bfa4a3ffab09a047bc3e9c75052",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_mono-white_on-dark_padded.pdf",
+      "sha256": "4ac6f2b6998a9a73250e1acd4c4fed92fbc876d52c943e88ac8daa5ef24bec8d",
+      "bytes": 1363,
+      "source": "01_logo/pdf/nora_logo-symbol_mono-white_on-dark_padded.pdf",
+      "sourceSha256": "4ac6f2b6998a9a73250e1acd4c4fed92fbc876d52c943e88ac8daa5ef24bec8d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/pdf/nora_logo-symbol_mono-white_on-dark_tight.pdf",
+      "sha256": "3541b1bddc237d011a0790c2d76fa7a723d2309dd97371fa00929f48942bc98e",
+      "bytes": 1392,
+      "source": "01_logo/pdf/nora_logo-symbol_mono-white_on-dark_tight.pdf",
+      "sourceSha256": "3541b1bddc237d011a0790c2d76fa7a723d2309dd97371fa00929f48942bc98e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_1024w.png",
+      "sha256": "ab36ca100c5cb86345cc58958931240c6c9ebdaee9e03ae4991abfb8689b17b8",
+      "bytes": 12691,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_1024w.png",
+      "sourceSha256": "ab36ca100c5cb86345cc58958931240c6c9ebdaee9e03ae4991abfb8689b17b8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_2048w.png",
+      "sha256": "5765b4dfcbab09e78457a1ea2f677c941af76a80758b97e36fbce29412f11042",
+      "bytes": 26392,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_2048w.png",
+      "sourceSha256": "5765b4dfcbab09e78457a1ea2f677c941af76a80758b97e36fbce29412f11042",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_256w.png",
+      "sha256": "a33c3ee77f8d018f27618fe43a7c467c3b8effa19f829d1e161e25347d376676",
+      "bytes": 3793,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_256w.png",
+      "sourceSha256": "a33c3ee77f8d018f27618fe43a7c467c3b8effa19f829d1e161e25347d376676",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_4096w.png",
+      "sha256": "b9f22887a7a27d2cb73a90fe7770a40afaceaa7b86bbbb548efb9e7cc5cb2c93",
+      "bytes": 59346,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_4096w.png",
+      "sourceSha256": "b9f22887a7a27d2cb73a90fe7770a40afaceaa7b86bbbb548efb9e7cc5cb2c93",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_512w.png",
+      "sha256": "d081b27f52f19954f96362c3410f97d810f60fab07a410fa1a93d0459f052c0e",
+      "bytes": 6775,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_padded_512w.png",
+      "sourceSha256": "d081b27f52f19954f96362c3410f97d810f60fab07a410fa1a93d0459f052c0e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_1024w.png",
+      "sha256": "6a4cbcd9d2dea1fdf0badcfa390e3e765a7c1dcd23abf2706028d5fbac1f082e",
+      "bytes": 15209,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_1024w.png",
+      "sourceSha256": "6a4cbcd9d2dea1fdf0badcfa390e3e765a7c1dcd23abf2706028d5fbac1f082e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_2048w.png",
+      "sha256": "dfb5835c0c934ba206282a52a491e8d9045db839882a3e7392e6c6e431d8ec8f",
+      "bytes": 31365,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_2048w.png",
+      "sourceSha256": "dfb5835c0c934ba206282a52a491e8d9045db839882a3e7392e6c6e431d8ec8f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_256w.png",
+      "sha256": "cb39e4b2fc23d5f03119a832ca05841de620dd35aea9c08a23ef7bddaa8b3da6",
+      "bytes": 4294,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_256w.png",
+      "sourceSha256": "cb39e4b2fc23d5f03119a832ca05841de620dd35aea9c08a23ef7bddaa8b3da6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_4096w.png",
+      "sha256": "b78ad3600ab3721efa2c88a3faaa20c604701ea512d33e9c7b7f3c8f9adf8188",
+      "bytes": 69667,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_4096w.png",
+      "sourceSha256": "b78ad3600ab3721efa2c88a3faaa20c604701ea512d33e9c7b7f3c8f9adf8188",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_512w.png",
+      "sha256": "fda92d22eaa15ad10f6f6ffe75aa31270bf621eb095be69cd91bf549e5af7218",
+      "bytes": 7940,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-dark_tight_512w.png",
+      "sourceSha256": "fda92d22eaa15ad10f6f6ffe75aa31270bf621eb095be69cd91bf549e5af7218",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_1024w.png",
+      "sha256": "e58e8ac1b9fe888f403983473becec94f3b3efae0ff0faad2f1bfaee0c8407cc",
+      "bytes": 12755,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_1024w.png",
+      "sourceSha256": "e58e8ac1b9fe888f403983473becec94f3b3efae0ff0faad2f1bfaee0c8407cc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_2048w.png",
+      "sha256": "fd158474c2c03c0e20039dea507d0b59068e8c0a3c37f2cebc358d6ea69c745d",
+      "bytes": 26370,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_2048w.png",
+      "sourceSha256": "fd158474c2c03c0e20039dea507d0b59068e8c0a3c37f2cebc358d6ea69c745d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_256w.png",
+      "sha256": "337ac7fdee2f208520598b50ac599267224d269acb156a6d65379bb100aff0c4",
+      "bytes": 3631,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_256w.png",
+      "sourceSha256": "337ac7fdee2f208520598b50ac599267224d269acb156a6d65379bb100aff0c4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_4096w.png",
+      "sha256": "b0a609ed2a19eaf11dd7d01eef80ee66af66ab7b0f89f557b2036ee12de52f5f",
+      "bytes": 59066,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_4096w.png",
+      "sourceSha256": "b0a609ed2a19eaf11dd7d01eef80ee66af66ab7b0f89f557b2036ee12de52f5f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_512w.png",
+      "sha256": "d678d7b973559659bef472cd1cb697ab01c09f3126392c2f7c06bb815496c304",
+      "bytes": 6776,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_padded_512w.png",
+      "sourceSha256": "d678d7b973559659bef472cd1cb697ab01c09f3126392c2f7c06bb815496c304",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_1024w.png",
+      "sha256": "151f01dc0435e34a563d735c334e1a5d6184139bb8487dafa7eb9df0974bea5e",
+      "bytes": 15276,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_1024w.png",
+      "sourceSha256": "151f01dc0435e34a563d735c334e1a5d6184139bb8487dafa7eb9df0974bea5e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_2048w.png",
+      "sha256": "9f9111f8621de9d3f20671af75c6cce829250af2ad3bebffe2125a3dc4ae77a9",
+      "bytes": 31439,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_2048w.png",
+      "sourceSha256": "9f9111f8621de9d3f20671af75c6cce829250af2ad3bebffe2125a3dc4ae77a9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_256w.png",
+      "sha256": "3222c80dcf6618e011c8c2c7cabb0da11f393a7685b478dfd4d0cdefda7653e8",
+      "bytes": 4292,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_256w.png",
+      "sourceSha256": "3222c80dcf6618e011c8c2c7cabb0da11f393a7685b478dfd4d0cdefda7653e8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_4096w.png",
+      "sha256": "0ffb9f3c14d2e7656dcd692c948ee7934d0a771a4ee4db642faaa89b1215ec76",
+      "bytes": 69060,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_4096w.png",
+      "sourceSha256": "0ffb9f3c14d2e7656dcd692c948ee7934d0a771a4ee4db642faaa89b1215ec76",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_512w.png",
+      "sha256": "07678c3179ebef6ea942fba91acd9238e18acd009ab6d3699c50e45cc4c02f6c",
+      "bytes": 7939,
+      "source": "01_logo/png/nora_logo-horizontal-short_fullcolor_on-light_tight_512w.png",
+      "sourceSha256": "07678c3179ebef6ea942fba91acd9238e18acd009ab6d3699c50e45cc4c02f6c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_1024w.png",
+      "sha256": "e58e8ac1b9fe888f403983473becec94f3b3efae0ff0faad2f1bfaee0c8407cc",
+      "bytes": 12755,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_1024w.png",
+      "sourceSha256": "e58e8ac1b9fe888f403983473becec94f3b3efae0ff0faad2f1bfaee0c8407cc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_2048w.png",
+      "sha256": "fd158474c2c03c0e20039dea507d0b59068e8c0a3c37f2cebc358d6ea69c745d",
+      "bytes": 26370,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_2048w.png",
+      "sourceSha256": "fd158474c2c03c0e20039dea507d0b59068e8c0a3c37f2cebc358d6ea69c745d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_256w.png",
+      "sha256": "337ac7fdee2f208520598b50ac599267224d269acb156a6d65379bb100aff0c4",
+      "bytes": 3631,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_256w.png",
+      "sourceSha256": "337ac7fdee2f208520598b50ac599267224d269acb156a6d65379bb100aff0c4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_4096w.png",
+      "sha256": "b0a609ed2a19eaf11dd7d01eef80ee66af66ab7b0f89f557b2036ee12de52f5f",
+      "bytes": 59066,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_4096w.png",
+      "sourceSha256": "b0a609ed2a19eaf11dd7d01eef80ee66af66ab7b0f89f557b2036ee12de52f5f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_512w.png",
+      "sha256": "d678d7b973559659bef472cd1cb697ab01c09f3126392c2f7c06bb815496c304",
+      "bytes": 6776,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_padded_512w.png",
+      "sourceSha256": "d678d7b973559659bef472cd1cb697ab01c09f3126392c2f7c06bb815496c304",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_1024w.png",
+      "sha256": "151f01dc0435e34a563d735c334e1a5d6184139bb8487dafa7eb9df0974bea5e",
+      "bytes": 15276,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_1024w.png",
+      "sourceSha256": "151f01dc0435e34a563d735c334e1a5d6184139bb8487dafa7eb9df0974bea5e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_2048w.png",
+      "sha256": "9f9111f8621de9d3f20671af75c6cce829250af2ad3bebffe2125a3dc4ae77a9",
+      "bytes": 31439,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_2048w.png",
+      "sourceSha256": "9f9111f8621de9d3f20671af75c6cce829250af2ad3bebffe2125a3dc4ae77a9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_256w.png",
+      "sha256": "3222c80dcf6618e011c8c2c7cabb0da11f393a7685b478dfd4d0cdefda7653e8",
+      "bytes": 4292,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_256w.png",
+      "sourceSha256": "3222c80dcf6618e011c8c2c7cabb0da11f393a7685b478dfd4d0cdefda7653e8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_4096w.png",
+      "sha256": "0ffb9f3c14d2e7656dcd692c948ee7934d0a771a4ee4db642faaa89b1215ec76",
+      "bytes": 69060,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_4096w.png",
+      "sourceSha256": "0ffb9f3c14d2e7656dcd692c948ee7934d0a771a4ee4db642faaa89b1215ec76",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_512w.png",
+      "sha256": "07678c3179ebef6ea942fba91acd9238e18acd009ab6d3699c50e45cc4c02f6c",
+      "bytes": 7939,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-black_on-light_tight_512w.png",
+      "sourceSha256": "07678c3179ebef6ea942fba91acd9238e18acd009ab6d3699c50e45cc4c02f6c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_1024w.png",
+      "sha256": "6c9109f515a99308346bf097762d8acc7d8fb115cb7b7e9693f60cdbc79946f0",
+      "bytes": 12755,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_1024w.png",
+      "sourceSha256": "6c9109f515a99308346bf097762d8acc7d8fb115cb7b7e9693f60cdbc79946f0",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_2048w.png",
+      "sha256": "3ec1dd801f351d4c6ce798fb6299530aa90713a8a263e49f0c3c518cf207b27a",
+      "bytes": 26370,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_2048w.png",
+      "sourceSha256": "3ec1dd801f351d4c6ce798fb6299530aa90713a8a263e49f0c3c518cf207b27a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_256w.png",
+      "sha256": "7568b4e5230a91b452c782bb8888a2917df574728eee4a2ee08af7c221b9958a",
+      "bytes": 3631,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_256w.png",
+      "sourceSha256": "7568b4e5230a91b452c782bb8888a2917df574728eee4a2ee08af7c221b9958a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_4096w.png",
+      "sha256": "5020fb0f60e7e414d21271af639f07ca32451024bfbf9a117bef02c304b0c112",
+      "bytes": 59066,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_4096w.png",
+      "sourceSha256": "5020fb0f60e7e414d21271af639f07ca32451024bfbf9a117bef02c304b0c112",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_512w.png",
+      "sha256": "c278d2bcd51bebd4f495926805b61a15271680d109831c2ed987ffcdb7353031",
+      "bytes": 6776,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_padded_512w.png",
+      "sourceSha256": "c278d2bcd51bebd4f495926805b61a15271680d109831c2ed987ffcdb7353031",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_1024w.png",
+      "sha256": "e1978ba80b622516fd6138a1bb226f093dfbf0d1d34760803890669be8ee68fc",
+      "bytes": 15276,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_1024w.png",
+      "sourceSha256": "e1978ba80b622516fd6138a1bb226f093dfbf0d1d34760803890669be8ee68fc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_2048w.png",
+      "sha256": "927f2097b24fe6e2ba69895172cb9ae72a0b8c7ecd6fab17243c3c89593b4d14",
+      "bytes": 31439,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_2048w.png",
+      "sourceSha256": "927f2097b24fe6e2ba69895172cb9ae72a0b8c7ecd6fab17243c3c89593b4d14",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_256w.png",
+      "sha256": "a1f20baf105de822d6739c10d9998c68fd29e02799510f2b8eaffda1c3f64723",
+      "bytes": 4292,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_256w.png",
+      "sourceSha256": "a1f20baf105de822d6739c10d9998c68fd29e02799510f2b8eaffda1c3f64723",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_4096w.png",
+      "sha256": "988372975a9d883f4ce64000a7948f6a80382febb3bb357fc4cb27f1a1bfd3b6",
+      "bytes": 69060,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_4096w.png",
+      "sourceSha256": "988372975a9d883f4ce64000a7948f6a80382febb3bb357fc4cb27f1a1bfd3b6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_512w.png",
+      "sha256": "154fba141fafafa5be0057d18f318de912b30590a3396676d045ce24ec1513d6",
+      "bytes": 7939,
+      "source": "01_logo/png/nora_logo-horizontal-short_mono-white_on-dark_tight_512w.png",
+      "sourceSha256": "154fba141fafafa5be0057d18f318de912b30590a3396676d045ce24ec1513d6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_1024w.png",
+      "sha256": "2f97e49d221c027054381fcb1b988b3d6e25128a53201604300534bc919ef7bb",
+      "bytes": 17960,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_1024w.png",
+      "sourceSha256": "2f97e49d221c027054381fcb1b988b3d6e25128a53201604300534bc919ef7bb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_2048w.png",
+      "sha256": "2ea2ca9a06eb7d788512f8593a1168f32b0183c69a132ba9be5614be6b8f1527",
+      "bytes": 41925,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_2048w.png",
+      "sourceSha256": "2ea2ca9a06eb7d788512f8593a1168f32b0183c69a132ba9be5614be6b8f1527",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_256w.png",
+      "sha256": "45f2cc61be5b66af7919b836072d4d9d907d9c355768645c35d682109308b551",
+      "bytes": 4080,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_256w.png",
+      "sourceSha256": "45f2cc61be5b66af7919b836072d4d9d907d9c355768645c35d682109308b551",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_4096w.png",
+      "sha256": "65f84acb4f6070518e28c26a120bf42778f05cc0b246c8299fad1185ed7a6e61",
+      "bytes": 103344,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_4096w.png",
+      "sourceSha256": "65f84acb4f6070518e28c26a120bf42778f05cc0b246c8299fad1185ed7a6e61",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_512w.png",
+      "sha256": "ce112ad603a6d9a90f226c024d485a9476a39982e26e3d47b9e72b8b2afa3c44",
+      "bytes": 8154,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_padded_512w.png",
+      "sourceSha256": "ce112ad603a6d9a90f226c024d485a9476a39982e26e3d47b9e72b8b2afa3c44",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_1024w.png",
+      "sha256": "f9021b029e73f8c28205f9efd67bce148a5002f5468cc25d37114c86b7936da3",
+      "bytes": 21082,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_1024w.png",
+      "sourceSha256": "f9021b029e73f8c28205f9efd67bce148a5002f5468cc25d37114c86b7936da3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_2048w.png",
+      "sha256": "9ee00feb7422cdab6929cac1ef29fbaa38fdca4171f525726ab87d60a0a98666",
+      "bytes": 48239,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_2048w.png",
+      "sourceSha256": "9ee00feb7422cdab6929cac1ef29fbaa38fdca4171f525726ab87d60a0a98666",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_256w.png",
+      "sha256": "5d42bd470fa4da628f4077a4a675ddcb0acd948bed6ad6514efcc514baf8b40a",
+      "bytes": 4691,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_256w.png",
+      "sourceSha256": "5d42bd470fa4da628f4077a4a675ddcb0acd948bed6ad6514efcc514baf8b40a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_4096w.png",
+      "sha256": "aad5d47ffc7f1beed9319bb60108aa4104021ee16ca5e8dfc3b253e3a7890ff9",
+      "bytes": 112673,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_4096w.png",
+      "sourceSha256": "aad5d47ffc7f1beed9319bb60108aa4104021ee16ca5e8dfc3b253e3a7890ff9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_512w.png",
+      "sha256": "ae2f66c0c38d90d5bd93703336d1248129a30df312e2d2642e5719536104d2a5",
+      "bytes": 9664,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-dark_tight_512w.png",
+      "sourceSha256": "ae2f66c0c38d90d5bd93703336d1248129a30df312e2d2642e5719536104d2a5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_padded_1024w.png",
+      "sha256": "6dccfbdfb42034dd5d7f23235c46c50074d193e2e6b0b61d2257e23a364a814e",
+      "bytes": 15664,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_padded_1024w.png",
+      "sourceSha256": "6dccfbdfb42034dd5d7f23235c46c50074d193e2e6b0b61d2257e23a364a814e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_padded_2048w.png",
+      "sha256": "6f53c95f58a92ccef042747c3006446a87d393aca963d12fa8b98591ffd964ac",
+      "bytes": 36014,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_padded_2048w.png",
+      "sourceSha256": "6f53c95f58a92ccef042747c3006446a87d393aca963d12fa8b98591ffd964ac",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_padded_256w.png",
+      "sha256": "76de9b1f2618cc735d7f585f78dc24321f79d9655495e56d4804b6c2beec3935",
+      "bytes": 3704,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_padded_256w.png",
+      "sourceSha256": "76de9b1f2618cc735d7f585f78dc24321f79d9655495e56d4804b6c2beec3935",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_padded_4096w.png",
+      "sha256": "1e24aeadfee91aed2b9f3e4cb31d1d4ca4ddd6ca254227a7c9119fa0574e25e6",
+      "bytes": 89241,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_padded_4096w.png",
+      "sourceSha256": "1e24aeadfee91aed2b9f3e4cb31d1d4ca4ddd6ca254227a7c9119fa0574e25e6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_padded_512w.png",
+      "sha256": "04f991311e8bdd7c524b7ac9e6e94f906236210edba1079e6c0021ed3362b5b0",
+      "bytes": 7263,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_padded_512w.png",
+      "sourceSha256": "04f991311e8bdd7c524b7ac9e6e94f906236210edba1079e6c0021ed3362b5b0",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_tight_1024w.png",
+      "sha256": "7a20eac8dd9b5901d2ce5b8bb5db5bbba28071bd0ef1c3d75dd89f0d3c0d9ce1",
+      "bytes": 18189,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_tight_1024w.png",
+      "sourceSha256": "7a20eac8dd9b5901d2ce5b8bb5db5bbba28071bd0ef1c3d75dd89f0d3c0d9ce1",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_tight_2048w.png",
+      "sha256": "8e6a3825107fdc239f3abf235fa0d12e5213bf1ec2c43a3b2c4645495063cd08",
+      "bytes": 40908,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_tight_2048w.png",
+      "sourceSha256": "8e6a3825107fdc239f3abf235fa0d12e5213bf1ec2c43a3b2c4645495063cd08",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_tight_256w.png",
+      "sha256": "60ba1c1d0172e45ffc34ca3479cea026d9da5ffe1dfcfaef4248c8823371c088",
+      "bytes": 4215,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_tight_256w.png",
+      "sourceSha256": "60ba1c1d0172e45ffc34ca3479cea026d9da5ffe1dfcfaef4248c8823371c088",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_tight_4096w.png",
+      "sha256": "ea4dfe2ddb5081bfd427b9a72c2643cb6b9faf51471f25c5c4ab25b562dbb85f",
+      "bytes": 94816,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_tight_4096w.png",
+      "sourceSha256": "ea4dfe2ddb5081bfd427b9a72c2643cb6b9faf51471f25c5c4ab25b562dbb85f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_fullcolor_on-light_tight_512w.png",
+      "sha256": "b3428a91b0504f5d1f4b35352d9b87c0ccaba364504d171357b58fbb388b34df",
+      "bytes": 8573,
+      "source": "01_logo/png/nora_logo-horizontal_fullcolor_on-light_tight_512w.png",
+      "sourceSha256": "b3428a91b0504f5d1f4b35352d9b87c0ccaba364504d171357b58fbb388b34df",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_padded_1024w.png",
+      "sha256": "c13bd009dbd7121031c5321d654f9ef0eecd4bf9960db41965d105144161d459",
+      "bytes": 10103,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_padded_1024w.png",
+      "sourceSha256": "c13bd009dbd7121031c5321d654f9ef0eecd4bf9960db41965d105144161d459",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_padded_2048w.png",
+      "sha256": "caed4cc0ebf3f6a436451c02915585070c9e783f03396f53fcbed7b98bc213d3",
+      "bytes": 20128,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_padded_2048w.png",
+      "sourceSha256": "caed4cc0ebf3f6a436451c02915585070c9e783f03396f53fcbed7b98bc213d3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_padded_256w.png",
+      "sha256": "92589b006dab25fa4c71a81e54115c8e3283b6e004ed0c699292d605ad3d1e72",
+      "bytes": 3088,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_padded_256w.png",
+      "sourceSha256": "92589b006dab25fa4c71a81e54115c8e3283b6e004ed0c699292d605ad3d1e72",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_padded_4096w.png",
+      "sha256": "ffd2102ad40f27c8538ebed9c164ea0bf2d0afa721dbe1db486ebc460f096c9c",
+      "bytes": 44238,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_padded_4096w.png",
+      "sourceSha256": "ffd2102ad40f27c8538ebed9c164ea0bf2d0afa721dbe1db486ebc460f096c9c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_padded_512w.png",
+      "sha256": "8a42c55e5e12c836c64e1318e21e33bc3a0a2e19e14888618bdaced2beb5a3bb",
+      "bytes": 5458,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_padded_512w.png",
+      "sourceSha256": "8a42c55e5e12c836c64e1318e21e33bc3a0a2e19e14888618bdaced2beb5a3bb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_tight_1024w.png",
+      "sha256": "09dfecb7ec41ec39e7c6901103f39e00e9be6812f61f21dfc8aede42bd8ca099",
+      "bytes": 11683,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_tight_1024w.png",
+      "sourceSha256": "09dfecb7ec41ec39e7c6901103f39e00e9be6812f61f21dfc8aede42bd8ca099",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_tight_2048w.png",
+      "sha256": "2e54cb3b39d0b0b424f9ff79530b584e970ba728512ba879bafca0c7d9e2c8af",
+      "bytes": 23699,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_tight_2048w.png",
+      "sourceSha256": "2e54cb3b39d0b0b424f9ff79530b584e970ba728512ba879bafca0c7d9e2c8af",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_tight_256w.png",
+      "sha256": "d72c67ae53c39d316f1098555d166b246cefb5df44f23ac30ce05ad5931642bd",
+      "bytes": 3013,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_tight_256w.png",
+      "sourceSha256": "d72c67ae53c39d316f1098555d166b246cefb5df44f23ac30ce05ad5931642bd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_tight_4096w.png",
+      "sha256": "d133a101d4c0417fbbd251d23721c043c925eb432efedeaa406af73ac3817d8e",
+      "bytes": 50811,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_tight_4096w.png",
+      "sourceSha256": "d133a101d4c0417fbbd251d23721c043c925eb432efedeaa406af73ac3817d8e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-black_on-light_tight_512w.png",
+      "sha256": "c0b0effd195838cdb97b78cb6facd97e9a1199d113330204fdcdcaa5df28a6c0",
+      "bytes": 6363,
+      "source": "01_logo/png/nora_logo-horizontal_mono-black_on-light_tight_512w.png",
+      "sourceSha256": "c0b0effd195838cdb97b78cb6facd97e9a1199d113330204fdcdcaa5df28a6c0",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_padded_1024w.png",
+      "sha256": "7c01721c9f360c9807d5351cde017286aec6609f6e7568ad1ccc0344fdbe8f20",
+      "bytes": 10103,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_padded_1024w.png",
+      "sourceSha256": "7c01721c9f360c9807d5351cde017286aec6609f6e7568ad1ccc0344fdbe8f20",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_padded_2048w.png",
+      "sha256": "c9ebe716937e25f705452bfc6d2f6a7253f347eddd6e35372a73951e274bef46",
+      "bytes": 20128,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_padded_2048w.png",
+      "sourceSha256": "c9ebe716937e25f705452bfc6d2f6a7253f347eddd6e35372a73951e274bef46",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_padded_256w.png",
+      "sha256": "34214f80d2e945c47bf84e1ea8d13cdba3d52f63eae5f9bcdc01c7d90fc5beb5",
+      "bytes": 3088,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_padded_256w.png",
+      "sourceSha256": "34214f80d2e945c47bf84e1ea8d13cdba3d52f63eae5f9bcdc01c7d90fc5beb5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_padded_4096w.png",
+      "sha256": "e6f76f620b27682e9f3f8f815a6808ff1913a028787789a206152e6576a7243b",
+      "bytes": 44238,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_padded_4096w.png",
+      "sourceSha256": "e6f76f620b27682e9f3f8f815a6808ff1913a028787789a206152e6576a7243b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_padded_512w.png",
+      "sha256": "f69aa2d4fa5030a19302a66b73888ee16e95cfdcc6a3ecd5a084882d46bc1270",
+      "bytes": 5458,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_padded_512w.png",
+      "sourceSha256": "f69aa2d4fa5030a19302a66b73888ee16e95cfdcc6a3ecd5a084882d46bc1270",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_tight_1024w.png",
+      "sha256": "5e51cb36ee60081f3d826fe30b1b8d57d9c67fac9d96d2ab27ecdc147cfa2f14",
+      "bytes": 11683,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_tight_1024w.png",
+      "sourceSha256": "5e51cb36ee60081f3d826fe30b1b8d57d9c67fac9d96d2ab27ecdc147cfa2f14",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_tight_2048w.png",
+      "sha256": "4a1484d71e75e83b43618d875173f225bbe7c793302251bd4203d30486ea7539",
+      "bytes": 23699,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_tight_2048w.png",
+      "sourceSha256": "4a1484d71e75e83b43618d875173f225bbe7c793302251bd4203d30486ea7539",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_tight_256w.png",
+      "sha256": "15a00768cb9eb57e712d902e0a0d93a8ec481eb933e61094bdd7641c857fbe8d",
+      "bytes": 3051,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_tight_256w.png",
+      "sourceSha256": "15a00768cb9eb57e712d902e0a0d93a8ec481eb933e61094bdd7641c857fbe8d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_tight_4096w.png",
+      "sha256": "177e4bf149f20cacd2505dbcc4c255c0fd9807b97794da503d9111fbfd5b36ab",
+      "bytes": 50811,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_tight_4096w.png",
+      "sourceSha256": "177e4bf149f20cacd2505dbcc4c255c0fd9807b97794da503d9111fbfd5b36ab",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-horizontal_mono-white_on-dark_tight_512w.png",
+      "sha256": "1ff32bdf8c20350b6fb280a647ae5b1ec2ea1b56dd611ff5e666cc2b54ba9a4f",
+      "bytes": 6363,
+      "source": "01_logo/png/nora_logo-horizontal_mono-white_on-dark_tight_512w.png",
+      "sourceSha256": "1ff32bdf8c20350b6fb280a647ae5b1ec2ea1b56dd611ff5e666cc2b54ba9a4f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_padded_1024w.png",
+      "sha256": "de80fbf6ec584d1f2934511b8a06362d21853bf3bb3b292374900be3a3ef7820",
+      "bytes": 20569,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_padded_1024w.png",
+      "sourceSha256": "de80fbf6ec584d1f2934511b8a06362d21853bf3bb3b292374900be3a3ef7820",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_padded_2048w.png",
+      "sha256": "16e222f789007f03870afad9f3f8f01dec9d17adc8e8d84a5aa1640f47bcba69",
+      "bytes": 43978,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_padded_2048w.png",
+      "sourceSha256": "16e222f789007f03870afad9f3f8f01dec9d17adc8e8d84a5aa1640f47bcba69",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_padded_256w.png",
+      "sha256": "7ec5bf38c6be31ee6fe78b46b269f40d47782b5b66fb03d6f27669c47123c5dd",
+      "bytes": 5652,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_padded_256w.png",
+      "sourceSha256": "7ec5bf38c6be31ee6fe78b46b269f40d47782b5b66fb03d6f27669c47123c5dd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_padded_4096w.png",
+      "sha256": "cecd0f1269f918be98b901b6c04533969052d70d490122016cb97a3f5111864b",
+      "bytes": 103427,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_padded_4096w.png",
+      "sourceSha256": "cecd0f1269f918be98b901b6c04533969052d70d490122016cb97a3f5111864b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_padded_512w.png",
+      "sha256": "e2cd034b68a7543f8d4f30bfa4e6890c7ce1b8345633321647612b8afa98572b",
+      "bytes": 10348,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_padded_512w.png",
+      "sourceSha256": "e2cd034b68a7543f8d4f30bfa4e6890c7ce1b8345633321647612b8afa98572b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_tight_1024w.png",
+      "sha256": "1c7347dbb36695096dd096574f75f853d77d7ddbedc0e6b100c614ca98fe4934",
+      "bytes": 25024,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_tight_1024w.png",
+      "sourceSha256": "1c7347dbb36695096dd096574f75f853d77d7ddbedc0e6b100c614ca98fe4934",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_tight_2048w.png",
+      "sha256": "63387d8820feeba61b7bf26f4495d3f0bc3272618c1f84965a1a5f8cccba4267",
+      "bytes": 53656,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_tight_2048w.png",
+      "sourceSha256": "63387d8820feeba61b7bf26f4495d3f0bc3272618c1f84965a1a5f8cccba4267",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_tight_256w.png",
+      "sha256": "941eb265bb82224ff9797f314fad566d38731d9e520e0d591f0f3d3cd335aa88",
+      "bytes": 6505,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_tight_256w.png",
+      "sourceSha256": "941eb265bb82224ff9797f314fad566d38731d9e520e0d591f0f3d3cd335aa88",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_tight_4096w.png",
+      "sha256": "d9a3ae5ad4bfc28a214209f6242b0f3a761acea1ce4587fa0b55174038815218",
+      "bytes": 125100,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_tight_4096w.png",
+      "sourceSha256": "d9a3ae5ad4bfc28a214209f6242b0f3a761acea1ce4587fa0b55174038815218",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-dark_tight_512w.png",
+      "sha256": "db445c83eeaf2b11bb62d5f8097fba1452e04c49e73cf6e9d4a7b39c1ad54ff4",
+      "bytes": 12251,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-dark_tight_512w.png",
+      "sourceSha256": "db445c83eeaf2b11bb62d5f8097fba1452e04c49e73cf6e9d4a7b39c1ad54ff4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_padded_1024w.png",
+      "sha256": "7441f7a49e6049d19c3bc9d04a29a90009a5f428aa130e0864bbdf874a5326d1",
+      "bytes": 20572,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_padded_1024w.png",
+      "sourceSha256": "7441f7a49e6049d19c3bc9d04a29a90009a5f428aa130e0864bbdf874a5326d1",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_padded_2048w.png",
+      "sha256": "bf99690ea3b890937f40f7ad2531c7be82e6ee9ab43c94c1cf70dd87345e05a5",
+      "bytes": 44012,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_padded_2048w.png",
+      "sourceSha256": "bf99690ea3b890937f40f7ad2531c7be82e6ee9ab43c94c1cf70dd87345e05a5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_padded_256w.png",
+      "sha256": "07d771a081863461d1c9fd5f54b696a6e75fb1931a36eb5b90ebdeb3f73fdf88",
+      "bytes": 5652,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_padded_256w.png",
+      "sourceSha256": "07d771a081863461d1c9fd5f54b696a6e75fb1931a36eb5b90ebdeb3f73fdf88",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_padded_4096w.png",
+      "sha256": "f95c436e0baf788b8e851f4814b8d117903d0aa38cd4b52c95af483ab82f9ae4",
+      "bytes": 103426,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_padded_4096w.png",
+      "sourceSha256": "f95c436e0baf788b8e851f4814b8d117903d0aa38cd4b52c95af483ab82f9ae4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_padded_512w.png",
+      "sha256": "97f95e71262b489ed4e9e75245f018caa342247cbed4069efcc7073697d39aa3",
+      "bytes": 10286,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_padded_512w.png",
+      "sourceSha256": "97f95e71262b489ed4e9e75245f018caa342247cbed4069efcc7073697d39aa3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_tight_1024w.png",
+      "sha256": "c8233f2d2914693b5ccaff863e3a82743adb624207d66a8772ad50f03f439ffb",
+      "bytes": 25023,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_tight_1024w.png",
+      "sourceSha256": "c8233f2d2914693b5ccaff863e3a82743adb624207d66a8772ad50f03f439ffb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_tight_2048w.png",
+      "sha256": "da87dc22822c76626327f7c9d4003864c586fc83730bc52d520cdc23623d4abd",
+      "bytes": 53660,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_tight_2048w.png",
+      "sourceSha256": "da87dc22822c76626327f7c9d4003864c586fc83730bc52d520cdc23623d4abd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_tight_256w.png",
+      "sha256": "b84242de6687126dc9e048063096f859e628203d90b8fb68ae29d585f4b9d73d",
+      "bytes": 6491,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_tight_256w.png",
+      "sourceSha256": "b84242de6687126dc9e048063096f859e628203d90b8fb68ae29d585f4b9d73d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_tight_4096w.png",
+      "sha256": "9ad62617c49adbd24ca70261c1480042e55405b7bd9d6a4bfe629bf9ac160370",
+      "bytes": 125098,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_tight_4096w.png",
+      "sourceSha256": "9ad62617c49adbd24ca70261c1480042e55405b7bd9d6a4bfe629bf9ac160370",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_fullcolor_on-light_tight_512w.png",
+      "sha256": "ab88316081049686c94d433d8d94cb74e03b315b7c37240d05b275e5ce06d61a",
+      "bytes": 12270,
+      "source": "01_logo/png/nora_logo-symbol_fullcolor_on-light_tight_512w.png",
+      "sourceSha256": "ab88316081049686c94d433d8d94cb74e03b315b7c37240d05b275e5ce06d61a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_padded_1024w.png",
+      "sha256": "7441f7a49e6049d19c3bc9d04a29a90009a5f428aa130e0864bbdf874a5326d1",
+      "bytes": 20572,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_padded_1024w.png",
+      "sourceSha256": "7441f7a49e6049d19c3bc9d04a29a90009a5f428aa130e0864bbdf874a5326d1",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_padded_2048w.png",
+      "sha256": "bf99690ea3b890937f40f7ad2531c7be82e6ee9ab43c94c1cf70dd87345e05a5",
+      "bytes": 44012,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_padded_2048w.png",
+      "sourceSha256": "bf99690ea3b890937f40f7ad2531c7be82e6ee9ab43c94c1cf70dd87345e05a5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_padded_256w.png",
+      "sha256": "07d771a081863461d1c9fd5f54b696a6e75fb1931a36eb5b90ebdeb3f73fdf88",
+      "bytes": 5652,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_padded_256w.png",
+      "sourceSha256": "07d771a081863461d1c9fd5f54b696a6e75fb1931a36eb5b90ebdeb3f73fdf88",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_padded_4096w.png",
+      "sha256": "f95c436e0baf788b8e851f4814b8d117903d0aa38cd4b52c95af483ab82f9ae4",
+      "bytes": 103426,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_padded_4096w.png",
+      "sourceSha256": "f95c436e0baf788b8e851f4814b8d117903d0aa38cd4b52c95af483ab82f9ae4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_padded_512w.png",
+      "sha256": "97f95e71262b489ed4e9e75245f018caa342247cbed4069efcc7073697d39aa3",
+      "bytes": 10286,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_padded_512w.png",
+      "sourceSha256": "97f95e71262b489ed4e9e75245f018caa342247cbed4069efcc7073697d39aa3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_tight_1024w.png",
+      "sha256": "c8233f2d2914693b5ccaff863e3a82743adb624207d66a8772ad50f03f439ffb",
+      "bytes": 25023,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_tight_1024w.png",
+      "sourceSha256": "c8233f2d2914693b5ccaff863e3a82743adb624207d66a8772ad50f03f439ffb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_tight_2048w.png",
+      "sha256": "da87dc22822c76626327f7c9d4003864c586fc83730bc52d520cdc23623d4abd",
+      "bytes": 53660,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_tight_2048w.png",
+      "sourceSha256": "da87dc22822c76626327f7c9d4003864c586fc83730bc52d520cdc23623d4abd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_tight_256w.png",
+      "sha256": "b84242de6687126dc9e048063096f859e628203d90b8fb68ae29d585f4b9d73d",
+      "bytes": 6491,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_tight_256w.png",
+      "sourceSha256": "b84242de6687126dc9e048063096f859e628203d90b8fb68ae29d585f4b9d73d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_tight_4096w.png",
+      "sha256": "9ad62617c49adbd24ca70261c1480042e55405b7bd9d6a4bfe629bf9ac160370",
+      "bytes": 125098,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_tight_4096w.png",
+      "sourceSha256": "9ad62617c49adbd24ca70261c1480042e55405b7bd9d6a4bfe629bf9ac160370",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-black_on-light_tight_512w.png",
+      "sha256": "ab88316081049686c94d433d8d94cb74e03b315b7c37240d05b275e5ce06d61a",
+      "bytes": 12270,
+      "source": "01_logo/png/nora_logo-symbol_mono-black_on-light_tight_512w.png",
+      "sourceSha256": "ab88316081049686c94d433d8d94cb74e03b315b7c37240d05b275e5ce06d61a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_padded_1024w.png",
+      "sha256": "d765891918f3573a71f5660cda478d52b8e6207513ac95c549af07898d2959b6",
+      "bytes": 20572,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_padded_1024w.png",
+      "sourceSha256": "d765891918f3573a71f5660cda478d52b8e6207513ac95c549af07898d2959b6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_padded_2048w.png",
+      "sha256": "56167addb96e23a14e43ebee2eddf16ef99f87db0021adff96d9e62b0186ac31",
+      "bytes": 44012,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_padded_2048w.png",
+      "sourceSha256": "56167addb96e23a14e43ebee2eddf16ef99f87db0021adff96d9e62b0186ac31",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_padded_256w.png",
+      "sha256": "f96b5b8e6e83f897f59bbab554a397d6125a25899cbdb0edf2c6af32136e850f",
+      "bytes": 5652,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_padded_256w.png",
+      "sourceSha256": "f96b5b8e6e83f897f59bbab554a397d6125a25899cbdb0edf2c6af32136e850f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_padded_4096w.png",
+      "sha256": "d742daf6fe6aaba3be43b9a29f6ed5d6b700aa6fc069104128cdc4b56ad79df8",
+      "bytes": 103426,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_padded_4096w.png",
+      "sourceSha256": "d742daf6fe6aaba3be43b9a29f6ed5d6b700aa6fc069104128cdc4b56ad79df8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_padded_512w.png",
+      "sha256": "fea00fdd9ee3875d320d30063204c3980b1952248bd7d9bfc26f3f7acc326703",
+      "bytes": 10286,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_padded_512w.png",
+      "sourceSha256": "fea00fdd9ee3875d320d30063204c3980b1952248bd7d9bfc26f3f7acc326703",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_tight_1024w.png",
+      "sha256": "d125248b55148098bb2996a24ca7a4eef926d016f311376955ef3c892dc70c25",
+      "bytes": 25023,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_tight_1024w.png",
+      "sourceSha256": "d125248b55148098bb2996a24ca7a4eef926d016f311376955ef3c892dc70c25",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_tight_2048w.png",
+      "sha256": "be4ac1e357dabca002496d5060ed0828f79482f10b6bbabde3c5d18bb3f80be8",
+      "bytes": 53660,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_tight_2048w.png",
+      "sourceSha256": "be4ac1e357dabca002496d5060ed0828f79482f10b6bbabde3c5d18bb3f80be8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_tight_256w.png",
+      "sha256": "1616b332b964cda2d81bac8ff36959f74b3e85ec77f2d54ca90c2edf67e1b21f",
+      "bytes": 6491,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_tight_256w.png",
+      "sourceSha256": "1616b332b964cda2d81bac8ff36959f74b3e85ec77f2d54ca90c2edf67e1b21f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_tight_4096w.png",
+      "sha256": "b8bfea1100260a69088c0a62141b77f663c656393bca5b7122fb7d675c0d0f25",
+      "bytes": 125098,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_tight_4096w.png",
+      "sourceSha256": "b8bfea1100260a69088c0a62141b77f663c656393bca5b7122fb7d675c0d0f25",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/png/nora_logo-symbol_mono-white_on-dark_tight_512w.png",
+      "sha256": "ffb97719ea23ee034dd7fa7bbd2155c373ec3ec533b39aa89abbfed9e72c4a90",
+      "bytes": 12270,
+      "source": "01_logo/png/nora_logo-symbol_mono-white_on-dark_tight_512w.png",
+      "sourceSha256": "ffb97719ea23ee034dd7fa7bbd2155c373ec3ec533b39aa89abbfed9e72c4a90",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_fullcolor_on-dark_padded-outlined.svg",
+      "sha256": "f2d4cd287f216e5a680622d56decd4d78bc1c12d51c5f5fea4b2694c79f48d6d",
+      "bytes": 4789,
+      "source": "01_logo/svg/nora_logo-horizontal-short_fullcolor_on-dark_padded-outlined.svg",
+      "sourceSha256": "f2d4cd287f216e5a680622d56decd4d78bc1c12d51c5f5fea4b2694c79f48d6d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_fullcolor_on-dark_tight-outlined.svg",
+      "sha256": "74d9824b2e190aa02f4ecfa184c63dbd7b47603a899485d63059c136933ba1d6",
+      "bytes": 4767,
+      "source": "01_logo/svg/nora_logo-horizontal-short_fullcolor_on-dark_tight-outlined.svg",
+      "sourceSha256": "74d9824b2e190aa02f4ecfa184c63dbd7b47603a899485d63059c136933ba1d6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_fullcolor_on-light_padded-outlined.svg",
+      "sha256": "3a75ac90d5ce1cbe5565a50d241b4fb8aaeae409b29f69109cbbd54d0509438e",
+      "bytes": 4784,
+      "source": "01_logo/svg/nora_logo-horizontal-short_fullcolor_on-light_padded-outlined.svg",
+      "sourceSha256": "3a75ac90d5ce1cbe5565a50d241b4fb8aaeae409b29f69109cbbd54d0509438e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_fullcolor_on-light_tight-outlined.svg",
+      "sha256": "b3a2135897c4a2c039ce75b6b13f3e5b5dc73d2c3ee86eb048418cf3dafe2eec",
+      "bytes": 4762,
+      "source": "01_logo/svg/nora_logo-horizontal-short_fullcolor_on-light_tight-outlined.svg",
+      "sourceSha256": "b3a2135897c4a2c039ce75b6b13f3e5b5dc73d2c3ee86eb048418cf3dafe2eec",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_mono-black_on-light_padded-outlined.svg",
+      "sha256": "150eda20296d842824bc2fa12b60c50fa735e2d8ff2981e835d617a378849412",
+      "bytes": 4808,
+      "source": "01_logo/svg/nora_logo-horizontal-short_mono-black_on-light_padded-outlined.svg",
+      "sourceSha256": "150eda20296d842824bc2fa12b60c50fa735e2d8ff2981e835d617a378849412",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_mono-black_on-light_tight-outlined.svg",
+      "sha256": "afba1b61fbab213b95d1fc4ebc51c021b5a2bcab5b1eae8dcd9954c9b9352ee9",
+      "bytes": 4786,
+      "source": "01_logo/svg/nora_logo-horizontal-short_mono-black_on-light_tight-outlined.svg",
+      "sourceSha256": "afba1b61fbab213b95d1fc4ebc51c021b5a2bcab5b1eae8dcd9954c9b9352ee9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_mono-white_on-dark_padded-outlined.svg",
+      "sha256": "aa54e1f01e243c2890d88d5f2bbb84d4b34aff992c37700a1636ab098638dd56",
+      "bytes": 4808,
+      "source": "01_logo/svg/nora_logo-horizontal-short_mono-white_on-dark_padded-outlined.svg",
+      "sourceSha256": "aa54e1f01e243c2890d88d5f2bbb84d4b34aff992c37700a1636ab098638dd56",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal-short_mono-white_on-dark_tight-outlined.svg",
+      "sha256": "ec4c520740668528d271fc08d0bf7cd871e99653a5c51e38ede88c7d079a6e6b",
+      "bytes": 4786,
+      "source": "01_logo/svg/nora_logo-horizontal-short_mono-white_on-dark_tight-outlined.svg",
+      "sourceSha256": "ec4c520740668528d271fc08d0bf7cd871e99653a5c51e38ede88c7d079a6e6b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_fullcolor_on-dark_padded-outlined.svg",
+      "sha256": "00f346b8a95cc4a412f5f46fccfde60f3dcef75fef00c473559f8af05181a5c5",
+      "bytes": 8162,
+      "source": "01_logo/svg/nora_logo-horizontal_fullcolor_on-dark_padded-outlined.svg",
+      "sourceSha256": "00f346b8a95cc4a412f5f46fccfde60f3dcef75fef00c473559f8af05181a5c5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_fullcolor_on-dark_tight-outlined.svg",
+      "sha256": "5bc93a7e4164c65dbb091f5dbf192fac40e0c3f8faea9a7a5d773ba50e2687e7",
+      "bytes": 8140,
+      "source": "01_logo/svg/nora_logo-horizontal_fullcolor_on-dark_tight-outlined.svg",
+      "sourceSha256": "5bc93a7e4164c65dbb091f5dbf192fac40e0c3f8faea9a7a5d773ba50e2687e7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_fullcolor_on-light_padded-outlined.svg",
+      "sha256": "b067b23e589ea4bbea406fcdc61296edffa0d92e1c061e1ef71e74b7fab5af4d",
+      "bytes": 8207,
+      "source": "01_logo/svg/nora_logo-horizontal_fullcolor_on-light_padded-outlined.svg",
+      "sourceSha256": "b067b23e589ea4bbea406fcdc61296edffa0d92e1c061e1ef71e74b7fab5af4d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_fullcolor_on-light_tight-outlined.svg",
+      "sha256": "53733930c021ab017927f0a527eeefd06d9a801f8fef5e0615548ff758718226",
+      "bytes": 8185,
+      "source": "01_logo/svg/nora_logo-horizontal_fullcolor_on-light_tight-outlined.svg",
+      "sourceSha256": "53733930c021ab017927f0a527eeefd06d9a801f8fef5e0615548ff758718226",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_mono-black_on-light_padded-outlined.svg",
+      "sha256": "fb63e49dab6cf23cfb712cbc80c9551f436a4b720a7fb8a41804d1ad757083fe",
+      "bytes": 8121,
+      "source": "01_logo/svg/nora_logo-horizontal_mono-black_on-light_padded-outlined.svg",
+      "sourceSha256": "fb63e49dab6cf23cfb712cbc80c9551f436a4b720a7fb8a41804d1ad757083fe",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_mono-black_on-light_tight-outlined.svg",
+      "sha256": "fd9e1d1e5de5b42953850de3993b08d584c7238cbb848a777c6735e7bdae0e88",
+      "bytes": 8099,
+      "source": "01_logo/svg/nora_logo-horizontal_mono-black_on-light_tight-outlined.svg",
+      "sourceSha256": "fd9e1d1e5de5b42953850de3993b08d584c7238cbb848a777c6735e7bdae0e88",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_mono-white_on-dark_padded-outlined.svg",
+      "sha256": "87bd10fd5c104b128e734bf78d9091cab15abc66e1c5b6b549c9376fb60e70fc",
+      "bytes": 8121,
+      "source": "01_logo/svg/nora_logo-horizontal_mono-white_on-dark_padded-outlined.svg",
+      "sourceSha256": "87bd10fd5c104b128e734bf78d9091cab15abc66e1c5b6b549c9376fb60e70fc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-horizontal_mono-white_on-dark_tight-outlined.svg",
+      "sha256": "b6d06c8c2756b20ad38a93cc96467c04fec02848f243320c177c6ea37c5fe4bf",
+      "bytes": 8099,
+      "source": "01_logo/svg/nora_logo-horizontal_mono-white_on-dark_tight-outlined.svg",
+      "sourceSha256": "b6d06c8c2756b20ad38a93cc96467c04fec02848f243320c177c6ea37c5fe4bf",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_fullcolor_on-dark_padded.svg",
+      "sha256": "742809bb5cad1905d53e339d110fd0591c717e7f6bab1f8c3abf4373dc39e13e",
+      "bytes": 2499,
+      "source": "01_logo/svg/nora_logo-symbol_fullcolor_on-dark_padded.svg",
+      "sourceSha256": "742809bb5cad1905d53e339d110fd0591c717e7f6bab1f8c3abf4373dc39e13e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_fullcolor_on-dark_tight.svg",
+      "sha256": "36578a603b81a133c11014bb858974b2ce986d2b6db2561267203e81f4c3e7fa",
+      "bytes": 2492,
+      "source": "01_logo/svg/nora_logo-symbol_fullcolor_on-dark_tight.svg",
+      "sourceSha256": "36578a603b81a133c11014bb858974b2ce986d2b6db2561267203e81f4c3e7fa",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_fullcolor_on-light_padded.svg",
+      "sha256": "2eff97a6a8440e5fa1ff0ceaf6932d6b845a7c9d62b671af5aed698e6c87fba3",
+      "bytes": 2501,
+      "source": "01_logo/svg/nora_logo-symbol_fullcolor_on-light_padded.svg",
+      "sourceSha256": "2eff97a6a8440e5fa1ff0ceaf6932d6b845a7c9d62b671af5aed698e6c87fba3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_fullcolor_on-light_tight.svg",
+      "sha256": "c5b337d74817724da5e7bdc67b306855874bc65a8e133bb6eca073dd81903fee",
+      "bytes": 2494,
+      "source": "01_logo/svg/nora_logo-symbol_fullcolor_on-light_tight.svg",
+      "sourceSha256": "c5b337d74817724da5e7bdc67b306855874bc65a8e133bb6eca073dd81903fee",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_mono-black_on-light_padded.svg",
+      "sha256": "1adff8284f0b9a1506d61ba22c84c52e80ed656ed051738fa073c2bec314840a",
+      "bytes": 2506,
+      "source": "01_logo/svg/nora_logo-symbol_mono-black_on-light_padded.svg",
+      "sourceSha256": "1adff8284f0b9a1506d61ba22c84c52e80ed656ed051738fa073c2bec314840a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_mono-black_on-light_tight.svg",
+      "sha256": "598e7c4541e5494362dbb375d326737b38342a87928631f97267ac6c1cc7338b",
+      "bytes": 2499,
+      "source": "01_logo/svg/nora_logo-symbol_mono-black_on-light_tight.svg",
+      "sourceSha256": "598e7c4541e5494362dbb375d326737b38342a87928631f97267ac6c1cc7338b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_mono-white_on-dark_padded.svg",
+      "sha256": "1df49d0d399155dd9bb235f35f0da5de8f6ca692b80e0e8ee81f0d1b2432d09f",
+      "bytes": 2501,
+      "source": "01_logo/svg/nora_logo-symbol_mono-white_on-dark_padded.svg",
+      "sourceSha256": "1df49d0d399155dd9bb235f35f0da5de8f6ca692b80e0e8ee81f0d1b2432d09f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/svg/nora_logo-symbol_mono-white_on-dark_tight.svg",
+      "sha256": "90fab86fbddea3ad5302c2e03ba2a05fbbf191c6b27f64001bba1414bb8d696a",
+      "bytes": 2494,
+      "source": "01_logo/svg/nora_logo-symbol_mono-white_on-dark_tight.svg",
+      "sourceSha256": "90fab86fbddea3ad5302c2e03ba2a05fbbf191c6b27f64001bba1414bb8d696a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_1024w.webp",
+      "sha256": "21f8004df07c705ca8aa6831257573eaf4e918b09d316af6863fb4e6d39f727d",
+      "bytes": 10754,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_1024w.webp",
+      "sourceSha256": "21f8004df07c705ca8aa6831257573eaf4e918b09d316af6863fb4e6d39f727d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_2048w.webp",
+      "sha256": "d65a5bbbac3152473e1e8c80da371b85d1848117d13be78eb6da793ec5a5a42d",
+      "bytes": 21862,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_2048w.webp",
+      "sourceSha256": "d65a5bbbac3152473e1e8c80da371b85d1848117d13be78eb6da793ec5a5a42d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_256w.webp",
+      "sha256": "404b257584bd95d2ab1ec1fd7441bb3d7c1e8225d3529d13857a2f9825ab6036",
+      "bytes": 2730,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_256w.webp",
+      "sourceSha256": "404b257584bd95d2ab1ec1fd7441bb3d7c1e8225d3529d13857a2f9825ab6036",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_4096w.webp",
+      "sha256": "0051ddf4ff9b4daf2a92e46294f9c33a094edc4a22afa3030f0dc0dc19d691b7",
+      "bytes": 44886,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_4096w.webp",
+      "sourceSha256": "0051ddf4ff9b4daf2a92e46294f9c33a094edc4a22afa3030f0dc0dc19d691b7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_512w.webp",
+      "sha256": "33fc3dbc38b6ff0d36d05e1fd096bf08aa5065cf996d172d9bf311aaa914f2e6",
+      "bytes": 5358,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_padded_512w.webp",
+      "sourceSha256": "33fc3dbc38b6ff0d36d05e1fd096bf08aa5065cf996d172d9bf311aaa914f2e6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_1024w.webp",
+      "sha256": "34d681092774c9f25b4dca05f4709743db7e9ad75eccb63e6dbf3f746764651e",
+      "bytes": 13292,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_1024w.webp",
+      "sourceSha256": "34d681092774c9f25b4dca05f4709743db7e9ad75eccb63e6dbf3f746764651e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_2048w.webp",
+      "sha256": "0ac21921e893f5420ce37d23ee8b53d4dcabaa089db1def566335bbf67f1b95c",
+      "bytes": 26894,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_2048w.webp",
+      "sourceSha256": "0ac21921e893f5420ce37d23ee8b53d4dcabaa089db1def566335bbf67f1b95c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_256w.webp",
+      "sha256": "2837c8e503dc44e42cebf0f19ef87ee0caa0a7d4d10b393b49285e81a364ae05",
+      "bytes": 3368,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_256w.webp",
+      "sourceSha256": "2837c8e503dc44e42cebf0f19ef87ee0caa0a7d4d10b393b49285e81a364ae05",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_4096w.webp",
+      "sha256": "c4c348931513148f5a83f49dc40ea40ee580f8dde1341438a9f20fe1a084acca",
+      "bytes": 54806,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_4096w.webp",
+      "sourceSha256": "c4c348931513148f5a83f49dc40ea40ee580f8dde1341438a9f20fe1a084acca",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_512w.webp",
+      "sha256": "a1878107a80ecef3e74010d5711025666930f5fe164cc0241ce889c736a3f8df",
+      "bytes": 6590,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-dark_tight_512w.webp",
+      "sourceSha256": "a1878107a80ecef3e74010d5711025666930f5fe164cc0241ce889c736a3f8df",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_1024w.webp",
+      "sha256": "f7c0daa80fa2d031afa6e5c40d23dc95dd3d8a124f95971cc9f940b75e1da152",
+      "bytes": 10460,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_1024w.webp",
+      "sourceSha256": "f7c0daa80fa2d031afa6e5c40d23dc95dd3d8a124f95971cc9f940b75e1da152",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_2048w.webp",
+      "sha256": "df14dff5273064319213f08d03dd255de1b68cb10e90faa9bfe870acef4ac431",
+      "bytes": 21574,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_2048w.webp",
+      "sourceSha256": "df14dff5273064319213f08d03dd255de1b68cb10e90faa9bfe870acef4ac431",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_256w.webp",
+      "sha256": "5c4b5d50350ad26a68589b9d8ab5b2137a23531d88ed30fce8f14b2fa55341a6",
+      "bytes": 2528,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_256w.webp",
+      "sourceSha256": "5c4b5d50350ad26a68589b9d8ab5b2137a23531d88ed30fce8f14b2fa55341a6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_4096w.webp",
+      "sha256": "dd8d4ba5cb10b5c1122f7831f49a5d6b14d5d95394a9d6f6952d88e222770665",
+      "bytes": 45128,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_4096w.webp",
+      "sourceSha256": "dd8d4ba5cb10b5c1122f7831f49a5d6b14d5d95394a9d6f6952d88e222770665",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_512w.webp",
+      "sha256": "300d58c39d855f45a525f6c325999ef9261ff61d05c69c1cfb4e4a6cdd2dfab7",
+      "bytes": 5068,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_padded_512w.webp",
+      "sourceSha256": "300d58c39d855f45a525f6c325999ef9261ff61d05c69c1cfb4e4a6cdd2dfab7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_1024w.webp",
+      "sha256": "0ac3aef5f0a1df9a32f5ca8ee56c23dc33bd1d2dfcbb4e43f8cb2ff3ebfceb15",
+      "bytes": 13006,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_1024w.webp",
+      "sourceSha256": "0ac3aef5f0a1df9a32f5ca8ee56c23dc33bd1d2dfcbb4e43f8cb2ff3ebfceb15",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_2048w.webp",
+      "sha256": "f8f40075fb4e826c8dd86cfc26ea20bb182de347d69c6149d11a242bb4888a7b",
+      "bytes": 26604,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_2048w.webp",
+      "sourceSha256": "f8f40075fb4e826c8dd86cfc26ea20bb182de347d69c6149d11a242bb4888a7b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_256w.webp",
+      "sha256": "730434eca0f8515fb0683858f78ff93040459b85f1365d3f2ba134b6b927dfe3",
+      "bytes": 3188,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_256w.webp",
+      "sourceSha256": "730434eca0f8515fb0683858f78ff93040459b85f1365d3f2ba134b6b927dfe3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_4096w.webp",
+      "sha256": "e741a45c098f98a9afbd8193ecbdd9519af1330bb1f4221dc9f1a0a6e54e05bc",
+      "bytes": 54438,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_4096w.webp",
+      "sourceSha256": "e741a45c098f98a9afbd8193ecbdd9519af1330bb1f4221dc9f1a0a6e54e05bc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_512w.webp",
+      "sha256": "61d2ee32b2c3cf89a989ba7a31249d83bf70d93bc8a72ad8ef9fe3ae87119f3d",
+      "bytes": 6296,
+      "source": "01_logo/webp/nora_logo-horizontal-short_fullcolor_on-light_tight_512w.webp",
+      "sourceSha256": "61d2ee32b2c3cf89a989ba7a31249d83bf70d93bc8a72ad8ef9fe3ae87119f3d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_1024w.webp",
+      "sha256": "f7c0daa80fa2d031afa6e5c40d23dc95dd3d8a124f95971cc9f940b75e1da152",
+      "bytes": 10460,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_1024w.webp",
+      "sourceSha256": "f7c0daa80fa2d031afa6e5c40d23dc95dd3d8a124f95971cc9f940b75e1da152",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_2048w.webp",
+      "sha256": "df14dff5273064319213f08d03dd255de1b68cb10e90faa9bfe870acef4ac431",
+      "bytes": 21574,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_2048w.webp",
+      "sourceSha256": "df14dff5273064319213f08d03dd255de1b68cb10e90faa9bfe870acef4ac431",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_256w.webp",
+      "sha256": "5c4b5d50350ad26a68589b9d8ab5b2137a23531d88ed30fce8f14b2fa55341a6",
+      "bytes": 2528,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_256w.webp",
+      "sourceSha256": "5c4b5d50350ad26a68589b9d8ab5b2137a23531d88ed30fce8f14b2fa55341a6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_4096w.webp",
+      "sha256": "dd8d4ba5cb10b5c1122f7831f49a5d6b14d5d95394a9d6f6952d88e222770665",
+      "bytes": 45128,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_4096w.webp",
+      "sourceSha256": "dd8d4ba5cb10b5c1122f7831f49a5d6b14d5d95394a9d6f6952d88e222770665",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_512w.webp",
+      "sha256": "300d58c39d855f45a525f6c325999ef9261ff61d05c69c1cfb4e4a6cdd2dfab7",
+      "bytes": 5068,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_padded_512w.webp",
+      "sourceSha256": "300d58c39d855f45a525f6c325999ef9261ff61d05c69c1cfb4e4a6cdd2dfab7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_1024w.webp",
+      "sha256": "0ac3aef5f0a1df9a32f5ca8ee56c23dc33bd1d2dfcbb4e43f8cb2ff3ebfceb15",
+      "bytes": 13006,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_1024w.webp",
+      "sourceSha256": "0ac3aef5f0a1df9a32f5ca8ee56c23dc33bd1d2dfcbb4e43f8cb2ff3ebfceb15",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_2048w.webp",
+      "sha256": "f8f40075fb4e826c8dd86cfc26ea20bb182de347d69c6149d11a242bb4888a7b",
+      "bytes": 26604,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_2048w.webp",
+      "sourceSha256": "f8f40075fb4e826c8dd86cfc26ea20bb182de347d69c6149d11a242bb4888a7b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_256w.webp",
+      "sha256": "730434eca0f8515fb0683858f78ff93040459b85f1365d3f2ba134b6b927dfe3",
+      "bytes": 3188,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_256w.webp",
+      "sourceSha256": "730434eca0f8515fb0683858f78ff93040459b85f1365d3f2ba134b6b927dfe3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_4096w.webp",
+      "sha256": "e741a45c098f98a9afbd8193ecbdd9519af1330bb1f4221dc9f1a0a6e54e05bc",
+      "bytes": 54438,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_4096w.webp",
+      "sourceSha256": "e741a45c098f98a9afbd8193ecbdd9519af1330bb1f4221dc9f1a0a6e54e05bc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_512w.webp",
+      "sha256": "61d2ee32b2c3cf89a989ba7a31249d83bf70d93bc8a72ad8ef9fe3ae87119f3d",
+      "bytes": 6296,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-black_on-light_tight_512w.webp",
+      "sourceSha256": "61d2ee32b2c3cf89a989ba7a31249d83bf70d93bc8a72ad8ef9fe3ae87119f3d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_1024w.webp",
+      "sha256": "5a2768e518b0a569a4158418ccb087582e8f359e2b83ef54ae3daf66d40f5255",
+      "bytes": 10466,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_1024w.webp",
+      "sourceSha256": "5a2768e518b0a569a4158418ccb087582e8f359e2b83ef54ae3daf66d40f5255",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_2048w.webp",
+      "sha256": "7455fdb4867e3df61746b3a84976d867eefef82569a49a2f4a507b81412e7c7f",
+      "bytes": 21580,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_2048w.webp",
+      "sourceSha256": "7455fdb4867e3df61746b3a84976d867eefef82569a49a2f4a507b81412e7c7f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_256w.webp",
+      "sha256": "6e16b5933e6353dbf6d03768d85dc2aade99fcb33660b03e5822672d42faa8b9",
+      "bytes": 2478,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_256w.webp",
+      "sourceSha256": "6e16b5933e6353dbf6d03768d85dc2aade99fcb33660b03e5822672d42faa8b9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_4096w.webp",
+      "sha256": "2654eec9589b77b0223428e96fc79012e390d04ed469453f40508da1f745dc84",
+      "bytes": 45134,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_4096w.webp",
+      "sourceSha256": "2654eec9589b77b0223428e96fc79012e390d04ed469453f40508da1f745dc84",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_512w.webp",
+      "sha256": "5486e055e4be7e5a893cfd46c4979989a6734f44fd3c60d5753dc3f4bce4ff7b",
+      "bytes": 5074,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_padded_512w.webp",
+      "sourceSha256": "5486e055e4be7e5a893cfd46c4979989a6734f44fd3c60d5753dc3f4bce4ff7b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_1024w.webp",
+      "sha256": "a5a789efbd97ef797658a053f7d8fd9c05eebef413f4cece47512b280ff1bd33",
+      "bytes": 13010,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_1024w.webp",
+      "sourceSha256": "a5a789efbd97ef797658a053f7d8fd9c05eebef413f4cece47512b280ff1bd33",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_2048w.webp",
+      "sha256": "0c214102e4db03c7433b666f280fcf48b1a89f1d249c9791fcdf357f9a4380ba",
+      "bytes": 26608,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_2048w.webp",
+      "sourceSha256": "0c214102e4db03c7433b666f280fcf48b1a89f1d249c9791fcdf357f9a4380ba",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_256w.webp",
+      "sha256": "fdfd78ff8044ae178899b47406c79896fb9755818298204c3286ed732c60ab83",
+      "bytes": 3094,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_256w.webp",
+      "sourceSha256": "fdfd78ff8044ae178899b47406c79896fb9755818298204c3286ed732c60ab83",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_4096w.webp",
+      "sha256": "b9d81083f79c312b4f160f253a4323daacd7adb707378101b960d492c50d188d",
+      "bytes": 54444,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_4096w.webp",
+      "sourceSha256": "b9d81083f79c312b4f160f253a4323daacd7adb707378101b960d492c50d188d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_512w.webp",
+      "sha256": "6cc7640563d07378f070ac7cb5eba381c0963763ac415655b71fe40dc4ad90e0",
+      "bytes": 6300,
+      "source": "01_logo/webp/nora_logo-horizontal-short_mono-white_on-dark_tight_512w.webp",
+      "sourceSha256": "6cc7640563d07378f070ac7cb5eba381c0963763ac415655b71fe40dc4ad90e0",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_1024w.webp",
+      "sha256": "a3a77bdbd9758ea94cece0fdfa4e2b6a9f0053e089c28f217c7d3b3dd15c2c09",
+      "bytes": 10248,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_1024w.webp",
+      "sourceSha256": "a3a77bdbd9758ea94cece0fdfa4e2b6a9f0053e089c28f217c7d3b3dd15c2c09",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_2048w.webp",
+      "sha256": "c05d3c5d6c33789cc035e71f87ac0d517b709ac5566ffa866645450889af1bed",
+      "bytes": 20014,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_2048w.webp",
+      "sourceSha256": "c05d3c5d6c33789cc035e71f87ac0d517b709ac5566ffa866645450889af1bed",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_256w.webp",
+      "sha256": "09e42b6561662f3dc7e24aa570bedeba0f9f61699420586f139c2aed8eddb00f",
+      "bytes": 2956,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_256w.webp",
+      "sourceSha256": "09e42b6561662f3dc7e24aa570bedeba0f9f61699420586f139c2aed8eddb00f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_4096w.webp",
+      "sha256": "97fcc5d1b9e0a40ff111a014efeb4b47616cf231fa3f3565e78ce98574129f6f",
+      "bytes": 38614,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_4096w.webp",
+      "sourceSha256": "97fcc5d1b9e0a40ff111a014efeb4b47616cf231fa3f3565e78ce98574129f6f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_512w.webp",
+      "sha256": "ff5699fe0913df0057eee2fecdbcc7560bef371aa138f716f175fe05b0a5c5f6",
+      "bytes": 5468,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_padded_512w.webp",
+      "sourceSha256": "ff5699fe0913df0057eee2fecdbcc7560bef371aa138f716f175fe05b0a5c5f6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_1024w.webp",
+      "sha256": "1ba5d57088066e872b9d96be011ccaa46c706b3026b04f53be1bd6b0ee32b030",
+      "bytes": 12382,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_1024w.webp",
+      "sourceSha256": "1ba5d57088066e872b9d96be011ccaa46c706b3026b04f53be1bd6b0ee32b030",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_2048w.webp",
+      "sha256": "822199eeedb4d1f95c487012910f16e485e9733c270d82a8556ec33db7c4e5c2",
+      "bytes": 24186,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_2048w.webp",
+      "sourceSha256": "822199eeedb4d1f95c487012910f16e485e9733c270d82a8556ec33db7c4e5c2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_256w.webp",
+      "sha256": "506b2761725db35b923d428176f761d93e2183e807d2f16c616fba262e88a7dc",
+      "bytes": 3612,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_256w.webp",
+      "sourceSha256": "506b2761725db35b923d428176f761d93e2183e807d2f16c616fba262e88a7dc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_4096w.webp",
+      "sha256": "b6f92c9b23d86bdc1a0e317034ccaaf05c5661075dbcadb9a91c1120aee6a4dd",
+      "bytes": 46192,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_4096w.webp",
+      "sourceSha256": "b6f92c9b23d86bdc1a0e317034ccaaf05c5661075dbcadb9a91c1120aee6a4dd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_512w.webp",
+      "sha256": "09b9c1ed2d39ddb5a74eb6f0904060d6af33fe7028a5a9147cfc7831857061a6",
+      "bytes": 6744,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-dark_tight_512w.webp",
+      "sourceSha256": "09b9c1ed2d39ddb5a74eb6f0904060d6af33fe7028a5a9147cfc7831857061a6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_1024w.webp",
+      "sha256": "812857fc979487d5852887ed810ff126cca54153108a592f96fdb574a26aa698",
+      "bytes": 9886,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_1024w.webp",
+      "sourceSha256": "812857fc979487d5852887ed810ff126cca54153108a592f96fdb574a26aa698",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_2048w.webp",
+      "sha256": "686708e32be2259b9e0d511661b879e0d69d94c56523cc0c1e8af540a6e5d80d",
+      "bytes": 19058,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_2048w.webp",
+      "sourceSha256": "686708e32be2259b9e0d511661b879e0d69d94c56523cc0c1e8af540a6e5d80d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_256w.webp",
+      "sha256": "49260b4469bf359887705ded27532a7348551a5a1375bc3fbee3a8c521d6c6ae",
+      "bytes": 2936,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_256w.webp",
+      "sourceSha256": "49260b4469bf359887705ded27532a7348551a5a1375bc3fbee3a8c521d6c6ae",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_4096w.webp",
+      "sha256": "26126f034fe472f4165cb3cd2a5bd7c1deb3cc8299becbf9cffb4f7c57f11ad3",
+      "bytes": 37132,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_4096w.webp",
+      "sourceSha256": "26126f034fe472f4165cb3cd2a5bd7c1deb3cc8299becbf9cffb4f7c57f11ad3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_512w.webp",
+      "sha256": "42b7afdc3fa3bc9054fad2e5b52fd10450060e30e0cab7483175b2a796213cd9",
+      "bytes": 5328,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_padded_512w.webp",
+      "sourceSha256": "42b7afdc3fa3bc9054fad2e5b52fd10450060e30e0cab7483175b2a796213cd9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_1024w.webp",
+      "sha256": "c88c14742021b085a8925c04af1e8240c17de795e9ae0d8c60f9c5c22fef1292",
+      "bytes": 11890,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_1024w.webp",
+      "sourceSha256": "c88c14742021b085a8925c04af1e8240c17de795e9ae0d8c60f9c5c22fef1292",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_2048w.webp",
+      "sha256": "7db9824a070dfd172f80dfd77832c2be9ca6c577d9c0ac7ff37e7bfd9811d3fd",
+      "bytes": 22706,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_2048w.webp",
+      "sourceSha256": "7db9824a070dfd172f80dfd77832c2be9ca6c577d9c0ac7ff37e7bfd9811d3fd",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_256w.webp",
+      "sha256": "e02ae9ac6c5173eef05ccb5e432fe46284a634e4b687af3cda488c66d6c75ce7",
+      "bytes": 3422,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_256w.webp",
+      "sourceSha256": "e02ae9ac6c5173eef05ccb5e432fe46284a634e4b687af3cda488c66d6c75ce7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_4096w.webp",
+      "sha256": "d848536bb83c1d5b4307c493ec9ccf1919f0c983790a76b5bb1fd309fc212da7",
+      "bytes": 44660,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_4096w.webp",
+      "sourceSha256": "d848536bb83c1d5b4307c493ec9ccf1919f0c983790a76b5bb1fd309fc212da7",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_512w.webp",
+      "sha256": "262d5dddc887b069d841df2dd1c1318fac5180dc6a7c3fdc280761ed0c05c6bf",
+      "bytes": 6426,
+      "source": "01_logo/webp/nora_logo-horizontal_fullcolor_on-light_tight_512w.webp",
+      "sourceSha256": "262d5dddc887b069d841df2dd1c1318fac5180dc6a7c3fdc280761ed0c05c6bf",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_padded_1024w.webp",
+      "sha256": "8e83a69bbb033ce25b7c24e405f73e791b82879f78db96454705e39f1c6c0ab8",
+      "bytes": 7932,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_padded_1024w.webp",
+      "sourceSha256": "8e83a69bbb033ce25b7c24e405f73e791b82879f78db96454705e39f1c6c0ab8",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_padded_2048w.webp",
+      "sha256": "59c5ce3093249a39a1fcae00a4a758c96796255752d811978d8ba47aa3eaebb3",
+      "bytes": 16238,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_padded_2048w.webp",
+      "sourceSha256": "59c5ce3093249a39a1fcae00a4a758c96796255752d811978d8ba47aa3eaebb3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_padded_256w.webp",
+      "sha256": "94bbf537d595dab2ad5d6cc186fd38c361593913db0991d492c24af71ac879a0",
+      "bytes": 2016,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_padded_256w.webp",
+      "sourceSha256": "94bbf537d595dab2ad5d6cc186fd38c361593913db0991d492c24af71ac879a0",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_padded_4096w.webp",
+      "sha256": "837e70c55251b7356c9c62358ba2664d981f124d91ae02d16fe236504d19a034",
+      "bytes": 33604,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_padded_4096w.webp",
+      "sourceSha256": "837e70c55251b7356c9c62358ba2664d981f124d91ae02d16fe236504d19a034",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_padded_512w.webp",
+      "sha256": "5ca36f1d20a5487b1c1aa2ccb507c5ac5fb73ce93a57aee859f06a146dd9aad2",
+      "bytes": 3906,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_padded_512w.webp",
+      "sourceSha256": "5ca36f1d20a5487b1c1aa2ccb507c5ac5fb73ce93a57aee859f06a146dd9aad2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_tight_1024w.webp",
+      "sha256": "2312830a3155d1f8dc5ef907011d3e30f44790e69c155bf278749df4ef25bc05",
+      "bytes": 9672,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_tight_1024w.webp",
+      "sourceSha256": "2312830a3155d1f8dc5ef907011d3e30f44790e69c155bf278749df4ef25bc05",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_tight_2048w.webp",
+      "sha256": "8a30466d74fdf868e39e23846f438d1c6d74286729972d070df5cfa5f23d6d9d",
+      "bytes": 19876,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_tight_2048w.webp",
+      "sourceSha256": "8a30466d74fdf868e39e23846f438d1c6d74286729972d070df5cfa5f23d6d9d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_tight_256w.webp",
+      "sha256": "1ac6d44bbdce67a9fe658f96e37e895c5ca0c3c054f3c689249a7fd04578cf60",
+      "bytes": 2518,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_tight_256w.webp",
+      "sourceSha256": "1ac6d44bbdce67a9fe658f96e37e895c5ca0c3c054f3c689249a7fd04578cf60",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_tight_4096w.webp",
+      "sha256": "cc2c655b03a22ae9c9207c68ab79a50219f501047ac81211d6c737d23a1b3b37",
+      "bytes": 40462,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_tight_4096w.webp",
+      "sourceSha256": "cc2c655b03a22ae9c9207c68ab79a50219f501047ac81211d6c737d23a1b3b37",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-black_on-light_tight_512w.webp",
+      "sha256": "7ab1a1e7220de35477f8477ba54645308bd571c3118f927c2b4199a6afa77efc",
+      "bytes": 4846,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-black_on-light_tight_512w.webp",
+      "sourceSha256": "7ab1a1e7220de35477f8477ba54645308bd571c3118f927c2b4199a6afa77efc",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_1024w.webp",
+      "sha256": "8be4e76be752f4033144778034f4994e5fe2388c288c4c8370c18c5bc1661ac6",
+      "bytes": 7938,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_1024w.webp",
+      "sourceSha256": "8be4e76be752f4033144778034f4994e5fe2388c288c4c8370c18c5bc1661ac6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_2048w.webp",
+      "sha256": "4f6202dc456bb7775662228d58e1aff7ddb149341e6f936757434b259c6031f2",
+      "bytes": 16242,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_2048w.webp",
+      "sourceSha256": "4f6202dc456bb7775662228d58e1aff7ddb149341e6f936757434b259c6031f2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_256w.webp",
+      "sha256": "99e8f873a6b13bf7c9e4826aa7ffdc9ebaca883635b3d77c72c081d5e8bc8e8b",
+      "bytes": 1906,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_256w.webp",
+      "sourceSha256": "99e8f873a6b13bf7c9e4826aa7ffdc9ebaca883635b3d77c72c081d5e8bc8e8b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_4096w.webp",
+      "sha256": "42ea3abb4ae4dab51c6cf4c3f7bec93866b4b987ecd2b3786891f07809c55a4d",
+      "bytes": 33608,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_4096w.webp",
+      "sourceSha256": "42ea3abb4ae4dab51c6cf4c3f7bec93866b4b987ecd2b3786891f07809c55a4d",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_512w.webp",
+      "sha256": "03aa655a340b2190c6d45f9e2f37c5e61dc3ac08c4c2ac975c1ea9e503bf85fb",
+      "bytes": 3912,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_padded_512w.webp",
+      "sourceSha256": "03aa655a340b2190c6d45f9e2f37c5e61dc3ac08c4c2ac975c1ea9e503bf85fb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_1024w.webp",
+      "sha256": "a5cbdc8d7dd109fe4006c5488274ec3269bc2f19c8a14263c8a32f36f5adafad",
+      "bytes": 9678,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_1024w.webp",
+      "sourceSha256": "a5cbdc8d7dd109fe4006c5488274ec3269bc2f19c8a14263c8a32f36f5adafad",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_2048w.webp",
+      "sha256": "87046d132fbea613fab9f542082b1a82ec1921adf07036c2c1ce0bf6106a094b",
+      "bytes": 19882,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_2048w.webp",
+      "sourceSha256": "87046d132fbea613fab9f542082b1a82ec1921adf07036c2c1ce0bf6106a094b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_256w.webp",
+      "sha256": "9f04044bba467261636d1b2b6ad438248c73d9b92cd29ffb1854dc0ef0b02519",
+      "bytes": 2388,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_256w.webp",
+      "sourceSha256": "9f04044bba467261636d1b2b6ad438248c73d9b92cd29ffb1854dc0ef0b02519",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_4096w.webp",
+      "sha256": "aa1d8167e81138464ba787cef1f470a1ec3fc7d5c79937a208f3a572ed4d68f0",
+      "bytes": 40468,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_4096w.webp",
+      "sourceSha256": "aa1d8167e81138464ba787cef1f470a1ec3fc7d5c79937a208f3a572ed4d68f0",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_512w.webp",
+      "sha256": "b30efe72ece52ef793c748d8bb01ebbc1d4ac051565417f7bf8cc688d650645e",
+      "bytes": 4852,
+      "source": "01_logo/webp/nora_logo-horizontal_mono-white_on-dark_tight_512w.webp",
+      "sourceSha256": "b30efe72ece52ef793c748d8bb01ebbc1d4ac051565417f7bf8cc688d650645e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_1024w.webp",
+      "sha256": "415348ee16a3f62d6a7b1598ce90396657fe7bd120ce65106c5ae2af963d3e00",
+      "bytes": 18968,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_1024w.webp",
+      "sourceSha256": "415348ee16a3f62d6a7b1598ce90396657fe7bd120ce65106c5ae2af963d3e00",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_2048w.webp",
+      "sha256": "afa13fa34008032b6f7983dee3d46f23959c61ff678c29097c90defeb0fbb151",
+      "bytes": 37232,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_2048w.webp",
+      "sourceSha256": "afa13fa34008032b6f7983dee3d46f23959c61ff678c29097c90defeb0fbb151",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_256w.webp",
+      "sha256": "933332c6071cfcf546363e735e9a549ce8eac37c9619fa9e209a800bb88d9213",
+      "bytes": 4666,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_256w.webp",
+      "sourceSha256": "933332c6071cfcf546363e735e9a549ce8eac37c9619fa9e209a800bb88d9213",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_4096w.webp",
+      "sha256": "5737068f20ae8b5851dcd604ea94bfee30a53dc9175d92bdbeee99c062e3ff2f",
+      "bytes": 74470,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_4096w.webp",
+      "sourceSha256": "5737068f20ae8b5851dcd604ea94bfee30a53dc9175d92bdbeee99c062e3ff2f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_512w.webp",
+      "sha256": "1a898f448a883f58f5d3a836a8bc14e3628a242dea57b4736f867c2ac21ca37a",
+      "bytes": 9276,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_padded_512w.webp",
+      "sourceSha256": "1a898f448a883f58f5d3a836a8bc14e3628a242dea57b4736f867c2ac21ca37a",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_1024w.webp",
+      "sha256": "34212ea3f6ff31a055834f76de1fb1797360403e9d94a4061450f8e60cb55410",
+      "bytes": 23492,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_1024w.webp",
+      "sourceSha256": "34212ea3f6ff31a055834f76de1fb1797360403e9d94a4061450f8e60cb55410",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_2048w.webp",
+      "sha256": "7eedf68b31850e509753180fbf98294cd929758812c5ba891f9e0e9e28290e8e",
+      "bytes": 45512,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_2048w.webp",
+      "sourceSha256": "7eedf68b31850e509753180fbf98294cd929758812c5ba891f9e0e9e28290e8e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_256w.webp",
+      "sha256": "dbfa9e3b80b6c11fe53b8b465c8685cb777817f8e0ecdaf1bf1f8c481ba62c30",
+      "bytes": 5722,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_256w.webp",
+      "sourceSha256": "dbfa9e3b80b6c11fe53b8b465c8685cb777817f8e0ecdaf1bf1f8c481ba62c30",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_4096w.webp",
+      "sha256": "e4a3af158a3e87b9ba2c3961853589c19b02cdcfc12ee74cf49df3c057db1858",
+      "bytes": 90446,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_4096w.webp",
+      "sourceSha256": "e4a3af158a3e87b9ba2c3961853589c19b02cdcfc12ee74cf49df3c057db1858",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_512w.webp",
+      "sha256": "9a5e49b060044ed729435c431d1d9ab2cea1b615d6d9683e3db267b2e52f96b4",
+      "bytes": 11510,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-dark_tight_512w.webp",
+      "sourceSha256": "9a5e49b060044ed729435c431d1d9ab2cea1b615d6d9683e3db267b2e52f96b4",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_padded_1024w.webp",
+      "sha256": "61c5e8bb19506877c415598f153dae1f8d69f97fdcaecf82add29a75f701353b",
+      "bytes": 18678,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_padded_1024w.webp",
+      "sourceSha256": "61c5e8bb19506877c415598f153dae1f8d69f97fdcaecf82add29a75f701353b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_padded_2048w.webp",
+      "sha256": "e04db9b9b59b09fb2df6d5b3a7060e0bab4f03eecd2d518ff19f4dd71423aadb",
+      "bytes": 36944,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_padded_2048w.webp",
+      "sourceSha256": "e04db9b9b59b09fb2df6d5b3a7060e0bab4f03eecd2d518ff19f4dd71423aadb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_padded_256w.webp",
+      "sha256": "e8a0e794802ee7edf639a97ace86a02b706eda08fb1a9def273ce24d0d50b89c",
+      "bytes": 4378,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_padded_256w.webp",
+      "sourceSha256": "e8a0e794802ee7edf639a97ace86a02b706eda08fb1a9def273ce24d0d50b89c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_padded_4096w.webp",
+      "sha256": "ce2fda95c9c4bb397f724227a37dfb3f07922361b50dbf2cf572fad307f9aa19",
+      "bytes": 73952,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_padded_4096w.webp",
+      "sourceSha256": "ce2fda95c9c4bb397f724227a37dfb3f07922361b50dbf2cf572fad307f9aa19",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_padded_512w.webp",
+      "sha256": "5745690fc36e60420a3c5f35f73d2094189a435ef99fd32e6ae3d6c1388617ba",
+      "bytes": 8986,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_padded_512w.webp",
+      "sourceSha256": "5745690fc36e60420a3c5f35f73d2094189a435ef99fd32e6ae3d6c1388617ba",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_tight_1024w.webp",
+      "sha256": "36ca09217fea19afe44dcdcb658857e71d92cb9823569a31e72c5af13e9e6042",
+      "bytes": 23198,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_tight_1024w.webp",
+      "sourceSha256": "36ca09217fea19afe44dcdcb658857e71d92cb9823569a31e72c5af13e9e6042",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_tight_2048w.webp",
+      "sha256": "402e8f38a307bda9f9731be3daca77f1b0f203675c900190f708ff680366f2ed",
+      "bytes": 45212,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_tight_2048w.webp",
+      "sourceSha256": "402e8f38a307bda9f9731be3daca77f1b0f203675c900190f708ff680366f2ed",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_tight_256w.webp",
+      "sha256": "b25df18c9f8511ecb61456d341ad47b36051cfbbf456926793e885733c78b520",
+      "bytes": 5432,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_tight_256w.webp",
+      "sourceSha256": "b25df18c9f8511ecb61456d341ad47b36051cfbbf456926793e885733c78b520",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_tight_4096w.webp",
+      "sha256": "09454d4187c4757557b722e92ffc8e71c4fa0b1c87b7d9adfa791a8585357764",
+      "bytes": 90260,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_tight_4096w.webp",
+      "sourceSha256": "09454d4187c4757557b722e92ffc8e71c4fa0b1c87b7d9adfa791a8585357764",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_fullcolor_on-light_tight_512w.webp",
+      "sha256": "b9047207ec2f60742af80631e1fa0ca61eb210852184cd78bcb8a85ed92a06e3",
+      "bytes": 11226,
+      "source": "01_logo/webp/nora_logo-symbol_fullcolor_on-light_tight_512w.webp",
+      "sourceSha256": "b9047207ec2f60742af80631e1fa0ca61eb210852184cd78bcb8a85ed92a06e3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_padded_1024w.webp",
+      "sha256": "61c5e8bb19506877c415598f153dae1f8d69f97fdcaecf82add29a75f701353b",
+      "bytes": 18678,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_padded_1024w.webp",
+      "sourceSha256": "61c5e8bb19506877c415598f153dae1f8d69f97fdcaecf82add29a75f701353b",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_padded_2048w.webp",
+      "sha256": "e04db9b9b59b09fb2df6d5b3a7060e0bab4f03eecd2d518ff19f4dd71423aadb",
+      "bytes": 36944,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_padded_2048w.webp",
+      "sourceSha256": "e04db9b9b59b09fb2df6d5b3a7060e0bab4f03eecd2d518ff19f4dd71423aadb",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_padded_256w.webp",
+      "sha256": "e8a0e794802ee7edf639a97ace86a02b706eda08fb1a9def273ce24d0d50b89c",
+      "bytes": 4378,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_padded_256w.webp",
+      "sourceSha256": "e8a0e794802ee7edf639a97ace86a02b706eda08fb1a9def273ce24d0d50b89c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_padded_4096w.webp",
+      "sha256": "ce2fda95c9c4bb397f724227a37dfb3f07922361b50dbf2cf572fad307f9aa19",
+      "bytes": 73952,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_padded_4096w.webp",
+      "sourceSha256": "ce2fda95c9c4bb397f724227a37dfb3f07922361b50dbf2cf572fad307f9aa19",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_padded_512w.webp",
+      "sha256": "5745690fc36e60420a3c5f35f73d2094189a435ef99fd32e6ae3d6c1388617ba",
+      "bytes": 8986,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_padded_512w.webp",
+      "sourceSha256": "5745690fc36e60420a3c5f35f73d2094189a435ef99fd32e6ae3d6c1388617ba",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_tight_1024w.webp",
+      "sha256": "36ca09217fea19afe44dcdcb658857e71d92cb9823569a31e72c5af13e9e6042",
+      "bytes": 23198,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_tight_1024w.webp",
+      "sourceSha256": "36ca09217fea19afe44dcdcb658857e71d92cb9823569a31e72c5af13e9e6042",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_tight_2048w.webp",
+      "sha256": "402e8f38a307bda9f9731be3daca77f1b0f203675c900190f708ff680366f2ed",
+      "bytes": 45212,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_tight_2048w.webp",
+      "sourceSha256": "402e8f38a307bda9f9731be3daca77f1b0f203675c900190f708ff680366f2ed",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_tight_256w.webp",
+      "sha256": "b25df18c9f8511ecb61456d341ad47b36051cfbbf456926793e885733c78b520",
+      "bytes": 5432,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_tight_256w.webp",
+      "sourceSha256": "b25df18c9f8511ecb61456d341ad47b36051cfbbf456926793e885733c78b520",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_tight_4096w.webp",
+      "sha256": "09454d4187c4757557b722e92ffc8e71c4fa0b1c87b7d9adfa791a8585357764",
+      "bytes": 90260,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_tight_4096w.webp",
+      "sourceSha256": "09454d4187c4757557b722e92ffc8e71c4fa0b1c87b7d9adfa791a8585357764",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-black_on-light_tight_512w.webp",
+      "sha256": "b9047207ec2f60742af80631e1fa0ca61eb210852184cd78bcb8a85ed92a06e3",
+      "bytes": 11226,
+      "source": "01_logo/webp/nora_logo-symbol_mono-black_on-light_tight_512w.webp",
+      "sourceSha256": "b9047207ec2f60742af80631e1fa0ca61eb210852184cd78bcb8a85ed92a06e3",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_padded_1024w.webp",
+      "sha256": "05812db2bee1fff83f226330da13266f738810e9dacfe4605aa33d177909b03c",
+      "bytes": 18684,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_padded_1024w.webp",
+      "sourceSha256": "05812db2bee1fff83f226330da13266f738810e9dacfe4605aa33d177909b03c",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_padded_2048w.webp",
+      "sha256": "74198241957ca2fe51102d46ce1a6a1b811cc02da6024a05d2af4374ae8d2e5e",
+      "bytes": 36948,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_padded_2048w.webp",
+      "sourceSha256": "74198241957ca2fe51102d46ce1a6a1b811cc02da6024a05d2af4374ae8d2e5e",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_padded_256w.webp",
+      "sha256": "1a114ba927520dbb57c0f149e7ae4381c1c6dbc387ac31f2d12952befb26d60f",
+      "bytes": 4384,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_padded_256w.webp",
+      "sourceSha256": "1a114ba927520dbb57c0f149e7ae4381c1c6dbc387ac31f2d12952befb26d60f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_padded_4096w.webp",
+      "sha256": "d2143510e265ef29c5660dcc75435fa69f2a1a60c130438b44cdd1fdd5d765e5",
+      "bytes": 73958,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_padded_4096w.webp",
+      "sourceSha256": "d2143510e265ef29c5660dcc75435fa69f2a1a60c130438b44cdd1fdd5d765e5",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_padded_512w.webp",
+      "sha256": "74f47d13fcfcd33e795b71d616092f1d00ad4a6618d051bd884e6b95396bb3e9",
+      "bytes": 8990,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_padded_512w.webp",
+      "sourceSha256": "74f47d13fcfcd33e795b71d616092f1d00ad4a6618d051bd884e6b95396bb3e9",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_tight_1024w.webp",
+      "sha256": "20b0761d0026b75c47ac36913c05d98f4bf8f20c94efc8eea78cedd665577de6",
+      "bytes": 23204,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_tight_1024w.webp",
+      "sourceSha256": "20b0761d0026b75c47ac36913c05d98f4bf8f20c94efc8eea78cedd665577de6",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_tight_2048w.webp",
+      "sha256": "dde131338d036c3f453ab940d5652109aab7640cf9edaf855c6f86086da9efb2",
+      "bytes": 45216,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_tight_2048w.webp",
+      "sourceSha256": "dde131338d036c3f453ab940d5652109aab7640cf9edaf855c6f86086da9efb2",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_tight_256w.webp",
+      "sha256": "41154e1b13dec9318d4abe10988bddfe698a3e6e75e1e617c47b74badc3db087",
+      "bytes": 5436,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_tight_256w.webp",
+      "sourceSha256": "41154e1b13dec9318d4abe10988bddfe698a3e6e75e1e617c47b74badc3db087",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_tight_4096w.webp",
+      "sha256": "e0ba883d613cb724a62171b88e1d16b980a0c8251d3b21393a8f5f0f81b70f9f",
+      "bytes": 90264,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_tight_4096w.webp",
+      "sourceSha256": "e0ba883d613cb724a62171b88e1d16b980a0c8251d3b21393a8f5f0f81b70f9f",
+      "method": "byte-for-byte"
+    },
+    {
+      "path": "logo/webp/nora_logo-symbol_mono-white_on-dark_tight_512w.webp",
+      "sha256": "83c8c9549ed2dab97583aabe61501ce8a41afb28831dd9802d393ed7cb0bb431",
+      "bytes": 11230,
+      "source": "01_logo/webp/nora_logo-symbol_mono-white_on-dark_tight_512w.webp",
+      "sourceSha256": "83c8c9549ed2dab97583aabe61501ce8a41afb28831dd9802d393ed7cb0bb431",
+      "method": "byte-for-byte"
+    }
+  ]
+}
