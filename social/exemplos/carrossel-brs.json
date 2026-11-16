@@ -1,0 +1,50 @@
+{
+  "comum": {
+    "formato": "feed",
+    "semente": "brs-quatro-redes"
+  },
+  "paginas": [
+    {
+      "layout": "titulo",
+      "tema": "verde",
+      "selo": "BRS",
+      "titulo": "O real brasileiro, *onchain.*",
+      "texto": "O que é o BRS, em três telas.",
+      "arte": "brs"
+    },
+    {
+      "layout": "numero",
+      "tema": "papel",
+      "selo": "Lastro",
+      "numero": "R$ 1",
+      "titulo": "em reserva para cada BRS emitido.",
+      "texto": "Resgate 1:1 em reais, por Pix."
+    },
+    {
+      "layout": "lista",
+      "tema": "papel",
+      "selo": "Onde",
+      "titulo": "No ar em *quatro redes.*",
+      "itens": [
+        {
+          "titulo": "Solana"
+        },
+        {
+          "titulo": "Ethereum"
+        },
+        {
+          "titulo": "Base"
+        },
+        {
+          "titulo": "Polygon"
+        }
+      ]
+    },
+    {
+      "layout": "titulo",
+      "tema": "verde",
+      "titulo": "Construa com o BRS.\n*Fale com a Nora.*",
+      "chamada": "nora.finance"
+    }
+  ]
+}

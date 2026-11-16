@@ -11,4 +11,10 @@ module.exports = {
   'white': '#FFFFFF',
   'signal': '#FF5F38',
   'lime-deep': '#8FB52E',
+  'green': '#003C2F',
+  'green-light': '#00463A',
+  'green-deep': '#002A21',
+  'lime-bright': '#E3FF63',
+  'stone': '#4A4740',
+  'sage': '#C9D7D0',
 };

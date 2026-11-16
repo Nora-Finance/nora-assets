@@ -19,19 +19,19 @@
     },
     {
       "path": "colors/palette.css",
-      "sha256": "40bb4ab624f2d95aa6fbe49a767496c43229615e439c5a8532f51de9490dd8af",
-      "bytes": 313,
+      "sha256": "2450972dc5521bfa2d599351eaac62c61febbf846513bd4ffb0538b7c32c0c11",
+      "bytes": 479,
       "source": "05_color/palette.css",
       "sourceSha256": "40bb4ab624f2d95aa6fbe49a767496c43229615e439c5a8532f51de9490dd8af",
-      "method": "byte-for-byte"
+      "method": "atualizado neste repositório em 2026-11-16 (tokens da linha atual do site)"
     },
     {
       "path": "colors/palette.scss",
-      "sha256": "cfa11f9ced373c97c89af835b1ae67c76a04e7c94177a735f965ce36d30ee252",
-      "bytes": 267,
+      "sha256": "e77e7c17e9a0505195babb54fe25e8627ed74b2701cfdf588f0d0d31d697fba9",
+      "bytes": 415,
       "source": "05_color/palette.scss",
       "sourceSha256": "cfa11f9ced373c97c89af835b1ae67c76a04e7c94177a735f965ce36d30ee252",
-      "method": "byte-for-byte"
+      "method": "atualizado neste repositório em 2026-11-16 (tokens da linha atual do site)"
     },
     {
       "path": "colors/swatches/index.html",
@@ -139,19 +139,19 @@
     },
     {
       "path": "colors/tailwind.colors.js",
-      "sha256": "90033eff8f0ac243affaa504c2ac8cb2baccfd67d58f9239698c0a9fdc7baeea",
-      "bytes": 289,
+      "sha256": "4613269127658bc1265921dad51748d5b0c9d83d221914b550cc111af743c7e3",
+      "bytes": 437,
       "source": "05_color/tailwind.colors.js",
       "sourceSha256": "90033eff8f0ac243affaa504c2ac8cb2baccfd67d58f9239698c0a9fdc7baeea",
-      "method": "byte-for-byte"
+      "method": "atualizado neste repositório em 2026-11-16 (tokens da linha atual do site)"
     },
     {
       "path": "colors/tokens.json",
-      "sha256": "7bbbc9f738d57ac9e9faf8ad63c18229b4142160ae03fb077f4f0b5cf29270cd",
-      "bytes": 5658,
+      "sha256": "a35f42242a83bba515912f6f040559db3af75644faf34bc4f1796b9ae845f8fd",
+      "bytes": 8532,
       "source": "05_color/tokens.json",
       "sourceSha256": "7bbbc9f738d57ac9e9faf8ad63c18229b4142160ae03fb077f4f0b5cf29270cd",
-      "method": "byte-for-byte"
+      "method": "atualizado neste repositório em 2026-11-16 (tokens da linha atual do site)"
     },
     {
       "path": "colors/wcag-contrast-matrix.csv",
