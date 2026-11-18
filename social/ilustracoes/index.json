@@ -1,0 +1,10 @@
+{
+  "brs-cofre": {"temas": ["papel", "lima"], "tema": "lastro guardado, segurança"},
+  "brs-celular": {"temas": ["papel", "verde", "lima"], "tema": "BRS no app, pagamento, carteira"},
+  "brs-lastro": {"temas": ["papel", "lima"], "tema": "reservas, lastro 1:1"},
+  "brs-pilhas": {"temas": ["papel", "lima"], "tema": "crescimento, volume, emissão"},
+  "brs-garantia": {"temas": ["verde"], "tema": "garantia, equilíbrio, paridade"},
+  "brs-cartao": {"temas": ["verde"], "tema": "cartão, gasto do dia a dia"},
+  "nora-simbolo-brs": {"temas": ["papel", "verde"], "tema": "Nora e BRS juntos, rede"},
+  "nora-simbolo-3d": {"temas": ["verde"], "tema": "institucional Nora"}
+}

@@ -1,0 +1,9 @@
+{
+  "formato": "feed",
+  "layout": "citacao",
+  "tema": "verde",
+  "selo": "Exemplo",
+  "citacao": "Frase de exemplo. *Troque pela fala real* de quem assina o post.",
+  "autor": "Nome Sobrenome",
+  "cargo": "Cargo, Empresa"
+}

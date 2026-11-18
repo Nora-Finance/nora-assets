@@ -1,0 +1,21 @@
+{
+  "formato": "feed",
+  "layout": "lista",
+  "tema": "papel",
+  "selo": "Por que BRS",
+  "titulo": "O BRS é o futuro *do real.*",
+  "itens": [
+    {
+      "titulo": "Disponível",
+      "texto": "No ar em Solana, Ethereum, Base e Polygon."
+    },
+    {
+      "titulo": "Acessível",
+      "texto": "Qualquer carteira Solana ou EVM guarda, envia e recebe BRS."
+    },
+    {
+      "titulo": "Rápido",
+      "texto": "Liquida em segundos, a qualquer hora de qualquer dia."
+    }
+  ]
+}
