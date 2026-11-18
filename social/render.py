@@ -333,7 +333,6 @@ def _interno(post, pagina, base):
         foto = base / post["foto"]
         # Embutida (data:) em vez de file:, para a página poder ler os pixels e aparar a sobra transparente.
         interno["_foto"] = f"data:image/{FOTOS[foto.suffix.lower()]};base64,{base64.b64encode(foto.read_bytes()).decode()}"
-        interno["_circulo"] = not _tem_alfa(foto)  # foto sem recorte entra num círculo
     if "parceiro" in post:
         interno["_parceiro"] = (base / post["parceiro"]).resolve().as_uri()
     return interno
