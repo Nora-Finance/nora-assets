@@ -6,10 +6,10 @@ peça, texto ou imagem da Nora. Se o que você lembra divergir do guia, vale o g
 
 ## Criar um post de rede social
 
-1. Escolha `formato`, `layout` e `tema` nas tabelas da seção Posts do guia e
-   escreva o texto conforme a seção Voz. Parta do exemplo mais parecido em
-   `social/exemplos/`. Post de série (apresentar alguém do time, por exemplo)
-   segue a receita da seção Séries do guia.
+1. Ache o tipo da peça na seção Peças do guia (anúncio, pessoa, dado, lista,
+   citação, carrossel) e parta da receita dela e do exemplo mais parecido em
+   `social/exemplos/`. Os campos e limites estão nas tabelas da seção Gerador;
+   o texto segue a seção Voz.
 2. Salve a especificação num `.json` fora deste repositório, na pasta do
    trabalho.
 3. Rode `python3 social/render.py caminho/do/post.json`. O erro diz o campo e
@@ -29,8 +29,9 @@ validado contra as tabelas do guia, e diga que falta renderizar.
   posição do logo já estão decididos nele: o que varia é o JSON.
 - Logo da Nora e marca do BRS entram pelos arquivos oficiais (`logo/`,
   `social/brs/`). Para ilustrar, use primeiro uma das prontas (`"imagem": "brs-celular"`);
-  IA de imagem produz só ilustração nova, pelo roteiro da seção "Imagem gerada
-  por IA" do guia.
+  IA de imagem produz só ilustração nova, pelo roteiro da seção Imagem do guia.
+  Gente aparece só em foto real, cedida pela pessoa: nenhuma IA gera nem
+  retoca rosto.
 - Número, parceiro, data e afirmação sobre o BRS vêm de quem pediu a peça, da
   lista de fatos do guia ou de fonte pública. O que faltar vira pergunta, não
   suposição.
@@ -41,5 +42,5 @@ validado contra as tabelas do guia, e diga que falta renderizar.
 ## Mudar o kit
 
 Mudou `social/post.html` ou `social/render.py`: rode `python3 social/test_render.py`
-e refaça a galeria com o comando da seção Manutenção do `README.md`. Mudou
+e refaça a galeria e os fundos com os comandos da seção Manutenção do `README.md`. Mudou
 arquivo listado em `SHA256SUMS`: atualize a linha dele e o `manifest.json`.

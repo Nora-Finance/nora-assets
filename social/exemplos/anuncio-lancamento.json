@@ -1,0 +1,11 @@
+{
+  "formato": "feed",
+  "layout": "titulo",
+  "tema": "papel",
+  "fundo": "arcos",
+  "selo": "Novidade",
+  "titulo": "O BRS no seu app.\n*Em reais, onchain.*",
+  "texto": "Qualquer carteira Solana ou EVM guarda, envia e recebe BRS.",
+  "arte": "imagem",
+  "imagem": "brs-celular"
+}

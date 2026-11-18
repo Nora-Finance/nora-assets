@@ -33,17 +33,22 @@ Marca Nora e BRS. Fonte: github.com/Nora-Finance/nora-assets, ramo main.
 - Antes de criar arte, post ou texto da Nora, releia GUIA-DE-MARCA.md e
   AGENTS.md desse repositório. Se este cartão e o guia divergirem, vale o guia.
 - Post de rede social sai do gerador do repositório: escrevo um JSON e rodo
-  python3 social/render.py. O layout já está decidido lá; eu escolho formato,
-  tema, layout e texto.
-- Cores: papel #F4F1EA, verde #003C2F, lima #C6F24E, lima do BRS #E3FF63,
-  tinta #0A0A0A. Fundos: papel, verde ou lima.
-- Letra: Geist; Geist Mono em rótulo e rodapé.
+  python3 social/render.py. O layout já está decidido lá; eu escolho o tipo
+  da peça, formato, tema e texto.
+- Peça de anúncio (parceiro, lançamento, evento, pessoa): fundo verde-noite
+  #001D17 com os arcos em lima, logo no topo à esquerda, rótulo em maiúsculas
+  espaçadas, título pesado com o fecho em lima, imagem à direita ou embaixo.
+  Peça de explicação (dado, lista, citação, carrossel): logo no rodapé.
+- Cores: verde-noite #001D17, papel #F4F1EA, verde #003C2F, lima #C6F24E,
+  lima do BRS #E3FF63, tinta #0A0A0A.
+- Letra: Geist; Geist Mono em assinatura e numeração.
 - Logo da Nora e marca do BRS: só os arquivos oficiais do repositório. O BRS é
   um disco chapado verde com a sigla e duas curvas em lima, sem aro.
 - Voz: direta, calma, precisa. Título em até duas frases, a segunda em
   destaque. Sem emoji e sem exclamação. Rendimento, retorno e ganho ficam
   fora da peça. Número só com fonte pública.
 - IA de imagem faz só a ilustração, sem texto e sem logo, pelo roteiro do guia.
+  Gente só em foto real, cedida pela pessoa; nenhuma IA gera nem retoca rosto.
 - Peça nova espera a aprovação de quem pediu antes de ser publicada.
 ```
 
