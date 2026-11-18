@@ -29,7 +29,7 @@ html, body { overflow: hidden; background: #fff; }
 }
 #post.formato-story { padding-block: calc(250 * var(--u)); } /* área livre da interface do app */
 #post > * { position: relative; }
-#post > .malha, #post > .grao { position: absolute; inset: 0; width: 100%; height: 100%; }
+#post > .malha, #post > .grao, #post > .arcos { position: absolute; inset: 0; width: 100%; height: 100%; }
 /* Grão fino por cima da malha: quebra as faixas que o gradiente liso forma em 8 bits. */
 #post > .grao { mix-blend-mode: soft-light; opacity: .22; }
 
@@ -108,6 +108,34 @@ html, body { overflow: hidden; background: #fff; }
 .formato-paisagem .arte { flex: 0 0 36%; align-items: center; }
 .formato-paisagem .arte img { max-width: 100%; }
 
+/* Layout pessoa (série Spotlight): fundo de arcos em lima, retrato recortado que sangra pela
+   base e pela direita, e logo no topo, porque a foto ocupa o lugar do rodapé. */
+.layout-pessoa { --fundo: var(--nora-green-deep); }
+/* order também muda a ordem de pintura: sem z-index o logo ficaria por baixo do fundo. */
+.layout-pessoa .rodape { order: -1; z-index: 1; margin: 0 0 calc(44 * var(--u)); }
+.layout-pessoa .rodape img { height: calc(80 * var(--u)); }
+.layout-pessoa .rodape .mono { visibility: hidden; }
+.layout-pessoa .bloco { max-width: var(--coluna); }
+.layout-pessoa .msg { margin-block: 0 auto; gap: calc(30 * var(--u)); }
+.layout-pessoa.ao-lado .msg { margin-block: auto; position: relative; top: calc(-105 * var(--u)); }
+.layout-pessoa .titulo { font-weight: 600; letter-spacing: -.035em; line-height: 1.04; white-space: pre; }
+.abertura { display: flex; align-items: center; gap: calc(12 * var(--u)); font-size: calc(48 * var(--u)); line-height: 1; white-space: nowrap; }
+.abertura strong { font-weight: 600; color: var(--destaque); }
+.abertura::after { content: ""; width: calc(110 * var(--u)); height: calc(4 * var(--u)); margin-left: calc(14 * var(--u)); background: var(--destaque); }
+.cargo {
+  align-self: flex-start; border: calc(4 * var(--u)) solid var(--destaque); border-radius: 999px;
+  padding: calc(23 * var(--u)) calc(40 * var(--u)) calc(23 * var(--u)) calc(50 * var(--u));
+  font-weight: 600; font-size: calc(30 * var(--u)); line-height: 1; letter-spacing: .24em;
+  text-transform: uppercase; white-space: nowrap;
+}
+#post > .retrato { position: absolute; right: 0; bottom: 0; height: var(--retrato); width: var(--retrato-l); object-fit: fill; }
+/* O brilho é a silhueta do retrato em lima, desfocada, mais forte nos ombros do que na cabeça. */
+#post > .retrato.brilho {
+  filter: url(#silhueta) blur(calc(26 * var(--u)));
+  -webkit-mask-image: linear-gradient(to top, #000 25%, rgba(0, 0, 0, .12) 75%);
+  mask-image: linear-gradient(to top, #000 25%, rgba(0, 0, 0, .12) 75%);
+}
+
 .rodape { display: flex; align-items: flex-end; justify-content: space-between; margin-top: calc(44 * var(--u)); }
 .rodape img { height: calc(56 * var(--u)); }
 .rodape .mono { flex: none; white-space: nowrap; }
@@ -116,7 +144,9 @@ html, body { overflow: hidden; background: #fff; }
 <body>
 <main id="post">
   <div class="malha"></div>
+  <svg class="arcos" aria-hidden="true"></svg>
   <svg class="grao" aria-hidden="true">
+    <filter id="silhueta"><feFlood flood-color="#C6F24E"/><feComposite in2="SourceAlpha" operator="in"/></filter>
     <filter id="grao"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="17"/><feColorMatrix values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1"/></filter>
     <rect width="100%" height="100%" filter="url(#grao)"/>
   </svg>
@@ -124,7 +154,7 @@ html, body { overflow: hidden; background: #fff; }
   <footer class="rodape"><img alt="nora"><p class="mono"></p></footer>
 </main>
 <script>
-const FORMATOS = { feed: [1080, 1350], quadrado: [1080, 1080], story: [1080, 1920], paisagem: [1200, 675] };
+const FORMATOS = { feed: [1080, 1350], quadrado: [1080, 1080], story: [1080, 1920], paisagem: [1200, 675], horizontal: [1440, 1080] };
 // Corpos possíveis do texto principal, do maior para o menor: vale o primeiro que cabe.
 const CORPOS = {
   titulo: [136, 120, 104, 92, 80, 68],
@@ -132,7 +162,10 @@ const CORPOS = {
   numero: [340, 280, 230, 190, 150, 120],
   lista: [88, 76, 68, 60, 52],
   citacao: [92, 80, 70, 62, 54, 46],
+  pessoa: [118, 106, 96, 86, 78, 70],
 };
+// Altura do retrato no layout pessoa, como fração da altura do post.
+const RETRATO = { paisagem: .88, horizontal: .87, quadrado: .48, feed: .57, story: .58 };
 // Malha de gradientes: por tema, [cor RGB, opacidade mínima, opacidade máxima] de cada mancha.
 const MALHA = {
   papel: [["198,242,78", .34, .58], ["227,255,99", .26, .46], ["255,255,255", .5, .8]],
@@ -166,6 +199,67 @@ function malha(tema, semente) {
   }).join(",");
 }
 
+// Arte de fundo do layout pessoa: um anel grande atrás do retrato e outro no canto de baixo,
+// os dois em degradê de lima, com brilho. p é a altura do retrato; tudo se ancora nele.
+// Com o texto ao lado, o anel grande sobe até o topo; com o texto em cima, fica abaixo dele.
+function arcos(W, H, p, lado) {
+  const U = Math.min(W, H);
+  const a = lado ? { cx: W + .017 * p, cy: H - .37 * p, r: .875 * p, l: .18 * p }
+    : { cx: W - .43 * p, cy: H - .47 * p, r: .52 * p, l: .14 * p };
+  const b = { cx: -.021 * U, cy: H + .05 * U, r: .331 * U, l: .12 * U };
+  const anel = (c, id, l = 1) => `<circle cx="${c.cx}" cy="${c.cy}" r="${c.r}" fill="none" stroke="url(#${id})" stroke-width="${c.l * l}"/>`;
+  return `<defs>
+    <linearGradient id="arco-a" gradientUnits="userSpaceOnUse" x1="${a.cx - .15 * a.r}" y1="${a.cy - a.r}" x2="${a.cx - a.r}" y2="${a.cy}">
+      <stop offset="0" stop-color="#E3FF63"/><stop offset=".42" stop-color="#E3FF63"/><stop offset=".56" stop-color="#C6F24E"/>
+      <stop offset=".72" stop-color="#8FB52E" stop-opacity=".8"/><stop offset=".88" stop-color="#003C2F" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#003C2F" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="arco-b" gradientUnits="userSpaceOnUse" x1="${b.cx}" y1="${b.cy - b.r}" x2="${b.cx + b.r}" y2="${b.cy - .12 * b.r}">
+      <stop offset="0" stop-color="#8FB52E" stop-opacity=".25"/><stop offset=".38" stop-color="#8FB52E" stop-opacity=".9"/>
+      <stop offset=".68" stop-color="#C6F24E"/><stop offset="1" stop-color="#E3FF63"/>
+    </linearGradient>
+    <linearGradient id="miolo-a" gradientUnits="userSpaceOnUse" x1="${a.cx - .15 * a.r}" y1="${a.cy - a.r}" x2="${a.cx - a.r}" y2="${a.cy}">
+      <stop offset="0" stop-color="#F4F1EA" stop-opacity=".42"/><stop offset=".62" stop-color="#F4F1EA" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="miolo-b" gradientUnits="userSpaceOnUse" x1="${b.cx}" y1="${b.cy - b.r}" x2="${b.cx + b.r}" y2="${b.cy - .12 * b.r}">
+      <stop offset=".45" stop-color="#F4F1EA" stop-opacity="0"/><stop offset="1" stop-color="#F4F1EA" stop-opacity=".42"/>
+    </linearGradient>
+    <radialGradient id="fundo-a" gradientUnits="userSpaceOnUse" cx="${a.cx}" cy="${a.cy}" r="${a.r}">
+      <stop offset=".45" stop-color="#0A0A0A" stop-opacity="0"/><stop offset="1" stop-color="#0A0A0A" stop-opacity=".3"/>
+    </radialGradient>
+    <filter id="aura" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${.035 * U}"/></filter>
+    <filter id="suave" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${.012 * U}"/></filter>
+  </defs>
+  <circle cx="${a.cx}" cy="${a.cy}" r="${a.r}" fill="url(#fundo-a)"/>
+  <g filter="url(#aura)" opacity=".48">${anel(a, "arco-a")}${anel(b, "arco-b")}</g>
+  ${anel(a, "arco-a")}${anel(b, "arco-b")}
+  <g filter="url(#suave)">${anel(a, "miolo-a", .45)}${anel(b, "miolo-b", .45)}</g>`;
+}
+
+// Parte visível do retrato: a sobra transparente em volta é aparada, para a foto terminar
+// onde a pessoa termina. Devolve o recorte (para object-view-box) e o tamanho que sobra.
+function caixa(foto) {
+  const l = foto.naturalWidth, h = foto.naturalHeight, tela = document.createElement("canvas");
+  tela.width = l;
+  tela.height = h;
+  const tinta = tela.getContext("2d");
+  tinta.drawImage(foto, 0, 0);
+  const alfa = tinta.getImageData(0, 0, l, h).data;
+  let x0 = l, y0 = h, x1 = -1, y1 = -1;
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < l; x++) {
+      if (alfa[(y * l + x) * 4 + 3] > 24) {
+        if (x < x0) x0 = x;
+        if (x > x1) x1 = x;
+        if (y < y0) y0 = y;
+        y1 = y;
+      }
+    }
+  }
+  if (x1 < 0) throw "a foto está toda transparente";
+  return { recorte: `inset(${y0}px ${l - 1 - x1}px ${h - 1 - y1}px ${x0}px)`, l: x1 - x0 + 1, h: y1 - y0 + 1 };
+}
+
 const el = (tag, classe, texto) => {
   const e = document.createElement(tag);
   if (classe) e.className = classe;
@@ -189,16 +283,34 @@ const marcado = (tag, classe, texto) => {
 function montar(s) {
   const [W, H] = FORMATOS[s.formato];
   const post = document.getElementById("post");
-  const arte = s.layout === "titulo" && s.arte && s.arte !== "nenhuma";
-  post.className = `tema-${s.tema} layout-${s.layout} formato-${s.formato}${arte ? " com-arte" : ""}`;
-  post.style.cssText = `width:${W}px;height:${H}px;--u:${Math.min(W, H) / 1080}px`;
-  post.querySelector(".malha").style.backgroundImage = malha(s.tema, s.semente || s.titulo || s.citacao);
+  const arte = s.layout === "titulo" && s.arte && s.arte !== "nenhuma", pessoa = s.layout === "pessoa";
+  const lado = W > H;
+  post.className = `tema-${s.tema} layout-${s.layout} formato-${s.formato}${arte ? " com-arte" : ""}${pessoa && lado ? " ao-lado" : ""}`;
+  post.style.cssText = `width:${W}px;height:${H}px;--u:${Math.min(W, H) / 1080}px;--coluna:${pessoa && lado ? 56 : 100}%`;
+  // O fundo do layout pessoa é fixo: é a arte da série, igual em toda edição.
+  post.querySelector(".malha").style.backgroundImage = pessoa
+    ? "radial-gradient(ellipse 60% 70% at 38% 36%, rgba(0,60,47,.22) 0%, rgba(0,60,47,0) 100%), linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3))"
+    : malha(s.tema, s.semente || s.titulo || s.citacao);
+  post.querySelector(".arcos").replaceChildren();
+  post.querySelectorAll(".retrato").forEach((e) => e.remove());
 
   const conteudo = post.querySelector(".conteudo"), bloco = el("div", "bloco"), msg = el("div", "msg");
   conteudo.replaceChildren();
-  if (s.selo) bloco.append(el("p", "selo", s.selo));
+  if (s.selo && !pessoa) bloco.append(el("p", "selo", s.selo));
   let ajustavel;
-  if (s.layout === "numero") {
+  if (pessoa) {
+    // A linha de abertura é o selo, com a última palavra em destaque: "Nora team Spotlight".
+    const selo = s.selo || "Nora team Spotlight", corte = selo.lastIndexOf(" ") + 1, abertura = el("p", "abertura");
+    abertura.append(selo.slice(0, corte), el("strong", "", selo.slice(corte)));
+    ajustavel = el("h1", "titulo", s.nome);
+    msg.append(abertura, ajustavel, el("p", "cargo", s.cargo));
+    for (const classe of ["retrato brilho", "retrato"]) {
+      const foto = el("img", classe);
+      foto.src = s._foto;
+      foto.alt = "";
+      conteudo.before(foto);
+    }
+  } else if (s.layout === "numero") {
     ajustavel = el("p", "numero", s.numero);
     msg.append(ajustavel, marcado("h1", "titulo", s.titulo));
     if (s.texto) msg.append(el("p", "texto", s.texto));
@@ -246,7 +358,9 @@ function montar(s) {
   // a arte fica com pelo menos um terço da altura e o rodapé não encosta no logo.
   const dentro = (e, area) => {
     const r = e.getBoundingClientRect();
-    return r.right <= area.right + 1 && r.bottom <= area.bottom + 1 && e.scrollWidth <= e.clientWidth + 1;
+    // No layout pessoa o texto também não passa da própria coluna, para não invadir o retrato.
+    return r.right <= (pessoa ? bloco.getBoundingClientRect() : area).right + 1 && r.bottom <= area.bottom + 1 &&
+      e.scrollWidth <= e.clientWidth + 1;
   };
   const cabe = () => {
     const area = conteudo.getBoundingClientRect();
@@ -256,8 +370,19 @@ function montar(s) {
       assinatura.getBoundingClientRect().left >= logo.getBoundingClientRect().right + (24 * Math.min(W, H)) / 1080;
   };
   const corpos = CORPOS[arte ? "tituloComArte" : s.layout];
-  // Só mede depois que as imagens carregam: a largura do logo entra na conta.
-  return () => corpos.some((corpo) => (ajustavel.style.setProperty("--t", corpo), cabe()));
+  // Só mede depois que as imagens carregam: a largura do logo entra na conta, e o retrato
+  // define a própria altura (a do formato, ou menos se a foto for larga) e a dos arcos.
+  return () => {
+    if (pessoa) {
+      const fotos = [...post.querySelectorAll(".retrato")], c = caixa(fotos[0]);
+      const altura = Math.min(RETRATO[s.formato] * H, (lado ? .6 : .92) * W * c.h / c.l);
+      fotos.forEach((f) => (f.style.objectViewBox = c.recorte));
+      post.style.setProperty("--retrato", altura + "px");
+      post.style.setProperty("--retrato-l", altura * c.l / c.h + "px");
+      post.querySelector(".arcos").innerHTML = arcos(W, H, altura, lado);
+    }
+    return corpos.some((corpo) => (ajustavel.style.setProperty("--t", corpo), cabe()));
+  };
 }
 
 // Desenha o post e só resolve com tudo pronto para a foto; rejeita com o motivo se algo falhar.

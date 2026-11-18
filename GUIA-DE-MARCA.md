@@ -100,7 +100,8 @@ Arquivos em [`logo/`](logo/). O símbolo tem 17 raios.
 - O logo que assina uma peça é sempre o arquivo oficial; nenhuma IA o desenha.
   As versões 3D do símbolo em `social/ilustracoes/` são ilustração: entram
   como arte e não substituem o logo.
-- Em post, o logo fica no rodapé, à esquerda. O gerador põe sozinho.
+- Em post, o logo fica no rodapé, à esquerda. O gerador põe sozinho. No layout
+  `pessoa` ele sobe para o topo, porque o retrato ocupa a base.
 
 ## Marca do BRS
 
@@ -136,9 +137,9 @@ Precisa de Python 3.10 ou mais novo e de Chromium ou Chrome, em Linux ou macOS.
 
 | Campo | Valores |
 |---|---|
-| `formato` (obrigatório) | `feed` 1080×1350 (padrão do Instagram e do LinkedIn), `quadrado` 1080×1080, `story` 1080×1920, `paisagem` 1200×675 (X e prévia de link) |
+| `formato` (obrigatório) | `feed` 1080×1350 (padrão do Instagram e do LinkedIn), `quadrado` 1080×1080, `story` 1080×1920, `paisagem` 1200×675 (X e prévia de link), `horizontal` 1440×1080 (imagem 4:3 no X e no LinkedIn) |
 | `tema` (obrigatório) | `papel`, `verde`, `lima` |
-| `layout` (obrigatório) | `titulo`, `numero`, `lista`, `citacao` |
+| `layout` (obrigatório) | `titulo`, `numero`, `lista`, `citacao`, `pessoa` |
 | `selo` | etiqueta no topo, até 28 caracteres ("Novidade", "Lastro") |
 | `rodape` | texto à direita do logo, até 40 caracteres; padrão `nora.finance` |
 | `semente` | palavra que define a malha do fundo, até 60 caracteres; padrão é o título |
@@ -153,11 +154,12 @@ Em negrito, o que é obrigatório; entre parênteses, o máximo de caracteres.
 | `numero` | um dado | **`numero`** (12: "1:1", "R$ 1"), **`titulo`** (60), `texto` (160) |
 | `lista` | de 2 a 4 pontos | **`titulo`** (70), **`itens`**: cada um com **`titulo`** (48) e `texto` (110) |
 | `citacao` | fala de alguém | **`citacao`** (220), **`autor`** (40), `cargo` (60) |
+| `pessoa` | apresentar alguém, na série [Spotlight do time](#spotlight-do-time) | **`nome`** (40), **`cargo`** (28), **`foto`** |
 
 - **Destaque:** nos campos `titulo` e `citacao`, em qualquer layout, o trecho
   entre asteriscos ganha a cor de destaque: `"O BRS chegou à Solana. *Bridge no ar.*"`.
 - **Quebra de linha:** o título quebra sozinho, em linhas equilibradas. Para
-  escolher a quebra, use `\n` em `titulo`, `citacao` ou `texto`; o uso mais
+  escolher a quebra, use `\n` em `titulo`, `citacao`, `texto` ou `nome`; o uso mais
   comum é pôr o destaque numa linha própria: `"Construa com o BRS.\n*Fale com a Nora.*"`.
 - **Arte** (só no layout `titulo`): `"arte"` vale `nenhuma` (padrão), `brs`
   (a marca do BRS) ou `imagem`. Com `imagem`, o campo `"imagem"` leva o nome de
@@ -201,6 +203,64 @@ Exemplos prontos, com o JSON de cada um, em [`social/exemplos/`](social/exemplos
 
 ![Exemplos de posts gerados pelo kit](social/exemplos/galeria.webp)
 
+### Séries
+
+Série é um tipo de post que se repete: mesma arte, mesmo padrão de texto. Só
+muda o assunto de cada edição.
+
+#### Spotlight do time
+
+Apresenta uma pessoa do time da Nora: quem é, o que construiu antes e o que
+faz aqui. Uma pessoa por post. Referências no ar:
+[João Bilesimo](https://x.com/norafinancexyz/status/2120198582796009505) e
+[André Rocco](https://x.com/norafinancexyz/status/2123034716182094108).
+
+A série tem layout próprio, `pessoa`. A arte é sempre a mesma: fundo verde
+escuro com dois arcos em lima, o retrato recortado à direita com brilho nos
+ombros, logo no topo, a linha "Nora team Spotlight", o nome e o cargo numa
+pílula. Só mudam o nome, o cargo e a foto:
+
+```json
+{
+  "formato": "horizontal",
+  "layout": "pessoa",
+  "tema": "verde",
+  "nome": "Nome Sobrenome",
+  "cargo": "Founding Engineer",
+  "foto": "foto-recortada.png"
+}
+```
+
+- **Formato:** `horizontal` no X e no LinkedIn (é o formato das edições no
+  ar), `feed` no Instagram, `story` nos stories. Nos formatos em pé o texto
+  fica em cima e o retrato embaixo, dentro do arco.
+- **Tema:** só `verde`. O layout não tem rodapé; `rodape` é recusado.
+- **Linha de abertura:** "Nora team Spotlight" por padrão. O campo `selo`
+  troca o texto, e a última palavra sai em destaque.
+- **Foto:** retrato real da pessoa, cedido por ela, do peito para cima e com o
+  tronco indo até a base da foto. Entra já recortado, em PNG ou WebP com fundo
+  transparente; o gerador apara a sobra em volta. Para recortar:
+  `uvx --from "rembg[cpu,cli]" rembg i -m isnet-general-use foto.jpg foto.png`.
+  Confira o contorno do cabelo e se não sobrou resíduo solto. Remover o fundo
+  pode; nenhuma IA gera nem retoca rosto.
+- **Nome e cargo:** o nome cabe numa linha e diminui sozinho; para duas
+  linhas, use `\n`. Com nome ou cargo longo no `horizontal`, confira no PNG se
+  o texto não encosta no rosto.
+- **Texto do post**, em inglês no X, em três partes:
+
+  ```text
+  Introducing @perfil
+
+  At [onde trabalhou], [Nome] [o que construiu, com um fato que se confere].
+
+  Now, as [cargo] at Nora, [he/she] [o que faz na Nora].
+  ```
+
+  Uma linha final pode ligar a pessoa ao produto ("$BRS is built to scale.").
+- **Fatos:** nome, cargo, perfil e trajetória vêm da própria pessoa. Número da
+  trajetória (usuários, volume) só com fonte pública ou confirmação dela.
+- A pessoa aprova a arte e o texto antes de o post ir ao ar.
+
 ## Imagem gerada por IA
 
 A arte determinística (fundo, tipografia, logo, marca do BRS) vem sempre do
@@ -216,7 +276,8 @@ gerador. A IA de imagem entra só para a ilustração, que vai no campo `imagem`
   novidade pede movimento. Cena alegre em notícia séria é erro.
 - Fora da linguagem: neon azul ou roxo, ouro, moeda genérica, estética de
   cassino, foguete, lua, gráfico disparando, brilho exagerado, cara de
-  brinquedo, pessoa realista.
+  brinquedo, pessoa realista. Gente do time aparece só em foto real, pela
+  série [Spotlight do time](#spotlight-do-time).
 
 ### Ilustrações prontas
 

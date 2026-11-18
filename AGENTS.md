@@ -8,7 +8,8 @@ peça, texto ou imagem da Nora. Se o que você lembra divergir do guia, vale o g
 
 1. Escolha `formato`, `layout` e `tema` nas tabelas da seção Posts do guia e
    escreva o texto conforme a seção Voz. Parta do exemplo mais parecido em
-   `social/exemplos/`.
+   `social/exemplos/`. Post de série (apresentar alguém do time, por exemplo)
+   segue a receita da seção Séries do guia.
 2. Salve a especificação num `.json` fora deste repositório, na pasta do
    trabalho.
 3. Rode `python3 social/render.py caminho/do/post.json`. O erro diz o campo e

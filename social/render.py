@@ -21,7 +21,10 @@ import tempfile
 from pathlib import Path
 
 AQUI = Path(__file__).resolve().parent
-FORMATOS = {"feed": (1080, 1350), "quadrado": (1080, 1080), "story": (1080, 1920), "paisagem": (1200, 675)}
+FORMATOS = {
+    "feed": (1080, 1350), "quadrado": (1080, 1080), "story": (1080, 1920), "paisagem": (1200, 675),
+    "horizontal": (1440, 1080),
+}
 TEMAS = ("papel", "verde", "lima")
 ARTES = ("nenhuma", "brs", "imagem")
 # Por layout: campo -> (obrigatório, máximo de caracteres).
@@ -30,11 +33,12 @@ LAYOUTS = {
     "numero": {"numero": (True, 12), "titulo": (True, 60), "texto": (False, 160)},
     "lista": {"titulo": (True, 70)},
     "citacao": {"citacao": (True, 220), "autor": (True, 40), "cargo": (False, 60)},
+    "pessoa": {"nome": (True, 40), "cargo": (True, 28)},
 }
 COMUNS = {"selo": (False, 28), "rodape": (False, 40), "semente": (False, 60)}
 ITEM = {"titulo": (True, 48), "texto": (False, 110)}
 COM_DESTAQUE = ("titulo", "citacao")  # campos em que *asteriscos* marcam o destaque
-COM_QUEBRA = ("titulo", "citacao", "texto")  # campos em que \n escolhe a quebra de linha
+COM_QUEBRA = ("titulo", "citacao", "texto", "nome")  # campos em que \n escolhe a quebra de linha
 # O que a Geist e a Geist Mono desenham: latim com acentos e a pontuação usual. Emoji e
 # símbolo de fora sairiam em outra fonte, por isso são recusados.
 NA_FONTE = (
@@ -104,6 +108,8 @@ def validar(post, base, onde="post"):
         permitidos.add("itens")
     if post["layout"] == "titulo":
         permitidos |= {"arte", "imagem"}
+    if post["layout"] == "pessoa":  # o logo sobe para o topo e a foto ocupa a base: não há rodapé
+        permitidos = permitidos - {"rodape"} | {"foto"}
     for campo in sorted(set(post) - permitidos):
         erros.append(f"{onde}: campo '{campo}' não existe no layout '{post['layout']}'")
     _textos(post, {**COMUNS, **layout}, onde, erros, COM_DESTAQUE)
@@ -118,6 +124,15 @@ def validar(post, base, onde="post"):
                     erros.append(f"{onde}: item {i} aceita só 'titulo' e 'texto'")
                 else:
                     _textos(item, ITEM, f"{onde}, item {i}", erros)
+
+    if post["layout"] == "pessoa":
+        foto = post.get("foto")
+        if post.get("tema") != "verde":
+            erros.append(f"{onde}: o layout 'pessoa' só existe no tema verde")
+        if not isinstance(foto, str) or len(foto) > 500 or not (base / foto).is_file():
+            erros.append(f"{onde}: 'foto' precisa ser um arquivo existente")
+        elif (base / foto).suffix.lower() not in (".png", ".webp") or not _tem_alfa(base / foto):
+            erros.append(f"{onde}: 'foto' precisa ser um retrato recortado, com fundo transparente, em PNG ou WebP")
 
     arte = post.get("arte", "nenhuma")
     if not isinstance(arte, str) or arte not in ARTES:
@@ -292,6 +307,11 @@ def _interno(post, pagina, base):
         imagem = _imagem(post, base).resolve()
         interno["_imagem"] = imagem.as_uri()
         interno["_cartao"] = not _tem_alfa(imagem)  # imagem sem transparência entra num cartão arredondado
+    if post["layout"] == "pessoa":
+        foto = base / post["foto"]
+        # Embutida (data:) em vez de file:, para a página poder ler os pixels e aparar a sobra transparente.
+        tipo = "png" if foto.suffix.lower() == ".png" else "webp"
+        interno["_foto"] = f"data:image/{tipo};base64,{base64.b64encode(foto.read_bytes()).decode()}"
     return interno
 
 
@@ -316,6 +336,7 @@ def gerar(arquivo, saida=None):
         # Sem resolve() no nome final: um link plantado no destino é trocado pelo PNG, nunca seguido.
         destinos = [pasta.resolve() / f"{arquivo.stem}{'-' + n[:2] if n else ''}.png" for _, n in lote]
         entradas = {_imagem(post, arquivo.parent).resolve() for post, _ in lote if post.get("arte") == "imagem"}
+        entradas |= {(arquivo.parent / post["foto"]).resolve() for post, _ in lote if post["layout"] == "pessoa"}
         if entradas & {d.resolve() for d in destinos} or any(d.is_dir() for d in destinos):
             return [], ["o PNG sairia por cima da imagem de entrada ou de uma pasta; use -o ou dê outro nome ao JSON"]
         prontos = []
