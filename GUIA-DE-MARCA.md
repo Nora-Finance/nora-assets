@@ -280,7 +280,7 @@ pílula. Só mudam o nome, o cargo e a foto:
 - **Texto do post**, em inglês no X, em três partes:
 
   ```text
-  Introducing @perfil
+  Introducing @perfil          (no LinkedIn: Introducing Nome Sobrenome)
 
   At [onde trabalhou], [Nome] [o que construiu, com um fato que se confere].
 
