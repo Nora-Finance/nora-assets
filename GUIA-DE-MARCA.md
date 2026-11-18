@@ -57,22 +57,25 @@ Fonte única: [`colors/tokens.json`](colors/tokens.json) (também em
 |---|---|---|
 | Papel | `#F4F1EA` | fundo claro padrão |
 | Verde | `#003C2F` | fundo escuro, destaque de título no claro, disco do BRS |
+| Verde-escuro | `#002A21` | fundo das peças com arcos |
 | Lima | `#C6F24E` | botão e chamada, fundo de destaque |
 | Lima do BRS | `#E3FF63` | marca do BRS, destaque de título sobre o verde |
 | Tinta | `#0A0A0A` | texto sobre papel e sobre lima |
 | Pedra | `#4A4740` | texto de apoio sobre papel |
 | Sálvia | `#C9D7D0` | texto de apoio sobre verde |
 
-- Três fundos: papel, verde e lima. Uma peça usa um só.
+- Três fundos: papel, verde e lima. Uma peça usa um só. Com [arcos](#arcos), o
+  verde dá lugar ao verde-escuro, para o lima acender.
 - Par de texto por fundo: tinta sobre papel e lima; papel sobre verde. O
   destaque é verde no claro e lima do BRS no escuro.
 - As duas limas não se misturam na mesma função: `#C6F24E` é da Nora (botão,
   fundo), `#E3FF63` é do BRS (marca e destaque sobre verde).
-- O fundo ganha uma malha de gradientes suaves nas cores da própria paleta
-  (as da tabela e os tons de apoio de `tokens.json`), como o brilho lima do
-  topo do site. Nunca uma cor de fora.
+- O fundo ganha uma malha de gradientes suaves, ou os arcos, nas cores da
+  própria paleta (as da tabela e os tons de apoio de `tokens.json`), como o
+  brilho lima do topo do site. Nunca uma cor de fora.
 - Preto `#000000` e os cinzas continuam na paleta para produto e documento
-  (terminal de código, interface). Peça de comunicação usa os três fundos acima.
+  (terminal de código, interface). Peça de comunicação usa os três fundos
+  acima; o preto só entra como véu sobre o verde-escuro das peças com arcos.
 - Apresentações de 2026 usam vizinhos quase idênticos (`#003C30`, `#E2FB56`,
   `#F7F6F1`). Seguem válidas; material novo usa os valores desta tabela.
 
@@ -141,8 +144,9 @@ Precisa de Python 3.10 ou mais novo e de Chromium ou Chrome, em Linux ou macOS.
 | `tema` (obrigatório) | `papel`, `verde`, `lima` |
 | `layout` (obrigatório) | `titulo`, `numero`, `lista`, `citacao`, `pessoa` |
 | `selo` | etiqueta no topo, até 28 caracteres ("Novidade", "Lastro") |
-| `rodape` | texto à direita do logo, até 40 caracteres; padrão `nora.finance` |
-| `semente` | palavra que define a malha do fundo, até 60 caracteres; padrão é o título |
+| `rodape` | texto à direita do logo, até 40 caracteres; padrão `nora.finance`. Não existe no layout `pessoa` |
+| `fundo` | `malha` (padrão) ou [`arcos`](#arcos), este só nos temas `verde` e `papel`. Não existe no layout `pessoa`, que já vem com arcos |
+| `semente` | palavra que define a malha do fundo, até 60 caracteres; padrão é o título. Sem efeito com arcos |
 
 ### Campos por layout
 
@@ -171,6 +175,30 @@ Em negrito, o que é obrigatório; entre parênteses, o máximo de caracteres.
   responder que o texto não cabe, encurte o campo mais longo: os corpos não mudam.
 - **Story:** o gerador reserva 250 px livres no topo e na base, onde o
   aplicativo põe a interface dele.
+
+### Arcos
+
+Os arcos são o grafismo da marca: um anel grande em degradê de lima, com
+brilho, que entra pelo alto da peça, e um segundo anel no canto de baixo. Vêm
+das peças que a Nora já publica: anúncio de evento, lançamento com parceiro e
+a série [Spotlight do time](#spotlight-do-time).
+
+`"fundo": "arcos"` troca a malha pelos arcos, em qualquer layout:
+
+```json
+{ "formato": "feed", "layout": "titulo", "tema": "verde", "fundo": "arcos",
+  "titulo": "A stablecoin do real brasileiro, *para a internet.*" }
+```
+
+- **Tema `verde`:** o fundo passa ao verde-escuro e o arco grande acende em
+  lima. O de baixo fica só num tom do fundo, porque passa por trás do logo e
+  do texto.
+- **Tema `papel`:** os dois arcos saem em lima claro.
+- **Tema `lima`:** não tem arcos.
+- **Layout `pessoa`:** já vem com os dois arcos acesos; nele o campo `fundo`
+  não entra.
+- O desenho dos arcos é fixo, igual em toda peça: a `semente` não muda nada.
+- O brilho é o do gerador. Ilustração continua sem brilho exagerado.
 
 ### Carrossel
 
@@ -235,6 +263,9 @@ pílula. Só mudam o nome, o cargo e a foto:
   ar), `feed` no Instagram, `story` nos stories. Nos formatos em pé o texto
   fica em cima e o retrato embaixo, dentro do arco.
 - **Tema:** só `verde`. O layout não tem rodapé; `rodape` é recusado.
+- **Exemplo:** `social/exemplos/spotlight-verde.json` usa uma silhueta
+  (`retrato-exemplo.webp`) no lugar da foto. Ela existe para a IA testar o
+  layout; nunca vai ao ar.
 - **Linha de abertura:** "Nora team Spotlight" por padrão. O campo `selo`
   troca o texto, e a última palavra sai em destaque.
 - **Foto:** retrato real da pessoa, cedido por ela, do peito para cima e com o

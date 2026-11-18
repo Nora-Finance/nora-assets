@@ -93,6 +93,7 @@ Depois de mudar o gerador, rode a prova e refaça a galeria:
 ```sh
 python3 social/test_render.py
 python3 social/render.py social/exemplos/*.json -o /tmp/nora-exemplos
+rm /tmp/nora-exemplos/spotlight-verde.png   # exemplo com silhueta: serve de molde, não de vitrine
 magick montage /tmp/nora-exemplos/*.png -tile 4x -geometry 360x450+14+14 -background '#D9D6CE' -quality 82 social/exemplos/galeria.webp
 ```
 
