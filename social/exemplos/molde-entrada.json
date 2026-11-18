@@ -1,0 +1,10 @@
+{
+  "formato": "horizontal",
+  "layout": "pessoa",
+  "tema": "verde",
+  "selo": "Angel Investor",
+  "nome": "Nome Sobrenome\n*joins Nora.*",
+  "texto": "Co-founder da Empresa\nEx-diretor da Fundação",
+  "fecho": "More than *capital.*",
+  "foto": "retrato-exemplo-fundo.webp"
+}

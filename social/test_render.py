@@ -56,16 +56,31 @@ class Validacao(unittest.TestCase):
         self.assertTrue(erros(fundo="ondas"))
         self.assertTrue(erros(fundo=None))
 
-    def test_pessoa_pede_retrato_recortado_e_tema_verde(self):
+    def test_pessoa_pede_foto_e_tema_verde(self):
         pessoa = {"formato": "horizontal", "layout": "pessoa", "tema": "verde", "nome": "Nome Sobrenome",
                   "cargo": "Founding Engineer", "foto": "retrato-exemplo.webp"}
-        self.assertEqual(render.validar(pessoa, render.AQUI / "exemplos"), [])
-        self.assertEqual(render.validar({**pessoa, "selo": "Nora partner Spotlight", "nome": "Duas\nlinhas"}, render.AQUI / "exemplos"), [])
-        for mudanca in ({"tema": "papel"}, {"foto": "galeria.webp"}, {"foto": "nao-existe.png"}, {"foto": None},
+        valida = lambda **mudancas: render.validar({**pessoa, **mudancas}, render.AQUI / "exemplos")
+        self.assertEqual(valida(), [])
+        # Entrada de pessoa: rótulo, nome com destaque em duas linhas, descrição, fecho, foto sem recorte.
+        self.assertEqual(valida(selo="Angel Investor", nome="Nome Sobrenome\n*joins Nora.*", texto="Descrição",
+                                fecho="More than *capital.*", foto="retrato-exemplo-fundo.webp"), [])
+        sem_cargo = {campo: valor for campo, valor in pessoa.items() if campo != "cargo"}
+        self.assertEqual(render.validar(sem_cargo, render.AQUI / "exemplos"), [])
+        for mudanca in ({"tema": "papel"}, {"foto": "nao-existe.png"}, {"foto": None}, {"foto": "molde-spotlight.json"},
                         {"rodape": "nora.finance"}, {"titulo": "Título"}, {"arte": "brs"}, {"cargo": "x" * 29},
-                        {"fundo": "arcos"}):
-            self.assertTrue(render.validar({**pessoa, **mudanca}, render.AQUI / "exemplos"), mudanca)
+                        {"fundo": "arcos"}, {"fecho": "x" * 41}, {"nome": "Um *destaque aberto"}):
+            self.assertTrue(valida(**mudanca), mudanca)
         self.assertTrue(erros(foto="retrato-exemplo.webp"))  # foto só existe no layout pessoa
+
+    def test_titulo_com_arcos_nao_tem_rodape_e_aceita_logo_de_parceiro(self):
+        logo = str(RAIZ / "logo" / "nora.svg")
+        self.assertEqual(erros(tema="verde", fundo="arcos", parceiro=logo), [])
+        self.assertEqual(erros(parceiro=logo), [])
+        self.assertTrue(erros(tema="verde", fundo="arcos", rodape="nora.finance"))
+        self.assertEqual(erros(rodape="nora.finance"), [])  # com malha o rodapé segue valendo
+        self.assertTrue(erros(parceiro="nao-existe.svg"))
+        self.assertTrue(erros(parceiro=str(RAIZ / "README.md")))
+        self.assertTrue(erros(layout="numero", numero="1:1", parceiro=logo))
 
     def test_ilustracao_so_entra_no_fundo_aprovado(self):
         self.assertTrue(render.ILUSTRACOES)
@@ -103,7 +118,7 @@ class Render(unittest.TestCase):
 
     def test_retrato_e_aparado_ate_a_pessoa(self):
         # O retrato de exemplo tem sobra transparente em cima e dos lados e encosta na base.
-        post = json.loads((render.AQUI / "exemplos" / "spotlight-verde.json").read_text(encoding="utf-8"))
+        post = json.loads((render.AQUI / "exemplos" / "molde-spotlight.json").read_text(encoding="utf-8"))
         with render.Navegador() as navegador:
             _, erro = navegador.fotografar(render._interno(post, None, render.AQUI / "exemplos"))
             recorte = navegador._avaliar('document.querySelector(".retrato").style.objectViewBox')
@@ -111,6 +126,25 @@ class Render(unittest.TestCase):
         topo, direita, base, esquerda = map(int, re.findall(r"(\d+)px", recorte))
         self.assertTrue(topo and direita and esquerda, recorte)
         self.assertEqual(base, 0, recorte)
+
+    def test_carrossel_com_arcos_mostra_a_numeracao_no_alto(self):
+        pagina = {**BASE, "tema": "verde", "fundo": "arcos"}
+        with render.Navegador() as navegador:
+            _, erro = navegador.fotografar(render._interno(pagina, "01/02", RAIZ))
+            numeracao = navegador._avaliar('document.querySelector(".rodape .mono").textContent')
+            _, erro_solto = navegador.fotografar(render._interno(pagina, None, RAIZ))
+            visivel = navegador._avaliar('getComputedStyle(document.querySelector(".rodape .mono")).visibility')
+        self.assertIsNone(erro)
+        self.assertIsNone(erro_solto)
+        self.assertEqual(numeracao, "01/02")
+        self.assertEqual(visivel, "hidden")  # peça solta: sem numeração, nada aparece
+
+    def test_fundos_saem_um_por_tema_e_formato(self):
+        with tempfile.TemporaryDirectory() as pasta:
+            gravados = render.fundos(pasta)
+            self.assertEqual(len(gravados), 2 * len(render.FORMATOS))
+            for arquivo in gravados:
+                self.assertEqual(arquivo.read_bytes()[:3], b"\xff\xd8\xff", arquivo.name)  # JPEG
 
     def test_mesma_semente_mesma_malha(self):
         # Compara a malha calculada, não os pixels: com a máquina ocupada o Chromium varia
@@ -130,7 +164,10 @@ class Render(unittest.TestCase):
                    {**BASE, "formato": "paisagem", "layout": "numero", "numero": "R$ 1.000.000"},
                    {**BASE, "fundo": "arcos"}, {**BASE, "tema": "verde", "fundo": "arcos", "arte": "brs"},
                    {"formato": "feed", "layout": "pessoa", "tema": "verde", "nome": "Nome", "cargo": "Cargo",
-                    "foto": str(render.AQUI / "exemplos" / "retrato-exemplo.webp")})
+                    "foto": str(render.AQUI / "exemplos" / "retrato-exemplo.webp")},
+                   {"formato": "feed", "layout": "pessoa", "tema": "verde", "nome": "Nome",
+                    "foto": str(render.AQUI / "exemplos" / "retrato-exemplo-fundo.webp")},
+                   {**BASE, "tema": "verde", "fundo": "arcos", "parceiro": str(RAIZ / "logo" / "nora.svg")})
         with tempfile.TemporaryDirectory() as pasta:
             for i, post in enumerate(minimos):
                 for formato in render.FORMATOS:

@@ -28,17 +28,18 @@ FORMATOS = {
 TEMAS = ("papel", "verde", "lima")
 ARTES = ("nenhuma", "brs", "imagem")
 FUNDOS = ("malha", "arcos")
+FOTOS = {".png": "png", ".jpg": "jpeg", ".jpeg": "jpeg", ".webp": "webp"}  # extensão -> tipo da imagem
 # Por layout: campo -> (obrigatório, máximo de caracteres).
 LAYOUTS = {
     "titulo": {"titulo": (True, 110), "texto": (False, 220), "chamada": (False, 28)},
     "numero": {"numero": (True, 12), "titulo": (True, 60), "texto": (False, 160)},
     "lista": {"titulo": (True, 70)},
     "citacao": {"citacao": (True, 220), "autor": (True, 40), "cargo": (False, 60)},
-    "pessoa": {"nome": (True, 40), "cargo": (True, 28)},
+    "pessoa": {"nome": (True, 40), "cargo": (False, 28), "texto": (False, 120), "fecho": (False, 40)},
 }
 COMUNS = {"selo": (False, 28), "rodape": (False, 40), "semente": (False, 60)}
 ITEM = {"titulo": (True, 48), "texto": (False, 110)}
-COM_DESTAQUE = ("titulo", "citacao")  # campos em que *asteriscos* marcam o destaque
+COM_DESTAQUE = ("titulo", "citacao", "nome", "fecho")  # campos em que *asteriscos* marcam o destaque
 COM_QUEBRA = ("titulo", "citacao", "texto", "nome")  # campos em que \n escolhe a quebra de linha
 # O que a Geist e a Geist Mono desenham: latim com acentos e a pontuação usual. Emoji e
 # símbolo de fora sairiam em outra fonte, por isso são recusados.
@@ -108,11 +109,17 @@ def validar(post, base, onde="post"):
     if post["layout"] == "lista":
         permitidos.add("itens")
     if post["layout"] == "titulo":
-        permitidos |= {"arte", "imagem"}
-    if post["layout"] == "pessoa":  # o logo sobe para o topo e a foto ocupa a base: não há rodapé
+        permitidos |= {"arte", "imagem", "parceiro"}
+    # Composição com arcos (pessoa, ou titulo com fundo de arcos): o logo sobe para o topo e não há rodapé.
+    if post["layout"] == "pessoa":
         permitidos = permitidos - {"rodape", "fundo"} | {"foto"}
+    elif post["layout"] == "titulo" and post.get("fundo") == "arcos":
+        permitidos -= {"rodape"}
     for campo in sorted(set(post) - permitidos):
-        erros.append(f"{onde}: campo '{campo}' não existe no layout '{post['layout']}'")
+        if campo == "rodape":
+            erros.append(f"{onde}: a peça com arcos não tem rodapé (o logo fica no topo); tire o campo 'rodape'")
+        else:
+            erros.append(f"{onde}: campo '{campo}' não existe no layout '{post['layout']}'")
     _textos(post, {**COMUNS, **layout}, onde, erros, COM_DESTAQUE)
 
     if post["layout"] == "lista":
@@ -132,8 +139,15 @@ def validar(post, base, onde="post"):
             erros.append(f"{onde}: o layout 'pessoa' só existe no tema verde")
         if not isinstance(foto, str) or len(foto) > 500 or not (base / foto).is_file():
             erros.append(f"{onde}: 'foto' precisa ser um arquivo existente")
-        elif (base / foto).suffix.lower() not in (".png", ".webp") or not _tem_alfa(base / foto):
-            erros.append(f"{onde}: 'foto' precisa ser um retrato recortado, com fundo transparente, em PNG ou WebP")
+        elif (base / foto).suffix.lower() not in FOTOS:
+            erros.append(f"{onde}: 'foto' precisa ser PNG, JPG ou WebP")
+
+    parceiro = post.get("parceiro")
+    if "parceiro" in post and post["layout"] == "titulo":
+        if not isinstance(parceiro, str) or len(parceiro) > 500 or not (base / parceiro).is_file():
+            erros.append(f"{onde}: 'parceiro' precisa ser o arquivo do logo do parceiro")
+        elif (base / parceiro).suffix.lower() not in (".png", ".webp", ".svg"):
+            erros.append(f"{onde}: 'parceiro' precisa ser PNG, WebP ou SVG")
 
     fundo = post.get("fundo", "malha")
     if not isinstance(fundo, str) or fundo not in FUNDOS:
@@ -291,18 +305,19 @@ class Navegador:
             raise RuntimeError(detalhe.get("value") or detalhe.get("description") or "falha ao desenhar")
         return saida["result"].get("value")
 
-    def fotografar(self, post):
-        """Desenha o post. Devolve (bytes do PNG, None) ou (None, motivo da recusa)."""
+    def fotografar(self, post, jpeg=False):
+        """Desenha o post. Devolve (bytes do PNG, None) ou (None, motivo da recusa). Com jpeg, a foto sai em JPEG."""
         largura, altura = FORMATOS[post["formato"]]
         try:
             self._chamar("Emulation.setDeviceMetricsOverride", width=largura, height=altura, deviceScaleFactor=1, mobile=False)
             # Sem o "ok" da página não há foto: a tela ainda mostraria o post anterior.
             if self._avaliar(f"desenhar({json.dumps(post)})") != "ok":
                 return None, "o navegador não confirmou o desenho"
-            png = base64.b64decode(self._chamar("Page.captureScreenshot", format="png")["data"])
+            formato = {"format": "jpeg", "quality": 92} if jpeg else {"format": "png"}
+            png = base64.b64decode(self._chamar("Page.captureScreenshot", **formato)["data"])
         except RuntimeError as erro:
             return None, str(erro)
-        if struct.unpack(">II", png[16:24]) != (largura, altura):
+        if not jpeg and struct.unpack(">II", png[16:24]) != (largura, altura):
             return None, f"o PNG não saiu em {largura}x{altura}"
         return png, None
 
@@ -317,8 +332,10 @@ def _interno(post, pagina, base):
     if post["layout"] == "pessoa":
         foto = base / post["foto"]
         # Embutida (data:) em vez de file:, para a página poder ler os pixels e aparar a sobra transparente.
-        tipo = "png" if foto.suffix.lower() == ".png" else "webp"
-        interno["_foto"] = f"data:image/{tipo};base64,{base64.b64encode(foto.read_bytes()).decode()}"
+        interno["_foto"] = f"data:image/{FOTOS[foto.suffix.lower()]};base64,{base64.b64encode(foto.read_bytes()).decode()}"
+        interno["_circulo"] = not _tem_alfa(foto)  # foto sem recorte entra num círculo
+    if "parceiro" in post:
+        interno["_parceiro"] = (base / post["parceiro"]).resolve().as_uri()
     return interno
 
 
@@ -343,7 +360,7 @@ def gerar(arquivo, saida=None):
         # Sem resolve() no nome final: um link plantado no destino é trocado pelo PNG, nunca seguido.
         destinos = [pasta.resolve() / f"{arquivo.stem}{'-' + n[:2] if n else ''}.png" for _, n in lote]
         entradas = {_imagem(post, arquivo.parent).resolve() for post, _ in lote if post.get("arte") == "imagem"}
-        entradas |= {(arquivo.parent / post["foto"]).resolve() for post, _ in lote if post["layout"] == "pessoa"}
+        entradas |= {(arquivo.parent / post[campo]).resolve() for post, _ in lote for campo in ("foto", "parceiro") if campo in post}
         if entradas & {d.resolve() for d in destinos} or any(d.is_dir() for d in destinos):
             return [], ["o PNG sairia por cima da imagem de entrada ou de uma pasta; use -o ou dê outro nome ao JSON"]
         prontos = []
@@ -374,11 +391,34 @@ def gerar(arquivo, saida=None):
     return destinos, []
 
 
+def fundos(pasta):
+    """Grava os fundos de arcos, um por tema e formato, para quem monta a peça fora do gerador."""
+    pasta = Path(pasta)
+    pasta.mkdir(parents=True, exist_ok=True)
+    gravados = []
+    with Navegador() as navegador:
+        for tema in ("verde", "papel"):
+            for formato in FORMATOS:
+                post = {"formato": formato, "layout": "titulo", "tema": tema, "fundo": "arcos", "titulo": "Nora", "_so_fundo": True}
+                imagem, erro = navegador.fotografar({**post, "_pagina": None}, jpeg=True)
+                if erro:
+                    raise RuntimeError(erro)
+                gravados.append(pasta / f"arcos-{tema}-{formato}.jpg")
+                gravados[-1].write_bytes(imagem)
+    return gravados
+
+
 def main():
     argumentos = argparse.ArgumentParser(description="Gera posts da Nora em PNG a partir de um JSON.")
-    argumentos.add_argument("json", nargs="+", help="arquivo(s) de especificação")
+    argumentos.add_argument("json", nargs="*", help="arquivo(s) de especificação")
     argumentos.add_argument("-o", "--saida", help="pasta dos PNGs (padrão: a pasta do JSON)")
+    argumentos.add_argument("--fundos", metavar="PASTA", help="grava nesta pasta os fundos de arcos, um por tema e formato")
     opcoes = argumentos.parse_args()
+    if opcoes.fundos:
+        for arquivo in fundos(opcoes.fundos):
+            print(arquivo)
+    elif not opcoes.json:
+        argumentos.error("informe ao menos um JSON, ou --fundos PASTA")
     falhou = False
     for arquivo in opcoes.json:
         pngs, erros = gerar(arquivo, opcoes.saida)
