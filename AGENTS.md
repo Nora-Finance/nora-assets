@@ -28,7 +28,7 @@ validado contra as tabelas do guia, e diga que falta renderizar.
 - O gerador é o único caminho para post. Layout, cor, tamanho de letra e
   posição do logo já estão decididos nele: o que varia é o JSON.
 - Logo da Nora e marca do BRS entram pelos arquivos oficiais (`logo/`,
-  `social/brs/`). Para ilustrar, use primeiro uma das prontas (`"imagem": "brs-cofre"`);
+  `social/brs/`). Para ilustrar, use primeiro uma das prontas (`"imagem": "brs-celular"`);
   IA de imagem produz só ilustração nova, pelo roteiro da seção "Imagem gerada
   por IA" do guia.
 - Número, parceiro, data e afirmação sobre o BRS vêm de quem pediu a peça, da

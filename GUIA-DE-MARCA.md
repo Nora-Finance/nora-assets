@@ -163,7 +163,7 @@ Em negrito, o que é obrigatório; entre parênteses, o máximo de caracteres.
   comum é pôr o destaque numa linha própria: `"Construa com o BRS.\n*Fale com a Nora.*"`.
 - **Arte** (só no layout `titulo`): `"arte"` vale `nenhuma` (padrão), `brs`
   (a marca do BRS) ou `imagem`. Com `imagem`, o campo `"imagem"` leva o nome de
-  uma [ilustração pronta](#ilustrações-prontas) (`"brs-cofre"`) ou o caminho de
+  uma [ilustração pronta](#ilustrações-prontas) (`"brs-celular"`) ou o caminho de
   um arquivo PNG, JPG ou WebP, relativo ao JSON ou absoluto. Imagem com fundo
   transparente entra solta; sem transparência, entra num cartão de cantos
   arredondados.
@@ -288,7 +288,7 @@ seja copiado ou renomeado.
 
 | Ilustração | Serve para | Temas |
 |---|---|---|
-| `brs-cofre` | lastro guardado, segurança | papel, verde, lima |
+| `brs-cofre` | lastro guardado, segurança | papel, lima |
 | `brs-celular` | BRS no app, pagamento, carteira | papel, verde, lima |
 | `brs-lastro` | reservas, lastro 1:1 | papel, lima |
 | `brs-pilhas` | crescimento, volume, emissão | papel, lima |
@@ -297,7 +297,7 @@ seja copiado ou renomeado.
 | `nora-simbolo-brs` | Nora e BRS juntos, rede | papel, verde |
 | `nora-simbolo-3d` | institucional Nora | verde |
 
-Uso no JSON: `"arte": "imagem", "imagem": "brs-cofre"`. Antes de gerar imagem
+Uso no JSON: `"arte": "imagem", "imagem": "brs-celular"`. Antes de gerar imagem
 nova, veja se uma destas já resolve.
 
 ### Imagem nova
