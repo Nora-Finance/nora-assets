@@ -110,7 +110,7 @@ html, body { overflow: hidden; background: #fff; }
 
 /* Layout pessoa (série Spotlight): fundo de arcos em lima, retrato recortado que sangra pela
    base e pela direita, e logo no topo, porque a foto ocupa o lugar do rodapé. */
-.layout-pessoa { --fundo: var(--nora-green-deep); }
+.fundo-arcos.tema-verde { --fundo: var(--nora-green-deep); }
 /* order também muda a ordem de pintura: sem z-index o logo ficaria por baixo do fundo. */
 .layout-pessoa .rodape { order: -1; z-index: 1; margin: 0 0 calc(44 * var(--u)); }
 .layout-pessoa .rodape img { height: calc(80 * var(--u)); }
@@ -199,41 +199,45 @@ function malha(tema, semente) {
   }).join(",");
 }
 
-// Arte de fundo do layout pessoa: um anel grande atrás do retrato e outro no canto de baixo,
-// os dois em degradê de lima, com brilho. p é a altura do retrato; tudo se ancora nele.
-// Com o texto ao lado, o anel grande sobe até o topo; com o texto em cima, fica abaixo dele.
-function arcos(W, H, p, lado) {
-  const U = Math.min(W, H);
-  const a = lado ? { cx: W + .017 * p, cy: H - .37 * p, r: .875 * p, l: .18 * p }
-    : { cx: W - .43 * p, cy: H - .47 * p, r: .52 * p, l: .14 * p };
+// Arcos: um anel grande que entra pelo alto e outro no canto de baixo, em degradê, com brilho.
+// É a arte do Spotlight e a opção "fundo": "arcos" dos outros layouts. Cada estilo dá as cores
+// dos dois anéis; atrás de texto, o de baixo é só um tom do fundo, para não brigar com a leitura.
+const LIMA_NO_ESCURO = [[0, "#E3FF63"], [.42, "#E3FF63"], [.56, "#C6F24E"], [.72, "#8FB52E", .8], [.88, "#003C2F", .28], [1, "#003C2F", .15]];
+const ARCOS = {
+  pessoa: { a: LIMA_NO_ESCURO, b: [[0, "#8FB52E", .25], [.38, "#8FB52E", .9], [.68, "#C6F24E"], [1, "#E3FF63"]], miolo: ["#F4F1EA", .42], aura: .48, escuro: true, doisAcesos: true },
+  verde: { a: LIMA_NO_ESCURO, b: [[0, "#00463A", .1], [1, "#00463A", .85]], miolo: ["#F4F1EA", .42], aura: .48, escuro: true },
+  papel: { a: [[0, "#E3FF63"], [.3, "#C6F24E"], [.7, "#C6F24E", .4], [1, "#C6F24E", 0]], b: [[0, "#C6F24E", .08], [1, "#C6F24E", .6]], miolo: ["#FFFFFF", .6], aura: .4 },
+};
+// Anéis do layout pessoa, ancorados na altura p do retrato: com o texto ao lado o anel grande
+// sobe até o topo; com o texto em cima, fica abaixo dele.
+const aneisDaPessoa = (W, H, p, lado) => lado ? { cx: W + .017 * p, cy: H - .37 * p, r: .875 * p, l: .18 * p }
+  : { cx: W - .43 * p, cy: H - .47 * p, r: .52 * p, l: .14 * p };
+// Anel grande dos outros layouts: ocupa o alto e a direita, longe do texto, que fica embaixo.
+const anelDeFundo = (W, U) => ({ cx: W + .012 * U, cy: .44 * U, r: .61 * U, l: .125 * U });
+const FUNDO_ESCURO = "radial-gradient(ellipse 60% 70% at 38% 36%, rgba(0,60,47,.22) 0%, rgba(0,60,47,0) 100%), linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3))";
+
+function arcos(W, H, a, estilo) {
+  const U = Math.min(W, H), e = ARCOS[estilo];
   const b = { cx: -.021 * U, cy: H + .05 * U, r: .331 * U, l: .12 * U };
+  const eixoA = `x1="${a.cx - .15 * a.r}" y1="${a.cy - a.r}" x2="${a.cx - a.r}" y2="${a.cy}"`;
+  const eixoB = `x1="${b.cx}" y1="${b.cy - b.r}" x2="${b.cx + b.r}" y2="${b.cy - .12 * b.r}"`;
+  const degrade = (id, eixo, paradas) => `<linearGradient id="${id}" gradientUnits="userSpaceOnUse" ${eixo}>` +
+    paradas.map(([o, cor, alfa = 1]) => `<stop offset="${o}" stop-color="${cor}" stop-opacity="${alfa}"/>`).join("") + "</linearGradient>";
   const anel = (c, id, l = 1) => `<circle cx="${c.cx}" cy="${c.cy}" r="${c.r}" fill="none" stroke="url(#${id})" stroke-width="${c.l * l}"/>`;
+  const [claro, forca] = e.miolo;
   return `<defs>
-    <linearGradient id="arco-a" gradientUnits="userSpaceOnUse" x1="${a.cx - .15 * a.r}" y1="${a.cy - a.r}" x2="${a.cx - a.r}" y2="${a.cy}">
-      <stop offset="0" stop-color="#E3FF63"/><stop offset=".42" stop-color="#E3FF63"/><stop offset=".56" stop-color="#C6F24E"/>
-      <stop offset=".72" stop-color="#8FB52E" stop-opacity=".8"/><stop offset=".88" stop-color="#003C2F" stop-opacity=".28"/>
-      <stop offset="1" stop-color="#003C2F" stop-opacity=".15"/>
-    </linearGradient>
-    <linearGradient id="arco-b" gradientUnits="userSpaceOnUse" x1="${b.cx}" y1="${b.cy - b.r}" x2="${b.cx + b.r}" y2="${b.cy - .12 * b.r}">
-      <stop offset="0" stop-color="#8FB52E" stop-opacity=".25"/><stop offset=".38" stop-color="#8FB52E" stop-opacity=".9"/>
-      <stop offset=".68" stop-color="#C6F24E"/><stop offset="1" stop-color="#E3FF63"/>
-    </linearGradient>
-    <linearGradient id="miolo-a" gradientUnits="userSpaceOnUse" x1="${a.cx - .15 * a.r}" y1="${a.cy - a.r}" x2="${a.cx - a.r}" y2="${a.cy}">
-      <stop offset="0" stop-color="#F4F1EA" stop-opacity=".42"/><stop offset=".62" stop-color="#F4F1EA" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="miolo-b" gradientUnits="userSpaceOnUse" x1="${b.cx}" y1="${b.cy - b.r}" x2="${b.cx + b.r}" y2="${b.cy - .12 * b.r}">
-      <stop offset=".45" stop-color="#F4F1EA" stop-opacity="0"/><stop offset="1" stop-color="#F4F1EA" stop-opacity=".42"/>
-    </linearGradient>
+    ${degrade("arco-a", eixoA, e.a)}${degrade("arco-b", eixoB, e.b)}
+    ${degrade("miolo-a", eixoA, [[0, claro, forca], [.62, claro, 0]])}${degrade("miolo-b", eixoB, [[.45, claro, 0], [1, claro, forca]])}
     <radialGradient id="fundo-a" gradientUnits="userSpaceOnUse" cx="${a.cx}" cy="${a.cy}" r="${a.r}">
       <stop offset=".45" stop-color="#0A0A0A" stop-opacity="0"/><stop offset="1" stop-color="#0A0A0A" stop-opacity=".3"/>
     </radialGradient>
     <filter id="aura" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${.035 * U}"/></filter>
     <filter id="suave" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="${.012 * U}"/></filter>
   </defs>
-  <circle cx="${a.cx}" cy="${a.cy}" r="${a.r}" fill="url(#fundo-a)"/>
-  <g filter="url(#aura)" opacity=".48">${anel(a, "arco-a")}${anel(b, "arco-b")}</g>
+  ${e.escuro ? `<circle cx="${a.cx}" cy="${a.cy}" r="${a.r}" fill="url(#fundo-a)"/>` : ""}
+  <g filter="url(#aura)" opacity="${e.aura}">${anel(a, "arco-a")}${e.doisAcesos ? anel(b, "arco-b") : ""}</g>
   ${anel(a, "arco-a")}${anel(b, "arco-b")}
-  <g filter="url(#suave)">${anel(a, "miolo-a", .45)}${anel(b, "miolo-b", .45)}</g>`;
+  <g filter="url(#suave)">${anel(a, "miolo-a", .45)}${e.doisAcesos ? anel(b, "miolo-b", .45) : ""}</g>`;
 }
 
 // Parte visível do retrato: a sobra transparente em volta é aparada, para a foto terminar
@@ -285,13 +289,15 @@ function montar(s) {
   const post = document.getElementById("post");
   const arte = s.layout === "titulo" && s.arte && s.arte !== "nenhuma", pessoa = s.layout === "pessoa";
   const lado = W > H;
-  post.className = `tema-${s.tema} layout-${s.layout} formato-${s.formato}${arte ? " com-arte" : ""}${pessoa && lado ? " ao-lado" : ""}`;
+  const comArcos = pessoa || s.fundo === "arcos", U = Math.min(W, H);
+  post.className = `tema-${s.tema} layout-${s.layout} formato-${s.formato}${arte ? " com-arte" : ""}` +
+    `${pessoa && lado ? " ao-lado" : ""}${comArcos ? " fundo-arcos" : ""}`;
   post.style.cssText = `width:${W}px;height:${H}px;--u:${Math.min(W, H) / 1080}px;--coluna:${pessoa && lado ? 56 : 100}%`;
-  // O fundo do layout pessoa é fixo: é a arte da série, igual em toda edição.
-  post.querySelector(".malha").style.backgroundImage = pessoa
-    ? "radial-gradient(ellipse 60% 70% at 38% 36%, rgba(0,60,47,.22) 0%, rgba(0,60,47,0) 100%), linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3))"
-    : malha(s.tema, s.semente || s.titulo || s.citacao);
-  post.querySelector(".arcos").replaceChildren();
+  // Com arcos o fundo é fixo, sem malha: é a mesma arte em toda peça.
+  post.querySelector(".malha").style.backgroundImage = !comArcos ? malha(s.tema, s.semente || s.titulo || s.citacao)
+    : s.tema === "verde" ? FUNDO_ESCURO : "none";
+  // No layout pessoa os arcos esperam o retrato carregar, porque se ancoram nele.
+  post.querySelector(".arcos").innerHTML = comArcos && !pessoa ? arcos(W, H, anelDeFundo(W, U), s.tema) : "";
   post.querySelectorAll(".retrato").forEach((e) => e.remove());
 
   const conteudo = post.querySelector(".conteudo"), bloco = el("div", "bloco"), msg = el("div", "msg");
@@ -379,7 +385,7 @@ function montar(s) {
       fotos.forEach((f) => (f.style.objectViewBox = c.recorte));
       post.style.setProperty("--retrato", altura + "px");
       post.style.setProperty("--retrato-l", altura * c.l / c.h + "px");
-      post.querySelector(".arcos").innerHTML = arcos(W, H, altura, lado);
+      post.querySelector(".arcos").innerHTML = arcos(W, H, aneisDaPessoa(W, H, altura, lado), "pessoa");
     }
     return corpos.some((corpo) => (ajustavel.style.setProperty("--t", corpo), cabe()));
   };

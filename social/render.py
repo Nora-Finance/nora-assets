@@ -27,6 +27,7 @@ FORMATOS = {
 }
 TEMAS = ("papel", "verde", "lima")
 ARTES = ("nenhuma", "brs", "imagem")
+FUNDOS = ("malha", "arcos")
 # Por layout: campo -> (obrigatório, máximo de caracteres).
 LAYOUTS = {
     "titulo": {"titulo": (True, 110), "texto": (False, 220), "chamada": (False, 28)},
@@ -103,13 +104,13 @@ def validar(post, base, onde="post"):
     layout = LAYOUTS.get(post["layout"]) if isinstance(post.get("layout"), str) else None
     if not layout:
         return erros
-    permitidos = {"formato", "layout", "tema", *COMUNS, *layout}
+    permitidos = {"formato", "layout", "tema", "fundo", *COMUNS, *layout}
     if post["layout"] == "lista":
         permitidos.add("itens")
     if post["layout"] == "titulo":
         permitidos |= {"arte", "imagem"}
     if post["layout"] == "pessoa":  # o logo sobe para o topo e a foto ocupa a base: não há rodapé
-        permitidos = permitidos - {"rodape"} | {"foto"}
+        permitidos = permitidos - {"rodape", "fundo"} | {"foto"}
     for campo in sorted(set(post) - permitidos):
         erros.append(f"{onde}: campo '{campo}' não existe no layout '{post['layout']}'")
     _textos(post, {**COMUNS, **layout}, onde, erros, COM_DESTAQUE)
@@ -133,6 +134,12 @@ def validar(post, base, onde="post"):
             erros.append(f"{onde}: 'foto' precisa ser um arquivo existente")
         elif (base / foto).suffix.lower() not in (".png", ".webp") or not _tem_alfa(base / foto):
             erros.append(f"{onde}: 'foto' precisa ser um retrato recortado, com fundo transparente, em PNG ou WebP")
+
+    fundo = post.get("fundo", "malha")
+    if not isinstance(fundo, str) or fundo not in FUNDOS:
+        erros.append(f"{onde}: 'fundo' deve ser um de: {', '.join(FUNDOS)}")
+    elif fundo == "arcos" and post.get("tema") == "lima":
+        erros.append(f"{onde}: o fundo de arcos só existe nos temas verde e papel")
 
     arte = post.get("arte", "nenhuma")
     if not isinstance(arte, str) or arte not in ARTES:

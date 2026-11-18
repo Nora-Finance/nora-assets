@@ -48,13 +48,22 @@ class Validacao(unittest.TestCase):
         self.assertTrue(erros(numero="1:1"))
         self.assertTrue(erros(layout="numero", numero="1:1", arte="brs"))
 
+    def test_fundo_de_arcos_so_no_verde_e_no_papel(self):
+        for tema in ("verde", "papel"):
+            self.assertEqual(erros(tema=tema, fundo="arcos"), [], tema)
+        self.assertEqual(erros(fundo="malha"), [])
+        self.assertTrue(erros(tema="lima", fundo="arcos"))
+        self.assertTrue(erros(fundo="ondas"))
+        self.assertTrue(erros(fundo=None))
+
     def test_pessoa_pede_retrato_recortado_e_tema_verde(self):
         pessoa = {"formato": "horizontal", "layout": "pessoa", "tema": "verde", "nome": "Nome Sobrenome",
                   "cargo": "Founding Engineer", "foto": "retrato-exemplo.webp"}
         self.assertEqual(render.validar(pessoa, render.AQUI / "exemplos"), [])
         self.assertEqual(render.validar({**pessoa, "selo": "Nora partner Spotlight", "nome": "Duas\nlinhas"}, render.AQUI / "exemplos"), [])
         for mudanca in ({"tema": "papel"}, {"foto": "galeria.webp"}, {"foto": "nao-existe.png"}, {"foto": None},
-                        {"rodape": "nora.finance"}, {"titulo": "Título"}, {"arte": "brs"}, {"cargo": "x" * 29}):
+                        {"rodape": "nora.finance"}, {"titulo": "Título"}, {"arte": "brs"}, {"cargo": "x" * 29},
+                        {"fundo": "arcos"}):
             self.assertTrue(render.validar({**pessoa, **mudanca}, render.AQUI / "exemplos"), mudanca)
         self.assertTrue(erros(foto="retrato-exemplo.webp"))  # foto só existe no layout pessoa
 
@@ -119,6 +128,7 @@ class Render(unittest.TestCase):
                    {**BASE, "titulo": "Primeira frase. *Segunda em destaque.*"},
                    {"formato": "feed", "layout": "citacao", "tema": "verde", "citacao": "Fala.", "autor": "Nome"},
                    {**BASE, "formato": "paisagem", "layout": "numero", "numero": "R$ 1.000.000"},
+                   {**BASE, "fundo": "arcos"}, {**BASE, "tema": "verde", "fundo": "arcos", "arte": "brs"},
                    {"formato": "feed", "layout": "pessoa", "tema": "verde", "nome": "Nome", "cargo": "Cargo",
                     "foto": str(render.AQUI / "exemplos" / "retrato-exemplo.webp")})
         with tempfile.TemporaryDirectory() as pasta:
