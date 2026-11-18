@@ -5,6 +5,6 @@
   "brs-pilhas": {"temas": ["papel", "lima"], "tema": "crescimento, volume, emissão"},
   "brs-garantia": {"temas": ["verde"], "tema": "garantia, equilíbrio, paridade"},
   "brs-cartao": {"temas": ["verde"], "tema": "cartão, gasto do dia a dia"},
-  "nora-simbolo-brs": {"temas": ["papel", "verde"], "tema": "Nora e BRS juntos, rede"},
-  "nora-simbolo-3d": {"temas": ["verde"], "tema": "institucional Nora"}
+  "nora-simbolo-brs": {"temas": ["papel", "verde"], "arcos": false, "tema": "Nora e BRS juntos, rede"},
+  "nora-simbolo-3d": {"temas": ["verde"], "arcos": false, "tema": "institucional Nora"}
 }

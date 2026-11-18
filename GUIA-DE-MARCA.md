@@ -171,6 +171,10 @@ do BRS `#E3FF63`, na ponta acesa, à lima `#C6F24E` e some no fundo.
   embaixo, em volta da imagem, e nunca sobe por trás do texto.
 - O desenho é fixo, igual em toda peça. Nada de arco de outra cor, de outro
   lado ou cruzando o texto.
+- O símbolo da Nora não vai por cima do arco: os raios se misturam com o anel.
+  As ilustrações `nora-simbolo-brs` e `nora-simbolo-3d` ficam no fundo de
+  malha, e o gerador recusa as duas com arcos. Sobre o arco vai a marca do BRS,
+  uma foto ou outra ilustração.
 
 Fundos prontos, um por tema e formato, em [`social/fundos/`](social/fundos/)
 (`arcos-verde-feed.jpg`, `arcos-papel-horizontal.jpg` e os demais): servem a
@@ -406,8 +410,8 @@ seja copiado ou renomeado.
 | `brs-pilhas` | crescimento, volume, emissão | papel, lima |
 | `brs-garantia` | garantia, equilíbrio, paridade | verde |
 | `brs-cartao` | cartão, gasto do dia a dia | verde |
-| `nora-simbolo-brs` | Nora e BRS juntos, rede | papel, verde |
-| `nora-simbolo-3d` | institucional Nora | verde |
+| `nora-simbolo-brs` | Nora e BRS juntos, rede | papel, verde; só na malha |
+| `nora-simbolo-3d` | institucional Nora | verde; só na malha |
 
 Uso no JSON: `"arte": "imagem", "imagem": "brs-celular"`. Antes de gerar imagem
 nova, veja se uma destas já resolve.

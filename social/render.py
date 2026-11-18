@@ -169,6 +169,9 @@ def validar(post, base, onde="post"):
             achada = _ilustracao(_imagem(post, base))
             if achada and post.get("tema") in TEMAS and post["tema"] not in achada[1]["temas"]:
                 erros.append(f"{onde}: a ilustração '{achada[0]}' só vale nos temas: {', '.join(achada[1]['temas'])}")
+            # Os raios do símbolo da Nora se misturam com o arco: essas ilustrações ficam na malha.
+            if achada and fundo == "arcos" and achada[1].get("arcos") is False:
+                erros.append(f"{onde}: a ilustração '{achada[0]}' não entra no fundo de arcos; use a marca do BRS (\"arte\": \"brs\") ou outra ilustração")
     elif "imagem" in post:
         erros.append(f"{onde}: 'imagem' só vale com \"arte\": \"imagem\"")
     return erros

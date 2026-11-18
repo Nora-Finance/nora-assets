@@ -92,6 +92,12 @@ class Validacao(unittest.TestCase):
                         achou = erros(tema=tema, arte="imagem", imagem=imagem)
                         self.assertEqual(achou == [], tema in regra["temas"], f"{nome} em {tema}: {achou}")
 
+    def test_simbolo_da_nora_nao_entra_sobre_os_arcos(self):
+        for nome in ("nora-simbolo-brs", "nora-simbolo-3d"):
+            self.assertEqual(erros(tema="verde", arte="imagem", imagem=nome), [])
+            self.assertIn("não entra no fundo de arcos", "".join(erros(tema="verde", fundo="arcos", arte="imagem", imagem=nome)))
+        self.assertEqual(erros(tema="verde", fundo="arcos", arte="imagem", imagem="brs-garantia"), [])
+
     def test_carrossel_tem_de_duas_a_dez_paginas_do_mesmo_formato(self):
         with self.assertRaises(ValueError):
             render.paginas({"paginas": [BASE]})
