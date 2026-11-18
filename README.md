@@ -5,16 +5,17 @@
   <img src="logo/nora.svg" width="320" alt="Nora">
 </picture>
 
-Identidade da [Nora Finance](https://www.nora.finance): guia de marca, logos,
-cores, fontes e um gerador de posts para redes sociais que pessoas e IAs usam
-do mesmo jeito.
+Identidade da [Nora Finance](https://www.nora.finance): manual de marca, logos,
+cores, fontes, fundos e um gerador de posts para redes sociais que pessoas e
+IAs usam do mesmo jeito.
 
 | Preciso de… | Onde |
 |---|---|
-| Regras da marca: voz, cor, tipografia, logo, posts, imagem por IA | [GUIA-DE-MARCA.md](GUIA-DE-MARCA.md) |
+| Manual de marca: sistema visual, voz, cor, tipografia, logo, arcos, peças, imagem | [GUIA-DE-MARCA.md](GUIA-DE-MARCA.md) |
 | Ensinar uma IA a criar peças da Nora | [INSTALAR-NA-IA.md](INSTALAR-NA-IA.md) |
 | Instruções que a IA segue ao trabalhar aqui | [AGENTS.md](AGENTS.md) |
-| Criar um post | [social/](social/), seção Posts do guia |
+| Criar um post | [social/](social/), seções Peças e Gerador do manual |
+| Fundos de arcos prontos, para montar a peça em outra ferramenta | [social/fundos/](social/fundos/) |
 | Logos | [logo/](logo/) |
 | Cores | [colors/](colors/) |
 | Fontes | [fonts/](fonts/) |
@@ -88,13 +89,15 @@ vindo da biblioteca. Confira os arquivos com `sha256sum -c SHA256SUMS`.
 
 ## Manutenção
 
-Depois de mudar o gerador, rode a prova e refaça a galeria:
+Depois de mudar o gerador, rode a prova e refaça a galeria e os fundos:
 
 ```sh
 python3 social/test_render.py
 python3 social/render.py social/exemplos/*.json -o /tmp/nora-exemplos
-rm /tmp/nora-exemplos/spotlight-verde.png   # exemplo com silhueta: serve de molde, não de vitrine
+rm /tmp/nora-exemplos/molde-*.png   # exemplos com silhueta: servem de molde, não de vitrine
 magick montage /tmp/nora-exemplos/*.png -tile 4x -geometry 360x450+14+14 -background '#D9D6CE' -quality 82 social/exemplos/galeria.webp
+python3 social/render.py --fundos social/fundos
+sha256sum social/fundos/*.jpg   # atualize as linhas correspondentes em SHA256SUMS
 ```
 
 ## Uso da marca
